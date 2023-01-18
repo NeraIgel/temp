@@ -246,6 +246,6 @@ ex)	template <typename T1, typename T2> class Pair { ... };
 	template <typename T1> class Pair<T1, int> { ... };
 	template <> class Pair<int, int> { ... };
 
-	Pair<double, double>	p1(0, 0);	// Pair<T1, T2> 포괄적 버전
-	Pair<double, int>	p2(0, 0);	// Pair<T1, int> 부분 특수화 버전
-	Pair<int, int>		p3(0, 0);	// Pair<int, int> 완전한 명시적 특수화 버전
+	Pair<double, double>	p1;	// Pair<T1, T2> 포괄적 버전
+	Pair<double, int>	p2;	// Pair<T1, int> 부분 특수화 버전
+	Pair<int, int>		p3;	// Pair<int, int> 완전한 명시적 특수화 버전
