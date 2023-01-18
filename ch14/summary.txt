@@ -225,6 +225,7 @@ ex)	template <template <typename T> class CL, typename U, int z>
 ex)	ArrayTP<double, 30>	*pt;
 
 	pt = new ArrayTP<double, 30>;		// 클래스 템플릿은 함수 템플릿과 다르게, 사용하려는 데이터형을 명시적으로 제공해야 한다.
+	delete pt;
 
 만약, 특정 타입에 대해 템플릿 클래스를 미리 생성하고 싶다면, 명시적 구체화를 제공할 수 있다.
 이 경우에, 컴파일러는 그 템플릿 클래스형의 어떠한 객체도 요구되지 않더라도 ArrayTP<std::string, 100> 특수화를 생성한다.
@@ -235,7 +236,7 @@ ex)	template class ArrayTP<std::string, 100>;
 명시적 특수화를 제공하면, 특정 타입에 대해 포괄적인 템플릿과 다르게 동작하는 특수화된 템플릿 클래스가 생성된다.
 이 경우에, 컴파일러는 특수화된 템플릿과 포괄적인 템플릿이 둘 다 구체화 요구에 적합한 상황에서 어느 하나를 선택해야 한다면, 특수화된 템플릿을 사용한다.
 ex)	template <>
-	class ArrayTP<const char *, 10> {
+	class ArrayTP<const char *, 100> {
 		...
 	};
 
