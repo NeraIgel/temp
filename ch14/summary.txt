@@ -212,7 +212,8 @@ ex)	template <typename T, std::size_t n = 1>
 		return (_array[position]);
 	}
 
-템플릿은 템플릿 매개변수(template template parameter)를 사용할 수 있다.
+클래스 템플릿은 템플릿 매개변수(template template parameter)를 사용할 수 있다.
+템플릿 매개변수는 표준 템플릿 라이브러리를 구현하기 위해 사용된 기능이며, 템플릿 매개변수에도 디폴트 값을 제공할 수 있다.
 ex)	template <template <typename T> class CL, typename U, int z>
 	class Trophy {
 		...
