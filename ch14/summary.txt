@@ -1,0 +1,258 @@
+(1) private 상속, protected 상속
+private 상속에서는 기본 클래스의 public 멤버들과 protected 멤버들이 파생 클래스의 private 멤버가 된다.
+protected 상속에서는 기본 클래스의 public 멤버들과 protected 멤버들이 파생 클래스의 protected 멤버가 된다.
+그래서, 어느 경우에나 기본 클래스의 public 인터페이스는 파생 클래스의 내부 인터페이스가 된다. 즉, 예를 들어 아래와 같이, 인터페이스를 상속하지 않는 것이 has-a 관계이다.
+ex)	class Student : private std::string {
+	public:
+		explicit Student(const std::string& name);
+		explicit Student(const char *pName = "Nully");
+		const std::string&	name() const;
+	};
+
+	Student::Student(const std::string& name)
+		: std::string(name)					// 파생 클래스 내부에 기본 클래스형 익명 객체를 생성할 수 있다.
+	{}
+
+	Student::Student(const char *pName)
+		: std::string(pName)
+	{}
+
+	const std::string&	Student::name() const
+	{
+		return (static_cast<const std::string&>(*this));	// 파생 클래스 내부에 있는 기본 클래스형 익명 객체를 사용하기 위해서, 데이터형 변환을 사용한다.
+	}
+
+private 상속에서도 파생 클래스형 객체가 기본 클래스의 어떤 특정 public 인터페이스를 사용하기를 원한다면, 예를 들어 아래와 같이 작성할 수 있다.
+ex)	class Student : private std::string {
+	public:
+		...
+		using std::string::c_str;				// using 선언은 소괄호, 리턴형, 시그니처 없이 멤버 이름만 사용한다.
+
+		const char	*data() const;
+	};
+
+	const char	*Student::data() const
+	{
+		return (std::string::data());
+	}
+
+	Student	student1("student1");
+	Student	student2("student2");
+	std::cout << student1.data() << std::endl;
+	std::cout << student2.c_str() << std::endl;
+
+(2) 객체 포함
+기존 클래스형의 객체를 데이터 멤버로 가지는 클래스를 작성하여 코드를 재활용할 수도 있다.
+컨테인먼트, 레이어링 또는 컴포지션이라 부르는 이와 같은 접근 방식도 has-a 관계를 모델링한다.
+컨테인먼트는 상속의 한 형식이 아니므로, 컨테인먼트를 사용하여 클래스 코드를 재활용할 때, 기존 클래스의 protected 멤버에 접근한다거나 가상 함수를 재정의할 수는 없다.
+ex)	class Student {
+	public:
+		explicit Student(const std::string& s);
+		explicit Student(const char *s = "Nully");
+		const std::string&	name() const;
+	private:
+		std::string	_name;
+	};
+
+	Student::Student(const std::string& name)
+		: _name(name)
+	{}
+
+	Student::Student(const char *pName)
+		: _name(pName)
+	{}
+
+	const std::string&	Student::name() const
+	{
+		return (_name);
+	}
+
+(3) has-a 관계
+컨테인먼트, private 상속, protected 상속은 has-a 관계를 나타낸다.
+has-a 관계는, 기존 클래스의 인터페이스가 아닌 구현만을 상속하는 관계이다.
+has-a 관계에서, 기존 클래스 참조형과 포인터형은 명시적 데이터형 변환 없이는 새로운 클래스 객체를 참조하거나 지시할 수 없다.
+
+일반적으로, has-a 관계를 모델링하려면 컨테인먼트를 사용하는 것이 더 적합하다.
+만일, 기존 클래스의 protected 멤버에 접근해야 할 경우 혹은 기존 클래스의 가상 함수를 재정의해야 할 경우에는 private 상속을 고려해볼 수 있다.
+또한, 기존 클래스가 비정적 데이터 멤버와 가상 함수를 가지지 않는다면, private 상속을 사용하여 공백 기본 클래스 최적화(Empty base optimization; EBO)를 활성화시킬 수도 있다.
+
+(4) 다중 상속
+다중 상속(multiple inheritance; MI)은 클래스 설계에서 하나 이상의 클래스 코드를 재활용하는 것을 허용한다.
+다중 상속을 서술할 때, 다음과 같이 키워드 public으로 기본 클래스들을 각각 제한해야 한다.
+왜냐하면, 특별히 지시하지 않으면 컴파일러가 private 파생으로 간주하기 때문이다.
+-.	class DerivedClassName : public BaseClassName1, public BaseClassName2 {
+		...
+	};
+
+다중 상속에서는 이름들이 다중으로 정의되는 문제와, 어떤 클래스의 다중 인스턴스를 상속하는 문제가 발생할 수 있다.
+파생 클래스에서 클래스 제한자를 사용하여 이름의 모호성을 해결할 수 있고, 가상 기본 클래스를 사용하여 다중 인스턴스를 상속하는 것을 막을 수 있다.
+ex)	class Worker {
+	public:
+		explicit Worker(const std::string& name) : _name(name)	{}
+		explicit Worker(const char *pName = "Anonymous") : _name(pName)	{}
+		virtual ~Worker()	{}
+
+		virtual void	show() const	{ std::cout << "Worker::show() " << _name << std::endl; }
+	protected:
+		std::string	_name;
+	};
+
+	class Singer : virtual public Worker {
+	public:
+		virtual void	show() const	{ std::cout << "Singer::show() " << _name << std::endl; }
+	};
+
+	class Waiter : virtual public Worker {
+	public:
+		virtual void	show() const	{ std::cout << "Waiter::show() " << _name << std::endl; }
+	};
+
+	class SingerWaiter : public Singer, public Waiter {
+	public:
+		explicit SingerWaiter(const std::string& name = std::string("Anonymous"));
+		SingerWaiter(const SingerWaiter& rhs);
+		SingerWaiter& operator=(const SingerWaiter& rhs);
+
+		virtual void	show() const;
+	private:
+		std::string	_name;
+	};
+
+	SingerWaiter::SingerWaiter(const std::string& name)
+		: Worker(name + "_worker_name"), Singer(), Waiter(), _name(name)
+	{}
+
+	SingerWaiter::SingerWaiter(const SingerWaiter& rhs)
+		: Worker(rhs), Singer(rhs), Waiter(rhs), _name(rhs._name)
+	{}
+
+	SingerWaiter&	SingerWaiter::operator=(const SingerWaiter& rhs)
+	{
+		if (this != &rhs)
+		{
+			Singer::operator=(rhs);
+			Waiter::operator=(rhs);
+			_name = rhs._name;
+		}
+		return (*this);
+	}
+
+	void	SingerWaiter::show() const
+	{
+		Singer::show();
+		Waiter::show();
+		std::cout << "SingerWaiter::show() " << Worker::_name << ", " << _name << std::endl;
+	}
+
+	SingerWaiter	ed;
+	Worker		*pw = &ed;
+	pw->show();
+
+C++는 다중 상속 기능을 추가하면서, 가상 기본 클래스(virtual base class)를 추가하였다.
+가상 기본 클래스는, 하나의 공통 조상을 공유하는 여러 개의 기본 클래스로부터 공통 조상의 유일 객체를 상속하는 방식으로 객체를 파생시키는 것을 허용한다.
+가상 상속 구조에서, 중간 클래스는 기본 클래스의 생성자를 호출하지 않기 때문에, 파생 클래스에서는 상속받은 가상 기본 클래스뿐만 아니라 공통 조상 클래스의 생성자를 명시적으로 호출해야 한다.
+가상 기본 클래스의 데이터 멤버에 접근하는 속도는 비가상 기본 클래스보다 상대적으로 느리며, 가상 기본 클래스형 객체는 비가상 기본 클래스형보다 크기가 더 크기 때문에, C++에서는 가상 상속이 디폴트가 아니다.
+
+(5) 클래스 템플릿
+클래스 템플릿을 작성하여 포괄적인 클래스 설계도를 생성할 수 있다.
+클래스 템플릿은 하나 이상의 데이터형 매개변수(type template parameter)를 사용할 수 있다.
+클래스 템플릿은 데이터형 매개변수들에 디폴트 값을 제공할 수 있지만, 함수 템플릿은 데이터형 매개변수에 디폴트 값을 제공할 수 없다.
+ex)	template <typename T1 = int, typename T2 = int>
+	class Pair {
+	public:
+		explicit Pair(const T1& a, const T2& b) : _a(a), _b(b)	{}
+		const T1&	first() const	{ return(_a); }
+		const T2&	second() const	{ return(_b); }
+	private:
+		T1	_a;
+		T2	_b;
+	};
+
+클래스 템플릿은 데이터형이 아닌 매개변수를 사용할 수 있다.
+클래스 템플릿과 함수 템플릿 모두 데이터형이 아닌 매개변수에 대해서 디폴트 값을 제공할 수 있다.
+데이터형이 아닌 매개변수(non-type teamplte parameter)를 수식 매개변수라고도 부르며 정수형, 열거형, 참조, 포인터만 수식 매개변수가 될 수 있다.
+수식 매개변수 접근 방식의 가장 큰 단점은, 예를 들어 아래와 같이 작성했을 때, 프로그램이 크기가 다른 객체를 사용하면 컴파일러가 각각의 템플릿 클래스들을 생성한다는 점이다.
+ex)	template <typename T, std::size_t n = 1>
+	class ArrayTP {
+	public:
+		explicit ArrayTP()	{}
+		explicit ArrayTP(const T& v);
+		virtual T&		operator[](std::size_t position);
+		virtual const T&	operator[](std::size_t position) const;
+	private:
+		T	_array[n];
+	};
+
+	template <typename T, std::size_t n>				// 클래스 템플릿의 멤버 함수를 클래스 바깥에서 작성할 때에 템플릿 표시를 앞세워야 한다.
+	ArrayTP<T, n>::ArrayTP(const T& v)
+	{
+		for (std::size_t i = 0; i < n; ++i)
+			_array[i] = v;
+	}
+
+	template <typename T, std::size_t n>
+	T&	ArrayTP<T, n>::operator[](std::size_t position)
+	{
+		return (
+			const_cast<T&>(
+				static_cast<const ArrayTP<T, n>&>(	// 템플릿 클래스형을 클래스 바깥에서 사용할 때 완전한 형식을 표기해야 한다.
+					*this)[position]
+				)
+		   );
+	}
+
+	template <typename T, std::size_t n>
+	const T&	ArrayTP<T, n>::operator[](std::size_t position) const
+	{
+		if (position >= n)
+		{
+			std::cerr << "invalid index." << std::endl;
+			std::exit(EXIT_FAILURE);
+		}
+		return (_array[position]);
+	}
+
+템플릿은 템플릿 매개변수(template template parameter)를 사용할 수 있다.
+ex)	template <template <typename T> class CL, typename U, int z>
+	class Trophy {
+		...
+	};
+
+(6) 클래스 템플릿 구체화
+클래스 템플릿의 정의(구체화)는, 템플릿 클래스형 객체를 선언하고 특정 데이터형을 지정할 때 생성된다.
+예를 들어, 템플릿 클래스형 객체를 아래와 같이 선언하면, 데이터형 매개변수 T를 지정한 데이터형인 double로 모두 대체하는 템플릿 클래스가 생성된다.
+이 경우에, 클래스 이름은 ArrayTP<double, 30>이다. ArrayTP<double, 30>은 그 템플릿의 한 특수화이다. 특별히 컴파일러가 타입 추론을 통해 구체화한다고 해서 암시적 구체화라고 부른다.
+ex)	ArrayTP<double, 30>	*pt;
+
+	pt = new ArrayTP<double, 30>;		// 클래스 템플릿은 함수 템플릿과 다르게, 사용하려는 데이터형을 명시적으로 제공해야 한다.
+
+만약, 특정 타입에 대해 템플릿 클래스를 미리 생성하고 싶다면, 명시적 구체화를 제공할 수 있다.
+이 경우에, 컴파일러는 그 템플릿 클래스형의 어떠한 객체도 요구되지 않더라도 ArrayTP<std::string, 100> 특수화를 생성한다.
+ex)	template class ArrayTP<std::string, 100> {
+		...
+	};
+
+(7) 클래스 템플릿 특수화
+클래스 템플릿을 작성할 때 특정 타입에 대하여 명시적 특수화를 제공할 수 있다.
+명시적 특수화를 제공하면, 특정 타입에 대하여 포괄적인 템플릿과 다르게 동작하는 템플릿 클래스가 생성된다.
+이 경우에, 컴파일러는 특수화된 템플릿과 포괄적인 템플릿이 둘 다 구체화 요구에 적합한 상황에서 어느 하나를 선택해야 한다면, 특수화된 템플릿을 사용한다.
+ex)	template <>
+	class ArrayTP<char *, std::size_t n = 1> {
+	public:
+		explicit ArrayTP();
+		explicit ArrayTP(const T v);
+		virtual T&		operator[](std::size_t position);
+		virtual const T&	operator[](std::size_t position) const;
+	private:
+		std::string	_array[n];
+	};
+
+클래스 템플릿을 부분적으로 특수화할 수도 있다.
+이 경우에, 컴파일러는 여러 가지 중에서 하나를 선택해야 한다면, 가장 특수화된 템플릿을 사용한다.
+ex)	template <typename T1, typename T2> class Pair { ... };
+	template <typename T1> class Pair<T1, int> { ... };
+	template <> class Pair<int, int> { ... };
+
+	Pair<double, double>	p1(0, 0);	// Pair<T1, T2> 포괄적 버전
+	Pair<double, int>	p2(0, 0);	// Pair<T1, int> 부분 특수화 버전
+	Pair<int, int>		p3(0, 0);	// Pair<int, int> 완전한 명시적 특수화 버전
