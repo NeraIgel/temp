@@ -19,7 +19,7 @@ ex)	#ifndef TV_H
 	#ifndef REMOTE_H
 	# define REMOTE_H
 
-	class Tv;							// Remote 클래스를 처리하기 전에 Tv 클래스에 대해 알아야 하기 때문에, 전방 선언을 사용한다.
+	# include "Tv.h"
 
 	class Remote {
 	public:
