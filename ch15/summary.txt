@@ -16,7 +16,7 @@ ex)	class Tv {
 ex)	class Tv;
 	class Remote {
 	public:
-		void	setChannel(Tv& t, int c);		// Remote 클래스 내부에서 Tv 클래스 객체를 필요로 하기 때문에, Tv 클래스를 전방 선언해야 한다.
+		void	setChannel(Tv& t, int c);		// Remote 클래스 내부에서 Tv 클래스를 사용하기 때문에, Tv 클래스를 전방 선언해야 한다.
 	};
 
 	class Tv {
