@@ -69,9 +69,9 @@ ex)	template <typename T>
 	{}
 
 	template <typename T>
-		template <typename V>
-		Beta<T>::Hold<V>::Hold(V val)
-			: _val(val)
+	template <typename V>
+	Beta<T>::Hold<V>::Hold(V val)
+		: _val(val)
 	{}
 
 (4) 예외 처리
