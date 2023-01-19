@@ -46,7 +46,33 @@ ex)	class Queue {
 	{}
 
 클래스 템플릿 내부에 중첩된 클래스 템플릿을 작성할 수도 있다.
-ex)	
+ex)	template <typename T>
+	Class Beta {
+	public:
+		explicit Beta(T t, int i);
+	private:
+		template <typename V>
+		class Hold {
+		public:
+			explicit Hold(V val = 0);
+		private:
+			V	_val;
+		};
+
+		Hold<T>		_q;
+		Hold<int>	_n;
+	};
+
+	template <typename T>
+	Beta<T>::Beta(T t, int i)
+		: _q(t), _n(i)
+	{}
+
+	template <typename T>
+		template <typename V>
+		Beta<T>::Hold<V>::Hold(V val)
+			: _val(val)
+	{}
 
 (4) 예외 처리
 C++의 예외 처리는 프로그램을 먹통으로 만드는 특별한 상황에 대처하는 메커니즘을 제공한다.
