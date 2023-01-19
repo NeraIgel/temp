@@ -46,6 +46,7 @@ ex)	class Queue {
 	{}
 
 클래스 템플릿 내부에 중첩된 클래스 템플릿을 작성할 수도 있다.
+클래스 템플릿 내부에 템플릿이 내포되어 있기 때문에, 예를 들어 아래와 같이 템플릿 표시를 중첩시켜야 하는 경우도 있다.
 ex)	template <typename T>
 	class Beta {
 	public:
