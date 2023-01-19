@@ -23,7 +23,7 @@ ex)	class Tv;
 	public:
 		void	Remote::setChannel(Tv& t, int c);	// Remote 클래스 선언이 Tv 클래스 선언보다 앞에 있어야 한다.
 	private:
-		int		_channel;
+		int	_channel;
 	};
 
 	void	Remote::setChannel(Tv& t, int c)
