@@ -229,7 +229,7 @@ ex)	ArrayTP<double, 30>	*pt;
 	delete pt;
 
 만약, 특정 타입에 대해 템플릿 클래스를 미리 생성하고 싶다면, 명시적 구체화를 제공할 수 있다.
-예를 들어 아래와 같은 상황에서 , 컴파일러는 그 템플릿 클래스형의 어떠한 객체도 요구되지 않더라도 ArrayTP<std::string, 100> 특수화를 생성한다.
+아래와 같은 경우에 , 컴파일러는 그 템플릿 클래스형의 어떠한 객체도 요구되지 않더라도 ArrayTP<std::string, 100> 특수화를 생성한다.
 ex)	template class ArrayTP<std::string, 100>;
 
 (7) 클래스 템플릿 특수화
