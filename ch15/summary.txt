@@ -1,32 +1,35 @@
-(1) 프렌드
+(1) 프렌드 클래스
 프렌드 클래스는 다른 클래스가 어떤 클래스의 프렌드가 되도록 지정할 때 사용할 수 있다.
-프렌드 메서드는 다른 클래스의 특정 메서드만 어떤 클래스의 프렌드가 되도록 지정할 때 사용할 수 있다.
-ex)	#ifndef TV_H
-	# define TV_H
+프렌드 클래스는 예를 들어 아래와 같이 선언할 수 있다.
+ex)	class Tv {
+	public:
+		friend class Remote;	// 프렌드 클래스 선언은 public, private, protected 부분 어디에나 둘 수 있다.
+	};
 
-	class Remote;
+	class Remote {
+	};
+
+(2) 프렌드 멤버 함수
+프렌드 멤버 함수는 다른 클래스의 특정 멤버 함수들만 어떤 클래스의 프렌드가 되도록 지정할 때 사용할 수 있다.
+프렌드 멤버 함수는 예를 들어 아래와 같이 지정할 수 있으며, 이 때 선언 순서에 주의해야 한다.
+이 경우, 전방 선언(forward declaration)을 사용하여 바르게 동작할 수 있게 할 수 있다.
+ex)	class Tv;
+	class Remote {
+	public:
+		void	setChannel(Tv& t, int c);			// Remote 클래스 내부에서 Tv 클래스 객체를 필요로 하기 때문에, Tv 클래스를 전방 선언해야 한다.
+	};
 
 	class Tv {
 	public:
-		friend class Remote;					// 프렌드 클래스 선언은 public, private, protected 부분 어디에나 둘 수 있다.
-		friend void	Remote::setChannel(Tv& t, int c);	// 프렌드 메서드 선언을 위하여 Remote 클래스를 전방 선언((forward declaration))한다.
+		void	Remote::setChannel(Tv& t, int c);	// Remote 클래스 선언이 Tv 클래스 선언보다 앞에 있어야 한다.
 	private:
-		int	_channel;
+		int		_channel;
 	};
 
-	#endif
-
-	#ifndef REMOTE_H
-	# define REMOTE_H
-
-	# include "Tv.h"
-
-	class Remote {
-	public:
-		void	setChannel(Tv& t, int c)	{ t._channel = c; }
-	};
-
-	#endif
+	void	Remote::setChannel(Tv& t, int c)
+	{
+		t._channel = c;
+	}
 
 (3) 중첩 클래스
 중첩 클래스(nested class)는 다른 클래스의 내부에 선언된 클래스를 의미한다.
