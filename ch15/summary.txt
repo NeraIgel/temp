@@ -5,7 +5,7 @@
 프렌드 클래스는 다른 클래스가 어떤 클래스의 프렌드가 되도록 지정할 떄 사용할 수 있으며, 예를 들어 아래와 같이 선언할 수 있다.
 ex)	class Tv {
 	public:
-		friend class Remote;					// 프렌드 선언은 public, protected, private 부분 어디에나 둘 수 있다.
+		friend class Remote;					// 프렌드 지정은 public, protected, private 부분 어디에나 둘 수 있다.
 	};
 
 	class Remote {
