@@ -111,22 +111,17 @@ throw가 복사본을 생성할지라도 catch 블록이 참조를 지정하는 
 ex)	class bad_hmean {
 	public:
 		explicit bad_hmean(double a = 0.0, double b = 0.0) : _a(a), _b(b)	{}
-		void	mesg() const;
+		const char	*what() const	{ return (""); }
 	private:
 		double	_a;
 		double	_b;
 	};
 
-	void	bad_hmean::mesg() const
-	{
-		std::cout << "" std::endl;
-	}
-
 	double	hmean(double a, double b)	throw(bad_hmean)	// C++98에서 함수는 그 함수에서 발생할 수 있는 예외들을 인식하는 예외 지정을 포함할 수 있었다.
 	{								// C++11부터 예외 지정은 무시되며, 다만 그 중에서도 throw() 구문은 noexcept 구문으로 대체되었다.
 		if (a == -b)
 			throw bad_hmean(a, b);
-		return 2.0 * a * b / (a + b);
+		return (2.0 * a * b / (a + b));
 	}
 
 	double	x, y, z;
@@ -139,7 +134,7 @@ ex)	class bad_hmean {
 		}
 		catch (bad_hmean& bg)
 		{
-			bg.mesg();
+			std::cerr << bg.what() << std::endl;
 			continue;
 		}
 		catch (...)						// 어떤 예외 데이터형도 포착한다.
