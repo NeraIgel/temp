@@ -123,7 +123,7 @@ ex)	class bad_hmean {
 	}
 
 	double	hmean(double a, double b)	throw(bad_hmean)	// C++98에서 함수는 그 함수에서 발생할 수 있는 예외들을 인식하는 예외 지정을 포함할 수 있었다.
-	{							// C++11부터 예외 지정은 무시되며, 다만 그 중에서도 throw() 구문은 noexcept 구문으로 대체되었다.
+	{								// C++11부터 예외 지정은 무시되며, 다만 그 중에서도 throw() 구문은 noexcept 구문으로 대체되었다.
 		if (a == -b)
 			throw bad_hmean(a, b);
 		return 2.0 * a * b / (a + b);
