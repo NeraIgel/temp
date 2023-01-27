@@ -142,7 +142,7 @@ ex)	class bad_hmean {
 			bg.mesg();
 			continue;
 		}
-		catch (...)							// 어떤 예외 데이터형도 포착한다.
+		catch (...)						// 어떤 예외 데이터형도 포착한다.
 		{
 			std::cerr << "" << std::endl;
 			std::exit(EXIT_FAILURE);
