@@ -146,8 +146,8 @@ ex)	class bad_hmean {
 
 C++98에서 함수는 그 함수에서 발생할 수 있는 예외들을 인식하는 예외 지정을 포함할 수 있었다.
 C++11부터 함수의 예외지정은 무시되며, 다만 그중에서도 throw() 구문은 noexcept라는 새로운 키워드로서 대체되어 예외를 발생하지 않는 함수를 지칭할 때 사용된다.
--. double	hmean(double a, double b)	throw(bad_hmean);	// bad_hmean 예외가 발생할 수 있다고 지칭하며, 이 함수에서 기대하지 않는 예외가 발생하면 abort() 함수가 호출된다.
--. double	hmean(double a, double b)	throw();			// 예외가 발생하지 않는다고 지칭함으로써, 컴파일러로 하여금 최적화를 하는데 도움이 된다.
+-. double	hmean(double a, double b) throw(bad_hmean);	// bad_hmean 예외가 발생할 수 있다고 지칭하며, 이 함수에서 기대하지 않는 예외가 발생하면 abort() 함수가 호출된다.
+-. double	hmean(double a, double b) throw();		// 예외가 발생하지 않는다고 지칭함으로써, 컴파일러로 하여금 최적화를 하는데 도움을 준다.
 
 C++98에서 함수는 그 함수에서 발생할 수 있는 예외들을 인식하는 예외 지정을 포함할 수 있었다.
 C++11부터 예외 지정은 무시되며, 다만 그 중에서도 throw() 구문은 noexcept 구문으로 대체되었다.
