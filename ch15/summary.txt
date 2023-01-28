@@ -141,7 +141,7 @@ ex)	class bad_hmean {
 		{
 			z = hmean(x, y);		// 예외가 발생하면, try 블록과 throw 구문 사이에 개입된 모든 함수 호출들이 스택에 올려 놓은 자동 수명 객체들의 소멸자들이 호출된다.
 		}
-		catch (bad_hmean& bg)		// bad_hmean 예외 데이터형을 포착할 수 있다.
+		catch (bad_hmean& bg)			// bad_hmean 예외 데이터형을 포착할 수 있다.
 		{
 			std::cerr << bg.what() << std::endl;
 			continue;
