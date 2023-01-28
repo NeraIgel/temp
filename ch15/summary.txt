@@ -94,7 +94,7 @@ ex)	double	x, y, z;
 		try
 		{
 			if (x == -y)					// throw 키워드는 예외의 발생을 나타낸다.
-				throw "exception";			// throw 키워드의 뒤에는 그 예외의 특징을 나타내는, 문자열이나 객체와 같은 하나의 값이 뒤따른다.
+				throw "hmean exception";		// throw 키워드의 뒤에는 그 예외의 특징을 나타내는, 문자열이나 객체와 같은 하나의 값이 뒤따른다.
 			z = 2.0 * x * y / (x + y);
 		};
 		catch (const char *s)					// catch 키워드는 예외의 포착을 나타낸다.
@@ -110,21 +110,12 @@ throw-catch 메커니즘은 함수 매개변수의 전달 메커니즘과 많이
 throw가 복사본을 생성할지라도 catch 블록이 참조를 지정하는 이유는 public 상속 관계에서 기본 클래스의 참조가 파생 클래스 객체도 참조할 수 있다는 특성 때문이다.
 ex)	class bad_hmean {
 	public:
-		explicit bad_hmean(double a = 0.0, double b = 0.0);
-		const char	*what() const;
+		explicit bad_hmean(double a = 0.0, double b = 0.0) : _a(a), _b(b)	{}
+		const char	*what() const						{ return("hmean exception"); }
 	private:
 		double	_a;
 		double	_b;
 	};
-
-	bad_hmean::bad_hmean(double a, double b)
-		: _a(a), _b(b)
-	{}
-
-	const char	*bad_hmean::what() const
-	{
-		return ("");
-	}
 
 	double	hmean(double a, double b)	throw(bad_hmean)
 	{
@@ -148,7 +139,7 @@ ex)	class bad_hmean {
 		}
 		catch (...)			// 어떤 예외 데이터형도 포착할 수 있다.
 		{
-			std::cerr << "" << std::endl;
+			std::cerr << "unknown exception" << std::endl;
 			std::exit(EXIT_FAILURE);
 		}
 	}
