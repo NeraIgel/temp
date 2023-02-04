@@ -27,7 +27,7 @@ ex)	class Tv;
 		int	_channel;
 	};
 
-	void	Remote::setChannel(Tv& t, int c)
+	inline void	Remote::setChannel(Tv& t, int c)
 	{
 		t._channel = c;
 	}
