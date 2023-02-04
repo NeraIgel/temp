@@ -199,7 +199,7 @@ ex)	#include <iostream>
 		catch (const hmean::bad_hmean& bh)		// 예외 클래스들의 상속 계층을 사용할 경우에, 가장 늦게 파생된 클래스의 예외가 가장 먼저 포착되도록 순서를 배치해야 한다.
 		{
 			std::cerr << bh.what() << std::endl;
-			throw;					// 예외를 재발생시킨다.
+			throw;					// 예외를 재발생시키면, 다음 catch 블록이 std::logic_error형이므로 예외를 포착할 수 있다.
 		}
 		catch (const std::logic_error& e)
 		{
