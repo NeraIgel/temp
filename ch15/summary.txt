@@ -133,9 +133,9 @@ ex)	class bad_hmean {
 			z = hmean(x, y);
 			std::cout << "The harmonic mean of " << x << " and " << y << " is " << z << std::endl;
 		}
-		catch (const bad_hmean& bg)
+		catch (const bad_hmean& bh)
 		{
-			std::cerr << bg.what() << std::endl;
+			std::cerr << bh.what() << std::endl;
 			continue;
 		}
 		catch (...)					// 어떤 예외라도 포착하고 싶다면, 예외 데이터형에 생략 부호(...)를 사용하면 된다.
@@ -153,21 +153,59 @@ C++11부터 함수의 예외지정은 무시되며, 다만 그중에서도 throw
 C++ 컴파일러들은 다른 예외 클래스들의 기본 클래스로 사용하는 std::exception 클래스를 정의하고 있다.
 또한, 사용자가 작성하는 코드는 std::exception 객체를 발생시키거나, std::exception 클래스를 기본 클래스로 사용할 수 있다.
 이 때, std::exception 클래스는 what()이라는 하나의 가상 멤버 함수를 제공하며, 그 것은 시스템의 특성에 따라 하나의 문자열을 리턴한다.
-ex)	#include <exception>
-	
-	class bad_hmean : public std::exception {
+ex)	#include <iostream>
+	#include <stdexcept>
+
+	class hmean {
 	public:
-		virtual const char	*what() const throw()	{ return("hmean exception"); }
+		class bad_hmean : public std::logic_error {
+		public:
+			virtual const char	*what() const throw();
+		};
+
+		explicit hmean(double a, double b);
+		double	getResult() const;
+	private:
+		double	_a;
+		double	_b;
+		double	_result;
 	};
 
-	try
+	const char	*hmean::bad_hmean::what() const throw()
 	{
+		return("hmean exception");
 	}
-	catch (const bad_hmean& bg)
+
+	hmean::hmean(double a, double b)
+		: _a(a), _b(b)
 	{
+		_result = 2.0 * _a * _b / (_a + _b);
 	}
-	catch (const std::exception& e)
+
+	double	hmean::getResult() const
 	{
+		return (_result);
+	}
+
+	double	x, y;
+
+	while (std::cin >> x >> y)
+	{
+		try
+		{
+			hmean	hm(x, y);
+			std::cout << "The harmonic mean of " << x << " and " << y << " is " << hm.getResult() << std::endl;
+		}
+		catch (const hmean::bad_hmean& bh)				// 예외 클래스들의 상속 계층을 사용할 경우에, 가장 늦게 파생된 클래스의 예외가 가장 먼저 포착되도록, catch 블록들의 순서를 배치해야 한다.
+		{
+			std::cerr << bh.what() << std::endl;
+			throw;										// 예외를 재발생시킨다.
+		}
+		catch (const std::logic_error& e)
+		{
+			std::cerr << e.what() << std::endl;
+			continue;
+		}
 	}
 
 	// page 1168~1175
