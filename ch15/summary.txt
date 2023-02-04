@@ -111,7 +111,7 @@ throw가 복사본을 생성할지라도 catch 블록이 참조를 지정하는 
 ex)	class bad_hmean {
 	public:
 		explicit bad_hmean(double a = 0.0, double b = 0.0) : _a(a), _b(b)	{}
-		const char	*what() const						{ return("hmean exception"); }
+		const char	*what() const throw()					{ return("hmean exception"); }
 	private:
 		double	_a;
 		double	_b;
@@ -154,6 +154,21 @@ C++ 컴파일러들은 다른 예외 클래스들의 기본 클래스로 사용�
 또한, 사용자가 작성하는 코드는 std::exception 객체를 발생시키거나, std::exception 클래스를 기본 클래스로 사용할 수 있다.
 이 때, std::exception 클래스는 what()이라는 하나의 가상 멤버 함수를 제공하며, 그 것은 시스템의 특성에 따라 하나의 문자열을 리턴한다.
 ex)	#include <exception>
+	
+	class bad_hmean : public std::exception {
+	public:
+		virtual const char	*what() const throw()	{ return("hmean exception"); }
+	};
+
+	try
+	{
+	}
+	catch (const bad_hmean& bg)
+	{
+	}
+	catch (const std::exception& e)
+	{
+	}
 
 	// page 1168~1175
 	// 예외 재발생 케이스 추가 (c.f. page 1152)
