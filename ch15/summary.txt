@@ -120,7 +120,7 @@ ex)	class bad_hmean {
 	double	hmean(double a, double b)	throw(bad_hmean)
 	{
 		if (a == -b)
-			throw bad_hmean(a, b);			// 예외가 발생하면, try 블록과 throw 구문 사이에 개입된 모든 함수 호출들이 스택에 올려 놓은 자동 수명 객체들이 소멸된다.
+			throw bad_hmean(a, b);			// 예외가 발생하면 try 블록과 throw 구문 사이에 개입된 모든 함수 호출들이 스택에 올려 놓은 자동 수명 객체들이 소멸된다.
 		return (2.0 * a * b / (a + b));
 	}
 
