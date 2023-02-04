@@ -179,6 +179,8 @@ ex)	#include <iostream>
 	hmean::hmean(double a, double b)
 		: _a(a), _b(b)
 	{
+		if (a == -b)
+			throw bad_hmean();
 		_result = 2.0 * _a * _b / (_a + _b);
 	}
 
