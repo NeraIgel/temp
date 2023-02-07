@@ -35,15 +35,15 @@ Array ADT를 정의하면 다음과 같다.
 	b. 희소 행렬
 		int	main(void)
 		{
-			int		array1[ROWS][COLS] = {
-						{2, 3, 0},
-						{7, 0, 5}
-					};
-			int		array2[ROWS][COLS] = {
-						{1, 0, 0},
-						{1, 0, 0}
-					};
-			int		array3[ROWS][COLS];
+			int	array1[ROWS][COLS] = {
+					{2, 3, 0},
+					{7, 0, 5}
+				};
+			int	array2[ROWS][COLS] = {
+					{1, 0, 0},
+					{1, 0, 0}
+				};
+			int	array3[ROWS][COLS];
 
 			matrix_add(array1, array2, array3);
 			return (0);
