@@ -19,7 +19,7 @@ Array ADT를 정의하면 다음과 같다.
 	a. 다항식
 		typedef struct s_polynomial
 		{
-			int	degree;				// 다항식의 차수
+			int	degree;			// 다항식의 차수
 			float	coef[MAX_DEGREE];	// 다항식의 계수
 		}	t_polynomial;
 
