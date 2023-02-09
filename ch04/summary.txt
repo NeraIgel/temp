@@ -20,11 +20,11 @@
 두 번째는 연결 리스트를 이용하여 구현하는 방법이다. 이 경우, 순회/탐색 시 오버헤드가 발생한다.
 
 	a. 배열을 이용한 리스트 ADT
-		typedef struct s_listType
+		typedef struct s_listArrayType
 		{
 			element	list[MAX_LIST_SIZE];
 			size_t	size;
-		}	t_listType;
+		}	t_listArrayType;
 	b. 연결 리스트를 이용한 리스트 ADT
 		typedef struct s_list
 		{
@@ -33,11 +33,11 @@
 			struct s_list	*next;
 		}	t_list;
 
-		typedef struct s_listType
+		typedef struct s_listLinkedType
 		{
 			t_list	*head;
 			size_t	size;
-		}	t_listType;
+		}	t_listLinkedType;
 
 (3) 연결 리스트
 배열은 메모리 안에 순차적으로 공간이 할당되어 있는 순차적 표현이다.
@@ -61,4 +61,5 @@
 (4) 리스트 ADT 연산 vs 연결 리스트 연산
 리스트의 항목들을 순차적으로 방문하면서 어떤 작업을 해야 되는 경우, 리스트 ADT 연산보다 연결 리스트가 제공하는 포인터를 이용한 연산이 더 효율적이다.
 따라서, 이런 경우에는 리스트 ADT보다는 직접 연결 리스트가 제공하는 함수, 또는 포인터를 이용한 작업이 효율성 측면에서 더 좋다.
+
 객체 지향 언어들에서는 이런 경우를 위하여 반복자(Iterator)라는 개념으로 순차적으로 객체를 효율적으로 방문하면서 작업할 수 있도록 각종 연산을 제공해주기도 한다.
