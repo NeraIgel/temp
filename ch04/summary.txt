@@ -19,24 +19,25 @@
 첫 번째는 배열을 이용하여 구현하는 방법이다. 이 경우, 삽입/삭제 시 오버헤드가 발생한다.
 두 번째는 연결 리스트를 이용하여 구현하는 방법이다. 이 경우, 순회/탐색 시 오버헤드가 발생한다.
 	a. 배열을 이용한 리스트 ADT
-		typedef struct s_listArrayType
+		typdef struct s_ArrayListType
 		{
-			element	list[MAX_LIST_SIZE];
+			element	list[MAX_LIST_TYPE];
 			size_t	size;
-		}	t_listArrayType;
+		}	t_ArrayListType;
+
 	b. 연결 리스트를 이용한 리스트 ADT
-		typdef struct s_listNode
+		typedef struct s_ListNode
 		{
 			void			*content;
-			struct s_listNode	*prev;
-			struct s_listNode	*next;
-		}	t_listNode;
-		
-		typedef struct s_listLinkedType
+			struct s_ListNode	*prev;
+			struct s_ListNode	*next;
+		}	t_ListNode;
+
+		typedef struct s_LinkedListType
 		{
-			t_listNode	*head;
+			t_ListNode	*head;
 			size_t		size;
-		}	t_listLinkedType;
+		}	t_LinkedListType;
 
 (3) 연결 리스트
 배열은 메모리 안에 순차적으로 공간이 할당되어 있는 순차적 표현이다.
