@@ -4,15 +4,17 @@
 (1) 리스트 ADT
 -. 객체 : n개의 element형으로 구성된 순서있는 컬렉션
 -. 연산 : 
-	a. add_last(list, item) ::= 맨끝에 요소를 추가한다.
-	b. add_first(list, item) ::= 맨앞에 요소를 추가한다.
-	c. add(list, pos, item) ::= pos 위치에 요소를 추가한다.
-	d. delete(list, pos) ::= pos 위치의 요소를 제거한다.
-	e. clear(list) ::= 리스트의 모든 요소를 제거한다.
-	f. get_length(list) ::= 리스트의 길이를 구한다.
-	g. is_empty(list) ::= 리스트가 비어있는지를 검사한다.
-	h. get_entry(list, pos) ::= pos 위치의 요소를 반환한다.
-	i. replace(list, pos, item) ::= pos 위치의 요소를 item으로 바꾼다.
+	a. create() ::= 리스트를 생성한다.
+	b. add_last(list, item) ::= 맨끝에 요소를 추가한다.
+	c. add_first(list, item) ::= 맨앞에 요소를 추가한다.
+	d. add(list, pos, item) ::= pos 위치에 요소를 추가한다.
+	e. delete(list, pos) ::= pos 위치의 요소를 제거한다.
+	f. clear(list) ::= 리스트의 모든 요소를 제거한다.
+	g. get_length(list) ::= 리스트의 길이를 구한다.
+	h. is_empty(list) ::= 리스트가 비어있는지를 검사한다.
+	i. get_entry(list, pos) ::= pos 위치의 요소를 반환한다.
+	j. replace(list, pos, item) ::= pos 위치의 요소를 item으로 바꾼다.
+	k. is_in_list(list, item) ::= item이 리스트 안에 있는지를 검사한다.
 
 (2) 리스트 구현
 리스트를 구현하는 방법에는 크게 2가지가 있다.
