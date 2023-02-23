@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 18:22:53 by heha              #+#    #+#             */
-/*   Updated: 2023/02/22 18:14:36 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/23 20:44:40 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	ft::__advance(InputIt& it, typename ft::iterator_traits<InputIt>::differenc
 	}
 }
 
-template <typename BiDirIt>
-void	ft::__advance(BiDirIt& it, typename ft::iterator_traits<BiDirIt>::differece_type n, ft::bidirectional_iterator_tag)
+template <typename BidirIt>
+void	ft::__advance(BidirIt& it, typename ft::iterator_traits<BidirIt>::difference_type n, ft::bidirectional_iterator_tag)
 {
 	while (n > 0)
 	{
@@ -40,7 +40,7 @@ void	ft::__advance(BiDirIt& it, typename ft::iterator_traits<BiDirIt>::differece
 }
 
 template <typename RandIt>
-void	ft::__advance(RandIt& it, typename ft::iterator_traits<RandIt>::difference_type n, ft::random_access_iteator_tag)
+void	ft::__advance(RandIt& it, typename ft::iterator_traits<RandIt>::difference_type n, ft::random_access_iterator_tag)
 {
 	it += n;
 }

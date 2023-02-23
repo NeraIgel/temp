@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:59:36 by heha              #+#    #+#             */
-/*   Updated: 2023/02/22 18:26:09 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/23 20:44:15 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 # define FT_ITERATOR_HPP
 
 # include <cstddef>
-# include <iterator>
+//# include <iterator>
 
 namespace ft
 {
-	typedef std::input_iterator_tag					input_iterator_tag;
-	typedef std::output_iterator_tag				output_iterator_tag;
-	typedef std::forward_iterator_tag				forward_iterator_tag;
-	typedef std::bidirectional_iterator_tag			bidirectional_iterator_tag;
-	typedef std::random_access_iterator_tag			random_access_iterator_tag;
+//	typedef std::input_iterator_tag					input_iterator_tag;
+//	typedef std::output_iterator_tag				output_iterator_tag;
+//	typedef std::forward_iterator_tag				forward_iterator_tag;
+//	typedef std::bidirectional_iterator_tag			bidirectional_iterator_tag;
+//	typedef std::random_access_iterator_tag			random_access_iterator_tag;
 
 	struct input_iterator_tag												{};
 	struct output_iterator_tag												{};
@@ -101,7 +101,7 @@ namespace ft
 		reverse_iterator	operator+(difference_type n) const;
 		reverse_iterator	operator-(difference_type n) const;
 		reverse_iterator&	operator+=(difference_type n);
-		reverse_iterator&	operator-=(differnece_type n);
+		reverse_iterator&	operator-=(difference_type n);
 
 	protected:
 		iterator_type		current;
@@ -122,8 +122,8 @@ namespace ft
 
 	template <typename InputIt>
 	void	__advance(InputIt& it, typename iterator_traits<InputIt>::difference_type n, input_iterator_tag);
-	template <typename BiDirIt>
-	void	__advance(BiDirIt& it, typename iterator_traits<BiDirIt>::difference_type n, bidirectional_iterator_tag);
+	template <typename BidirIt>
+	void	__advance(BidirIt& it, typename iterator_traits<BidirIt>::difference_type n, bidirectional_iterator_tag);
 	template <typename RandIt>
 	void	__advance(RandIt& it, typename iterator_traits<RandIt>::difference_type n, random_access_iterator_tag);
 	template <typename InputIt, typename Distance>
