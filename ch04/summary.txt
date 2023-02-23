@@ -31,6 +31,7 @@
 			struct __s_node	*prev;
 			struct __s_node	*next;
 		}	__t_node;
+		
 		typedef struct s_listLinkedType
 		{
 			__t_node	*head;
