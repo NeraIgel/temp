@@ -4,11 +4,11 @@
 
 # include <stddef.h>
 # include <stdbool.h>
-# include "__ft_list.h"
+# include "__list.h"
 
 typedef struct s_list
 {
-	__t_list	*head;
+	__t_node	*head;
 	size_t		size;
 }	t_list;
 
