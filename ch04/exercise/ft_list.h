@@ -1,33 +1,16 @@
+#pragma once
 #ifndef FT_LIST_H
 # define FT_LIST_H
 
-# include <stdlib.h>
+# include <stddef.h>
 # include <stdbool.h>
-
-typedef struct s_node
-{
-	void			*content;
-	struct s_node	*prev;
-	struct s_node	*next;
-}	t_node;
+# include "__ft_list.h"
 
 typedef struct s_list
 {
-	t_node	*head;
-	size_t	size;
+	__t_list	*head;
+	size_t		size;
 }	t_list;
-
-void	ft_node_init(t_node *head);
-t_node	*ft_node_new(void *content);
-t_node	*ft_node_last(const t_node *head);
-t_node	*ft_node_first(const t_node *head);
-t_node	*ft_node_at(const t_node *head, size_t pos);
-void	ft_node_add(t_node *prev, t_node *new);
-void	ft_node_add_back(t_node *head, t_node *new);
-void	ft_node_add_front(t_node *head, t_node *new);
-void	ft_node_delone(t_node *node, void (*del)(void *));
-void	ft_node_clear(t_node *head, void (*del)(void *));
-void	ft_node_iter(t_node *head, void (*f)(void *));
 
 void	ft_list_create(t_list *l);
 void	ft_list_destroy(t_list *l);
