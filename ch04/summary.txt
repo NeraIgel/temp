@@ -25,16 +25,16 @@
 			size_t	size;
 		}
 	b. 연결 리스트를 이용한 리스트 ADT
-		typdef struct __s_node
+		typdef struct s_listNode
 		{
-			void		*content;
-			struct __s_node	*prev;
-			struct __s_node	*next;
-		}	__t_node;
+			void			*content;
+			struct s_listNode	*prev;
+			struct s_listNode	*next;
+		}	t_listNode;
 		
 		typedef struct s_listLinkedType
 		{
-			__t_node	*head;
+			t_listNode	*head;
 			size_t		size;
 		}	t_listLinkedType;
 
