@@ -14,7 +14,6 @@
 	h. is_empty(list) ::= 리스트가 비어있는지를 검사한다.
 	i. get_entry(list, pos) ::= pos 위치의 요소를 반환한다.
 	j. replace(list, pos, item) ::= pos 위치의 요소를 item으로 바꾼다.
-	k. is_in_list(list, item) ::= item이 리스트 안에 있는지를 검사한다.
 
 (2) 리스트 구현
 리스트를 구현하는 방법에는 크게 2가지가 있다.
