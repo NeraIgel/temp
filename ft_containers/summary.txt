@@ -53,15 +53,18 @@
 	* https://scvgoe.github.io/2019-07-06-Exception-Safety/
 	* https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=mug896&logNo=140168091611
 
+	* https://42born2code.slack.com/archives/CMX2R5JSW/p1628521358211700
+	* TBD / std::iterator_tag
+	* TBD / ft::reverse_iterator::operator[] 구현부가 명세와 다른 것은 std::ptrdiff_t underflow 방지 목적인가?
+	* TBD / https://42born2code.slack.com/archives/CMX2R5JSW/p1641220574022700?thread_ts=1641209232.013100&cid=CMX2R5JSW
+	* TBD / ft::vector::operator==() 비멤버 함수에서 size를 미리 호출하는 이유는? 컴파일타임 에러 확인 목적인건가?
+
 	* https://stackoverflow.com/questions/839958/custom-iterator-in-c
 	* https://stackoverflow.com/questions/3582608/how-to-correctly-implement-custom-iterators-and-const-iterators
 	* https://stackoverflow.com/questions/8054273/how-to-implement-an-stl-style-iterator-and-avoid-common-pitfalls
 	* https://stackoverflow.com/questions/7758580/writing-your-own-stl-container/7759622#7759622
-	* https://42born2code.slack.com/archives/CMX2R5JSW/p1628521358211700
-	* TBD / ft::vector::operator==() 비멤버 함수에서 size를 미리 호출하는 이유는? 컴파일타임 에러 확인 목적인건가?
 
 	* https://gcc.gnu.org/legacy-ml/gcc/2011-08/msg00221.html
-	* https://stackoverflow.com/questions/16609041/c-stl-what-does-base-do
 	* https://stackoverflow.com/questions/28516686/does-max-size-of-stdvectorchar-have-a-bug
 	* https://carnation-visage-cc7.notion.site/ft_containers-fabfdb4bdcce4f139c900737acbb04ff
 

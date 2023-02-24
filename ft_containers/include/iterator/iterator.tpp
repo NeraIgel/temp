@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 18:22:53 by heha              #+#    #+#             */
-/*   Updated: 2023/02/23 20:44:40 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/24 13:27:15 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,5 @@ typename ft::iterator_traits<RandIt>::difference_type	ft::__distance(RandIt firs
 template <typename InputIt>
 typename ft::iterator_traits<InputIt>::difference_type	ft::distance(InputIt first, InputIt last)
 {
-	ft::__distance(first, last, typename ft::iterator_traits<InputIt>::iterator_category());
+	return (ft::__distance(first, last, typename ft::iterator_traits<InputIt>::iterator_category()));
 }

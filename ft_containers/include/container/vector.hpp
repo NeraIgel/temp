@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:16:34 by heha              #+#    #+#             */
-/*   Updated: 2023/02/20 14:48:08 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/24 19:51:42 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 # include <memory>
 # include <cstddef>
 //# include <stdexcept>
-# include <iterator>	// TBD
+# include "iterator.hpp"
 # include "algorithm.hpp"
+# include "__vector_base.hpp"
+# include "__vector_iterator.hpp"
 
 // ************************************************************************** //
 //                            vector class template                           //
@@ -37,11 +39,11 @@ namespace ft
 		typedef typename allocator_type::const_reference					const_reference;
 		typedef typename allocator_type::pointer							pointer;
 		typedef typename allocator_type::const_pointer						const_pointer;
-//		typedef std::random_access_iterator_tag<value_type>					iterator;				// TBD
-//		typedef std::random_access_iterator_tag<const value_type>			const_iterator;			// TBD
-		typedef std::reverse_iterator<iterator>								reverse_iterator;		// TBD
-		typedef std::reverse_iterator<const_iterator>						const_reverse_iterator;	// TBD
-		typedef typename std::iterator_traits<iterator>::difference_type	difference_type;		// TBD
+		typedef ft::__vector_iterator<pointer>								iterator;
+		typedef ft::__vector_iterator<const_pointer>						const_iterator;
+		typedef ft::reverse_iterator<iterator>								reverse_iterator;
+		typedef ft::reverse_iterator<const_iterator>						const_reverse_iterator;
+		typedef typename ft::iterator_traits<iterator>::difference_type		difference_type;
 		typedef std::size_t													size_type;
 
 		explicit vector(const allocator_type& alloc = allocator_type());

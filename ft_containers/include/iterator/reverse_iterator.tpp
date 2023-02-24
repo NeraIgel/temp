@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 17:32:25 by heha              #+#    #+#             */
-/*   Updated: 2023/02/23 21:06:18 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/24 17:00:52 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ typename ft::reverse_iterator<Iter>::pointer	ft::reverse_iterator<Iter>::operato
 template <typename Iter>
 typename ft::reverse_iterator<Iter>::reference	ft::reverse_iterator<Iter>::operator[](typename ft::reverse_iterator<Iter>::difference_type n) const
 {
-	return (current[-n - 1]);
+	//return (base()[-n - 1]);
+	return (*(*this + n));
 }
 
 template <typename Iter>

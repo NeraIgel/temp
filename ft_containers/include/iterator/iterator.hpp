@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:59:36 by heha              #+#    #+#             */
-/*   Updated: 2023/02/23 20:44:15 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/24 18:00:28 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,23 @@
 # define FT_ITERATOR_HPP
 
 # include <cstddef>
-//# include <iterator>
 
 namespace ft
 {
-//	typedef std::input_iterator_tag					input_iterator_tag;
-//	typedef std::output_iterator_tag				output_iterator_tag;
-//	typedef std::forward_iterator_tag				forward_iterator_tag;
-//	typedef std::bidirectional_iterator_tag			bidirectional_iterator_tag;
-//	typedef std::random_access_iterator_tag			random_access_iterator_tag;
-
+	// TBD
+#if defined(_ITERATOR_) || defined(_LIBCPP_ITERATOR) || defined(__GLIBCPP_INTERNAL_ITERATOR_H)
+	typedef std::input_iterator_tag				input_iterator_tag;
+	typedef std::output_iterator_tag			output_iterator_tag;
+	typedef std::forward_iterator_tag			forward_iterator_tag;
+	typedef std::bidirectional_iterator_tag		bidirectional_iterator_tag;
+	typedef std::random_access_iterator_tag		random_access_iterator_tag;
+#else
 	struct input_iterator_tag												{};
 	struct output_iterator_tag												{};
 	struct forward_iterator_tag			: public input_iterator_tag			{};
 	struct bidirectional_iterator_tag	: public forward_iterator_tag		{};
 	struct random_access_iterator_tag	: public bidirectional_iterator_tag	{};
+#endif
 
 	template <typename Category, typename T, typename Distance = std::ptrdiff_t, typename Pointer = T*, typename Reference = T&>
 	struct iterator {

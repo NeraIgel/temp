@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:52:36 by heha              #+#    #+#             */
-/*   Updated: 2023/02/17 16:03:09 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/24 17:19:49 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -269,7 +269,7 @@ ft::vector<T, Allocator>::~vector()
 template <typename T, typename Allocator>
 bool	ft::operator==(const ft::vector<T, Allocator>& lhs, const ft::vector<T, Allocator>& rhs)
 {
-	const typename ft::vector<T, Allocator>::size_type	size = lhs.size();
+	const typename ft::vector<T, Allocator>::size_type	size = lhs.size();	// TBD
 	return (size == rhs.size() &&
 			ft_equal(lhs.begin(), lhs.end(), rhs.begin()));
 }
