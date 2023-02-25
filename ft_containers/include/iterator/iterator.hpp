@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:59:36 by heha              #+#    #+#             */
-/*   Updated: 2023/02/24 18:00:28 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/25 19:02:55 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 namespace ft
 {
-	// TBD
+// For compatibility with the std::iterator_tag used by some std::algorithm functions
 #if defined(_ITERATOR_) || defined(_LIBCPP_ITERATOR) || defined(__GLIBCPP_INTERNAL_ITERATOR_H)
 	typedef std::input_iterator_tag				input_iterator_tag;
 	typedef std::output_iterator_tag			output_iterator_tag;
@@ -42,7 +42,7 @@ namespace ft
 		typedef Reference							reference;
 	};
 
-	template <typename Iter>
+	template <typename Iter>	// TBD
 	struct iterator_traits {
 		typedef typename Iter::difference_type		difference_type;
 		typedef typename Iter::value_type			value_type;

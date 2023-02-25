@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:02:13 by heha              #+#    #+#             */
-/*   Updated: 2023/02/24 19:02:31 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/25 19:46:24 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,7 @@
 namespace ft
 {
 	template <typename RandIt>
-	class __vector_iterator : public iterator<
-							  typename iterator_traits<RandIt>::iterator_category,
-							  typename iterator_traits<RandIt>::value_type,
-							  typename iterator_traits<RandIt>::difference_type,
-							  typename iterator_traits<RandIt>::pointer,
-							  typename iterator_traits<RandIt>::reference> {
+	class __vector_iterator {
 	
 	public:
 		typedef RandIt												iterator_type;
@@ -36,7 +31,7 @@ namespace ft
 
 		__vector_iterator();
 		template <typename U>
-		__vector_iterator(const __vector_iterator<U>& other);
+		__vector_iterator(const __vector_iterator<U>& other);	// TBD
 		template <typename U>
 		__vector_iterator& operator=(const __vector_iterator<U>& other);
 		~__vector_iterator();
@@ -69,7 +64,7 @@ namespace ft
 	template <typename RandIt> bool	operator>=(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs);
 
 	template <typename RandIt>
-	__vector_iterator<RandIt>	operator+(typename __vector_iterator<RandIt>::difference_type n, const __vector_iterator<RandIt>& it);
+	__vector_iterator<RandIt>	operator+(typename __vector_iterator<RandIt>::difference_type n, __vector_iterator<RandIt> it);
 	template <typename RandIt>
 	typename __vector_iterator<RandIt>::difference_type	operator-(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs);
 }

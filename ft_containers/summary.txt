@@ -44,6 +44,12 @@
 	b. https://modoocode.com/295
 	c. https://80000coding.oopy.io/ad7da304-36e9-4db0-aba7-db439cc8bac2
 	d. https://github.com/yongjulejule/ft_containers/tree/fa4e0535dcdd04d911ac8c2ae5bf5c8e0cdd73d7
+		d-a. algorithm / min								// TBD (ft::less로 대체 가능할듯)
+		d-b. functional / x									// TBD (ft::min 대신 ft::less 사용하면 될듯)
+		d-c. type_traits / is_same, void_t						// TBD (ft::enable_if와 ft::is_integral 활용한 방법을 고민해볼 것)
+		d-d. utility / std::functional, swap, select_first, identity		// TBD (어떤 목적으로 정의되었는지 확인해보고, 나만의 방법으로 풀어나갈 것)
+		d-e. iterator / ft::type_traits, iterator_traits, __is_iterator	// TBD (iterator_traits와 __is_iterator는 xcode library를 분석해보고, 나만의 방법으로 풀어나갈 것 | ft::is_same 구현 여부 고민해볼 것)
+		d-f. __vector_iterator / copy_constructor, constructor		// TBD (copy_constructor에서 enable_if 활용하는 방법을 xcode_library를 분석해보고, 나만의 방법으로 풀어나갈 것)
 
 	* https://stackoverflow.com/questions/38357089/why-does-stdtransform-and-similar-cast-the-for-loop-increment-to-void
 	* https://stackoverflow.com/questions/10473284/a-struct-has-public-inheritance-by-default

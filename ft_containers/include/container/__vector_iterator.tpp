@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:57:01 by heha              #+#    #+#             */
-/*   Updated: 2023/02/24 19:43:02 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/25 19:46:47 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ft::__vector_iterator<RandIt>::__vector_iterator()
 
 template <typename RandIt>
 template <typename U>
-ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<U>& other)
+ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<U>& other)	// TBD
 	: __current(other.base())
 {}
 
@@ -67,7 +67,7 @@ typename ft::__vector_iterator<RandIt>::pointer	ft::__vector_iterator<RandIt>::o
 template <typename RandIt>
 typename ft::__vector_iterator<RandIt>::reference	ft::__vector_iterator<RandIt>::operator[](typename ft::__vector_iterator<RandIt>::difference_type n) const
 {
-	return (*(*this + n));
+	return (__current[n]);
 }
 
 template <typename RandIt>
@@ -171,9 +171,10 @@ bool	ft::operator>=(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>	operator+(typename ft::__vector_iterator<RandIt>::difference_type n, const ft::__vector_iterator<RandIt>& it)
+ft::__vector_iterator<RandIt>	operator+(typename ft::__vector_iterator<RandIt>::difference_type n, ft::__vector_iterator<RandIt> it)
 {
-	return (ft::__vector_iterator<RandIt>(it.base() + n));
+	it += n;
+	return (it);
 }
 
 template <typename RandIt>
