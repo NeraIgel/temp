@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:57:01 by heha              #+#    #+#             */
-/*   Updated: 2023/02/25 19:46:47 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/27 19:30:48 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ft::__vector_iterator<RandIt>::__vector_iterator()
 
 template <typename RandIt>
 template <typename U>
-ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<U>& other)	// TBD
+ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<U>& other)
 	: __current(other.base())
 {}
 

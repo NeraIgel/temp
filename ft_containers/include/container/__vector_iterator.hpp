@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:02:13 by heha              #+#    #+#             */
-/*   Updated: 2023/02/25 19:46:24 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/27 19:32:46 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ namespace ft
 
 		__vector_iterator();
 		template <typename U>
-		__vector_iterator(const __vector_iterator<U>& other);	// TBD
+		__vector_iterator(const __vector_iterator<U>& other, typename enable_if<__libft_is_random_access_iterator<U>::value>::type* = 0);
 		template <typename U>
 		__vector_iterator& operator=(const __vector_iterator<U>& other);
 		~__vector_iterator();

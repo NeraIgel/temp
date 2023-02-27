@@ -46,10 +46,10 @@
 	d. https://github.com/yongjulejule/ft_containers/tree/fa4e0535dcdd04d911ac8c2ae5bf5c8e0cdd73d7
 		d-a. algorithm / min								// TBD (ft::less로 대체 가능할듯)
 		d-b. functional / x									// TBD (ft::min 대신 ft::less 사용하면 될듯)
-		d-c. type_traits / is_same, void_t						// TBD (ft::enable_if와 ft::is_integral 활용한 방법을 고민해볼 것)
+		d-c. type_traits / void_t								// TBD (void_t 필요 여부 고민해볼 것)
 		d-d. utility / std::functional, swap, select_first, identity		// TBD (어떤 목적으로 정의되었는지 확인해보고, 나만의 방법으로 풀어나갈 것)
-		d-e. iterator / ft::type_traits, iterator_traits, __is_iterator	// TBD (iterator_traits와 __is_iterator는 xcode library를 분석해보고, 나만의 방법으로 풀어나갈 것 | ft::is_same 구현 여부 고민해볼 것)
-		d-f. __vector_iterator / copy_constructor, constructor		// TBD (copy_constructor에서 enable_if 활용하는 방법을 xcode_library를 분석해보고, 나만의 방법으로 풀어나갈 것)
+		d-e. iterator / iterator_traits							// TBD (iterator_traits 개선 여부 고민해볼 것)
+		d-f. __vector_iterator / constructor						// TBD (constructor 비공개 이유 조사해볼 것)
 
 	* https://stackoverflow.com/questions/38357089/why-does-stdtransform-and-similar-cast-the-for-loop-increment-to-void
 	* https://stackoverflow.com/questions/10473284/a-struct-has-public-inheritance-by-default
@@ -58,10 +58,11 @@
 	* https://en.wikipedia.org/wiki/Exception_safety
 	* https://scvgoe.github.io/2019-07-06-Exception-Safety/
 	* https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=mug896&logNo=140168091611
-
-	* https://42born2code.slack.com/archives/CMX2R5JSW/p1628521358211700
-	* TBD / std::iterator_tag
+	* https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error
+	* https://stackoverflow.com/questions/4335962/how-to-check-if-a-template-parameter-is-an-iterator-type-or-not
+	* https://stackoverflow.com/questions/69882795/what-is-a-difference-between-iterator-category-vs-iterator-category-in-stdit
 	* TBD / ft::reverse_iterator::operator[] 구현부가 명세와 다른 것은 std::ptrdiff_t underflow 방지 목적인가?
+	* TBD / https://42born2code.slack.com/archives/CMX2R5JSW/p1628521358211700
 	* TBD / https://42born2code.slack.com/archives/CMX2R5JSW/p1641220574022700?thread_ts=1641209232.013100&cid=CMX2R5JSW
 	* TBD / ft::vector::operator==() 비멤버 함수에서 size를 미리 호출하는 이유는? 컴파일타임 에러 확인 목적인건가?
 
