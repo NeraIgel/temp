@@ -1,7 +1,7 @@
 [ft_containers]
 -. 개요 정리
 	a. C++ 표준 템플릿 라이브러리의 몇 가지 컨테이너 유형을 구현한다. (vector, stack, map, set)
-	b. C++98 표준을 준수해야 하므로, 이후 기능은 구현하면 안되지만 모든 C++98 기능(더 이상 사용되지 않는 기능 포함)들은 구현한다.
+	b. C++98 표준을 준수해야 하므로, 컨테이너의 이후 기능은 구현하면 안되지만 모든 C++98 기능(더 이상 사용되지 않는 기능 포함)들은 구현한다.
 
 	* 추가 구현 항목
 		a. std::iterator_traits
@@ -46,10 +46,8 @@
 	d. https://github.com/yongjulejule/ft_containers/tree/fa4e0535dcdd04d911ac8c2ae5bf5c8e0cdd73d7
 		d-a. algorithm / min								// TBD (ft::less로 대체 가능할듯)
 		d-b. functional / x									// TBD (ft::min 대신 ft::less 사용하면 될듯)
-		d-c. type_traits / void_t								// TBD (void_t 필요 여부 고민해볼 것)
-		d-d. utility / std::functional, swap, select_first, identity		// TBD (어떤 목적으로 정의되었는지 확인해보고, 나만의 방법으로 풀어나갈 것)
-		d-e. iterator / iterator_traits							// TBD (iterator_traits 개선 여부 고민해볼 것)
-		d-f. __vector_iterator / constructor						// TBD (constructor 비공개 이유 조사해볼 것)
+		d-c. utility / std::functional, swap, select_first, identity		// TBD (어떤 목적으로 정의되었는지 확인해보고, 나만의 방법으로 풀어나갈 것)
+		d-d. __vector_iterator / constructor					// TBD (private constructor 필요 여부 조사해보고, 나만의 방법으로 풀어나갈 것)
 
 	* https://stackoverflow.com/questions/38357089/why-does-stdtransform-and-similar-cast-the-for-loop-increment-to-void
 	* https://stackoverflow.com/questions/10473284/a-struct-has-public-inheritance-by-default
@@ -63,7 +61,7 @@
 	* https://stackoverflow.com/questions/69882795/what-is-a-difference-between-iterator-category-vs-iterator-category-in-stdit
 	* TBD / ft::reverse_iterator::operator[] 구현부가 명세와 다른 것은 std::ptrdiff_t underflow 방지 목적인가?
 	* TBD / https://42born2code.slack.com/archives/CMX2R5JSW/p1628521358211700
-	* TBD / https://42born2code.slack.com/archives/CMX2R5JSW/p1641220574022700?thread_ts=1641209232.013100&cid=CMX2R5JSW
+	* TBD / ft::__vector_iterator::constructor 비공개 목적 확인해보기
 	* TBD / ft::vector::operator==() 비멤버 함수에서 size를 미리 호출하는 이유는? 컴파일타임 에러 확인 목적인건가?
 
 	* https://stackoverflow.com/questions/839958/custom-iterator-in-c

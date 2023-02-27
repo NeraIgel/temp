@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:59:36 by heha              #+#    #+#             */
-/*   Updated: 2023/02/27 19:20:08 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/27 21:22:24 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ namespace ft
 		typedef Reference							reference;
 	};
 
-	template <typename Iter>	// TBD
+	template <typename Iter>
 	struct iterator_traits {
 		typedef typename Iter::difference_type		difference_type;
 		typedef typename Iter::value_type			value_type;
