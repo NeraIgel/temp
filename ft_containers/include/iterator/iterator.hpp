@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:59:36 by heha              #+#    #+#             */
-/*   Updated: 2023/02/27 21:22:24 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/28 14:53:10 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,10 +154,10 @@ namespace ft
 	template <typename Iter, bool = __libft_has_iterator_category<iterator_traits<Iter> >::value>
 	struct __libft_has_iterator_category_convertible_to_input_iterator
 		: public integral_constant<bool,
-			__libft_is_same<typename iterator_traits<Iter>::iterator_category, input_iterator_tag>::value ||
-			 __libft_is_same<typename iterator_traits<Iter>::iterator_category, forward_iterator_tag>::value ||
-			 __libft_is_same<typename iterator_traits<Iter>::iterator_category, bidirectional_iterator_tag>::value ||
-			 __libft_is_same<typename iterator_traits<Iter>::iterator_category, random_access_iterator_tag>::value> {};
+			is_same<typename iterator_traits<Iter>::iterator_category, input_iterator_tag>::value ||
+			 is_same<typename iterator_traits<Iter>::iterator_category, forward_iterator_tag>::value ||
+			 is_same<typename iterator_traits<Iter>::iterator_category, bidirectional_iterator_tag>::value ||
+			 is_same<typename iterator_traits<Iter>::iterator_category, random_access_iterator_tag>::value> {};
 	template <typename Iter>
 	struct __libft_has_iterator_category_convertible_to_input_iterator<Iter, false>
 		: public false_type {};
@@ -166,9 +166,9 @@ namespace ft
 	template <typename Iter, bool = __libft_has_iterator_category<iterator_traits<Iter> >::value>
 	struct __libft_has_iterator_category_convertible_to_forward_iterator
 		: public integral_constant<bool,
-			__libft_is_same<typename iterator_traits<Iter>::iterator_category, forward_iterator_tag>::value ||
-			 __libft_is_same<typename iterator_traits<Iter>::iterator_category, bidirectional_iterator_tag>::value ||
-			 __libft_is_same<typename iterator_traits<Iter>::iterator_category, random_access_iterator_tag>::value> {};
+			is_same<typename iterator_traits<Iter>::iterator_category, forward_iterator_tag>::value ||
+			 is_same<typename iterator_traits<Iter>::iterator_category, bidirectional_iterator_tag>::value ||
+			 is_same<typename iterator_traits<Iter>::iterator_category, random_access_iterator_tag>::value> {};
 	template <typename Iter>
 	struct __libft_has_iterator_category_convertible_to_forward_iterator<Iter, false>
 		: public false_type {};
@@ -177,8 +177,8 @@ namespace ft
 	template <typename Iter, bool = __libft_has_iterator_category<iterator_traits<Iter> >::value>
 	struct __libft_has_iterator_category_convertible_to_bidirectional_iterator
 		: public integral_constant<bool,
-			__libft_is_same<typename iterator_traits<Iter>::iterator_category, bidirectional_iterator_tag>::value ||
-			 __libft_is_same<typename iterator_traits<Iter>::iterator_category, random_access_iterator_tag>::value> {};
+			is_same<typename iterator_traits<Iter>::iterator_category, bidirectional_iterator_tag>::value ||
+			 is_same<typename iterator_traits<Iter>::iterator_category, random_access_iterator_tag>::value> {};
 	template <typename Iter>
 	struct __libft_has_iterator_category_convertible_to_bidirectional_iterator<Iter, false>
 		: public false_type {};
@@ -187,7 +187,7 @@ namespace ft
 	template <typename Iter, bool = __libft_has_iterator_category<iterator_traits<Iter> >::value>
 	struct __libft_has_iterator_category_convertible_to_random_access_iterator
 		: public integral_constant<bool,
-			__libft_is_same<typename iterator_traits<Iter>::iterator_category, random_access_iterator_tag>::value> {};
+			is_same<typename iterator_traits<Iter>::iterator_category, random_access_iterator_tag>::value> {};
 	template <typename Iter>
 	struct __libft_has_iterator_category_convertible_to_random_access_iterator<Iter, false>
 		: public false_type {};
@@ -196,7 +196,7 @@ namespace ft
 	template <typename Iter, bool = __libft_has_iterator_category<iterator_traits<Iter> >::value>
 	struct __libft_has_iterator_category_convertible_to_output_iterator
 		: public integral_constant<bool,
-			__libft_is_same<typename iterator_traits<Iter>::iterator_category, output_iterator_tag>::value> {};
+			is_same<typename iterator_traits<Iter>::iterator_category, output_iterator_tag>::value> {};
 	template <typename Iter>
 	struct __libft_has_iterator_category_convertible_to_output_iterator<Iter, false>
 		: public false_type {};
@@ -209,7 +209,7 @@ namespace ft
 	struct __libft_is_iterator<Iter, false>
 		: public false_type {};
 
-	// __libft_is_(x)_iterator
+	// __libft_is_(category)_iterator
 	template <typename Iter> struct __libft_is_input_iterator : public __libft_has_iterator_category_convertible_to_input_iterator<Iter> {};
 	template <typename Iter> struct __libft_is_output_iterator : public __libft_has_iterator_category_convertible_to_output_iterator<Iter> {};
 	template <typename Iter> struct __libft_is_forward_iterator : public __libft_has_iterator_category_convertible_to_forward_iterator<Iter> {};

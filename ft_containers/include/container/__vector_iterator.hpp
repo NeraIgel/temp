@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:02:13 by heha              #+#    #+#             */
-/*   Updated: 2023/02/27 21:26:44 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/28 15:42:52 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define __FT_VECTOR_ITERATOR_HPP
 
 # include "iterator.hpp"
+# include "type_traits.hpp"
 
 namespace ft
 {
@@ -29,12 +30,10 @@ namespace ft
 		typedef typename iterator_traits<RandIt>::pointer			pointer;
 		typedef typename iterator_traits<RandIt>::reference			reference;
 
-		__vector_iterator();
-		explicit __vector_iterator(iterator_type it);	// TBD
-		template <typename U>
-		__vector_iterator(const __vector_iterator<U>& other, typename enable_if<__libft_is_random_access_iterator<U>::value>::type* = 0);	// TBD
-		template <typename U>
-		__vector_iterator& operator=(const __vector_iterator<U>& other);	// TBD
+		explicit __vector_iterator();
+		explicit __vector_iterator(iterator_type it, typename enable_if<__libft_is_random_access_iterator<U>::value>::type* = 0);
+		__vector_iterator(const __vector_iterator<RandIt>& other);
+		__vector_iterator& operator=(const __vector_iterator& other);
 		~__vector_iterator();
 
 		iterator_type		base() const;

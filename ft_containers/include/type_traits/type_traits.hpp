@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:32:23 by heha              #+#    #+#             */
-/*   Updated: 2023/02/27 17:44:23 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/28 12:17:52 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ namespace ft
 	template <typename T>
 	struct is_integral : public __libft_is_integral<typename remove_cv<T>::type> {};
 
-	template <typename T, typename U> struct __libft_is_same	: public false_type {};
-	template <typename T> struct __libft_is_same<T, T>			: public true_type {};
+	template <typename T, typename U> struct is_same			: public false_type {};
+	template <typename T> struct is_same<T, T>					: public true_type {};
 }
 
 # include "type_traits.tpp"

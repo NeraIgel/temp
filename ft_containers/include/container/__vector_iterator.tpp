@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:57:01 by heha              #+#    #+#             */
-/*   Updated: 2023/02/27 21:28:30 by heha             ###   ########.fr       */
+/*   Updated: 2023/02/28 15:44:30 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,12 @@ ft::__vector_iterator<RandIt>::__vector_iterator()
 {}
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>::__vector_iterator(typename ft::__vector_iterator<RandIt>::iterator_type it)	// TBD
+ft::__vector_iterator<RandIt>::__vector_iterator(typename ft::__vector_iterator<RandIt>::iterator_type it)
 	: __current(it)
 {}
 
 template <typename RandIt>
-template <typename U>
-ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<U>& other)
+ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<RandIt>& other)
 	: __current(other.base())
 {}
 
@@ -35,10 +34,12 @@ ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<U>&
 // ************************************************************************** //
 
 template <typename RandIt>
-template <typename U>
-ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator=(const ft::__vector_iterator<U>& other)
+ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator=(const ft::__vector_iterator<Rand>& other)
 {
-	__current = other.base();
+	if (this != &other)
+	{
+		__current = other.base();
+	}
 	return (*this);
 }
 

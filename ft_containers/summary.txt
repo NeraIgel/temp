@@ -47,7 +47,9 @@
 		d-a. algorithm / min								// TBD (ft::less로 대체 가능할듯)
 		d-b. functional / x									// TBD (ft::min 대신 ft::less 사용하면 될듯)
 		d-c. utility / std::functional, swap, select_first, identity		// TBD (어떤 목적으로 정의되었는지 확인해보고, 나만의 방법으로 풀어나갈 것)
-		d-d. __vector_iterator / constructor					// TBD (private constructor 필요 여부 조사해보고, 나만의 방법으로 풀어나갈 것)
+		d-d. __vector_iterator / 
+		d-e. __vector_base / 
+		d-f. vector / 
 
 	* https://stackoverflow.com/questions/38357089/why-does-stdtransform-and-similar-cast-the-for-loop-increment-to-void
 	* https://stackoverflow.com/questions/10473284/a-struct-has-public-inheritance-by-default
@@ -60,8 +62,7 @@
 	* https://stackoverflow.com/questions/4335962/how-to-check-if-a-template-parameter-is-an-iterator-type-or-not
 	* https://stackoverflow.com/questions/69882795/what-is-a-difference-between-iterator-category-vs-iterator-category-in-stdit
 	* TBD / ft::reverse_iterator::operator[] 구현부가 명세와 다른 것은 std::ptrdiff_t underflow 방지 목적인가?
-	* TBD / https://42born2code.slack.com/archives/CMX2R5JSW/p1628521358211700
-	* TBD / ft::__vector_iterator::constructor 비공개 목적 확인해보기
+	* https://42born2code.slack.com/archives/CMX2R5JSW/p1628521358211700
 	* TBD / ft::vector::operator==() 비멤버 함수에서 size를 미리 호출하는 이유는? 컴파일타임 에러 확인 목적인건가?
 
 	* https://stackoverflow.com/questions/839958/custom-iterator-in-c
