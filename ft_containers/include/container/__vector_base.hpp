@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 19:51:49 by heha              #+#    #+#             */
-/*   Updated: 2023/02/28 16:58:37 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/01 16:58:17 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,10 @@ namespace ft
 		size_type		__capacity() const;
 
 		void			__copy_assign_alloc(const __vector_base& other);
-		void			__move_assign_alloc(__vector_base& other);
 		void			__destruct_at_end(pointer new_last);
 		void			__clear();
 
-	protected:
+	private:
 		allocator_type	__allocator;
 		pointer			__end_cap;
 		pointer			__begin;
