@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:04:26 by heha              #+#    #+#             */
-/*   Updated: 2023/02/15 21:36:12 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/02 13:52:22 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,21 @@ ft::pair<T1, T2>&	ft::pair<T1, T2>::operator=(const ft::pair<T1, T2>& other)
 // ************************************************************************** //
 
 template <typename T1, typename T2>
+inline
 bool	ft::operator==(const ft::pair<T1, T2>& lhs, const ft::pair<T1, T2>& rhs)
 {
 	return (lhs.first == rhs.first && lhs.second == rhs.second);
 }
 
 template <typename T1, typename T2>
+inline
 bool	ft::operator!=(const ft::pair<T1, T2>& lhs, const ft::pair<T1, T2>& rhs)
 {
 	return (!(lhs == rhs));
 }
 
 template <typename T1, typename T2>
+inline
 bool	ft::operator<(const ft::pair<T1, T2>& lhs, const ft::pair<T1, T2>& rhs)
 {
 	return (lhs.first < rhs.first ||
@@ -69,24 +72,28 @@ bool	ft::operator<(const ft::pair<T1, T2>& lhs, const ft::pair<T1, T2>& rhs)
 }
 
 template <typename T1, typename T2>
+inline
 bool	ft::operator<=(const ft::pair<T1, T2>& lhs, const ft::pair<T1, T2>& rhs)
 {
 	return (!(rhs < lhs));
 }
 
 template <typename T1, typename T2>
+inline
 bool	ft::operator>(const ft::pair<T1, T2>& lhs, const ft::pair<T1, T2>& rhs)
 {
 	return (rhs < lhs);
 }
 
 template <typename T1, typename T2>
+inline
 bool	ft::operator>=(const ft::pair<T1, T2>& lhs, const ft::pair<T1, T2>& rhs)
 {
 	return (!(lhs < rhs));
 }
 
 template <typename T1, typename T2>
+inline
 ft::pair<T1, T2>	ft::make_pair(T1 x, T2 y)
 {
 	return (ft::pair<T1, T2>(x, y));

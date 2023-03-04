@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 19:51:49 by heha              #+#    #+#             */
-/*   Updated: 2023/03/01 16:58:17 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/04 15:07:34 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,23 @@ namespace ft
 		typedef typename allocator_type::const_pointer		const_pointer;
 		typedef std::size_t									size_type;
 
-		explicit __vector_base(const allocator_type& alloc = allocator_type());
-		__vector_base(const __vector_base& other);
-		__vector_base& operator=(const __vector_base& other);
+		__vector_base();
+		explicit __vector_base(const allocator_type& alloc);	// TBD (explicit keyword)
+		__vector_base(const __vector_base& other);				// TBD (delete?)
+		__vector_base& operator=(const __vector_base& other);	// TBD (delete?)
 		~__vector_base();
 
-		size_type		__capacity() const;
+		size_type		__capacity() const throw();
 
 		void			__copy_assign_alloc(const __vector_base& other);
-		void			__destruct_at_end(pointer new_last);
-		void			__clear();
+		void			__destruct_at_end(pointer new_last) throw();
+		void			__move_assign_alloc(__vector_base& other);
+		void			__clear() throw();
 
 	private:
+
+	
+	protected:
 		allocator_type	__allocator;
 		pointer			__end_cap;
 		pointer			__begin;

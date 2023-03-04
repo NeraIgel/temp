@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:02:13 by heha              #+#    #+#             */
-/*   Updated: 2023/02/28 15:42:52 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/04 15:07:57 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,41 +30,41 @@ namespace ft
 		typedef typename iterator_traits<RandIt>::pointer			pointer;
 		typedef typename iterator_traits<RandIt>::reference			reference;
 
-		explicit __vector_iterator();
-		explicit __vector_iterator(iterator_type it, typename enable_if<__libft_is_random_access_iterator<U>::value>::type* = 0);
-		__vector_iterator(const __vector_iterator<RandIt>& other);
-		__vector_iterator& operator=(const __vector_iterator& other);
-		~__vector_iterator();
+		__vector_iterator() throw();
+		__vector_iterator(iterator_type it, typename enable_if<__libft_is_random_access_iterator<RandIt>::value>::type* = 0) throw();	// TBD (explicit keyword)
+		__vector_iterator(const __vector_iterator& other) throw();
+		__vector_iterator& operator=(const __vector_iterator& other) throw();
+		~__vector_iterator() throw();
 
-		iterator_type		base() const;
-		reference			operator*() const;
-		pointer				operator->() const;
-		reference			operator[](difference_type n) const;
-		__vector_iterator&	operator++();
-		__vector_iterator&	operator--();
-		__vector_iterator	operator++(int);
-		__vector_iterator	operator--(int);
-		__vector_iterator	operator+(difference_type n) const;
-		__vector_iterator	operator-(difference_type n) const;
-		__vector_iterator&	operator+=(difference_type n);
-		__vector_iterator&	operator-=(difference_type n);
+		iterator_type		base() const throw();
+		reference			operator*() const throw();
+		pointer				operator->() const throw();
+		reference			operator[](difference_type n) const throw();
+		__vector_iterator&	operator++() throw();
+		__vector_iterator&	operator--() throw();
+		__vector_iterator	operator++(int) throw();
+		__vector_iterator	operator--(int) throw();
+		__vector_iterator	operator+(difference_type n) const throw();
+		__vector_iterator	operator-(difference_type n) const throw();
+		__vector_iterator&	operator+=(difference_type n) throw();
+		__vector_iterator&	operator-=(difference_type n) throw();
 	
 	private:
 		iterator_type		__current;
 
 	};
 
-	template <typename RandIt> bool	operator==(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs);
-	template <typename RandIt> bool	operator!=(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs);
-	template <typename RandIt> bool	operator<(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs);
-	template <typename RandIt> bool	operator<=(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs);
-	template <typename RandIt> bool	operator>(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs);
-	template <typename RandIt> bool	operator>=(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs);
+	template <typename RandIt> inline bool	operator==(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs) throw();
+	template <typename RandIt> inline bool	operator!=(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs) throw();
+	template <typename RandIt> inline bool	operator<(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs) throw();
+	template <typename RandIt> inline bool	operator<=(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs) throw();
+	template <typename RandIt> inline bool	operator>(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs) throw();
+	template <typename RandIt> inline bool	operator>=(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs) throw();
 
-	template <typename RandIt>
-	__vector_iterator<RandIt>	operator+(typename __vector_iterator<RandIt>::difference_type n, __vector_iterator<RandIt> it);
-	template <typename RandIt>
-	typename __vector_iterator<RandIt>::difference_type	operator-(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs);
+	template <typename RandIt> inline
+	__vector_iterator<RandIt>	operator+(typename __vector_iterator<RandIt>::difference_type n, __vector_iterator<RandIt> it) throw();
+	template <typename RandIt> inline
+	typename __vector_iterator<RandIt>::difference_type	operator-(const __vector_iterator<RandIt>& lhs, const __vector_iterator<RandIt>& rhs) throw();
 }
 
 # include "__vector_iterator.tpp"

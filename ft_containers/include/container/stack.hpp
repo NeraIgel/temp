@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 10:40:08 by heha              #+#    #+#             */
-/*   Updated: 2023/02/21 18:39:28 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/02 13:50:41 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ namespace ft
 
 	};
 
-	template <typename T, typename Container> bool	operator==(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
-	template <typename T, typename Container> bool	operator!=(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
-	template <typename T, typename Container> bool	operator<(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
-	template <typename T, typename Container> bool	operator<=(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
-	template <typename T, typename Container> bool	operator>(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
-	template <typename T, typename Container> bool	operator>=(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
+	template <typename T, typename Container> inline bool	operator==(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
+	template <typename T, typename Container> inline bool	operator!=(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
+	template <typename T, typename Container> inline bool	operator<(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
+	template <typename T, typename Container> inline bool	operator<=(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
+	template <typename T, typename Container> inline bool	operator>(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
+	template <typename T, typename Container> inline bool	operator>=(const stack<T, Container>& lhs, const stack<T, Container>& rhs);
 }
 
 # include "stack.tpp"

@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:01:09 by heha              #+#    #+#             */
-/*   Updated: 2023/02/16 20:33:42 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/02 13:53:25 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,36 +95,42 @@ ft::stack<T, Container>::~stack()
 // ************************************************************************** //
 
 template <typename T, typename Container>
+inline
 bool	ft::operator==(const ft::stack<T, Container>& lhs, const ft::stack<T, Container>& rhs)
 {
 	return (lhs.c == rhs.c);
 }
 
 template <typename T, typename Container>
+inline
 bool	ft::operator!=(const ft::stack<T, Container>& lhs, const ft::stack<T, Container>& rhs)
 {
 	return (!(lhs == rhs));
 }
 
 template <typename T, typename Container>
+inline
 bool	ft::operator<(const ft::stack<T, Container>& lhs, const ft::stack<T, Container>& rhs)
 {
 	return (lhs.c < rhs.c);
 }
 
 template <typename T, typename Container>
+inline
 bool	ft::operator<=(const ft::stack<T, Container>& lhs, const ft::stack<T, Container>& rhs)
 {
 	return (!(rhs < lhs));
 }
 
 template <typename T, typename Container>
+inline
 bool	ft::operator>(const ft::stack<T, Container>& lhs, const ft::stack<T, Container>& rhs)
 {
 	return (rhs < lhs);
 }
 
 template <typename T, typename Container>
+inline
 bool	ft::operator>=(const ft::stack<T, Container>& lhs, const ft::stack<T, Container>& rhs)
 {
 	return (!(lhs < rhs));

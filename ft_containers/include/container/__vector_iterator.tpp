@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:57:01 by heha              #+#    #+#             */
-/*   Updated: 2023/02/28 15:44:30 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/02 12:56:58 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 // ************************************************************************** //
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>::__vector_iterator()
+ft::__vector_iterator<RandIt>::__vector_iterator() throw()
 	: __current()
 {}
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>::__vector_iterator(typename ft::__vector_iterator<RandIt>::iterator_type it)
+ft::__vector_iterator<RandIt>::__vector_iterator(typename ft::__vector_iterator<RandIt>::iterator_type it) throw()
 	: __current(it)
 {}
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<RandIt>& other)
+ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<RandIt>& other) throw()
 	: __current(other.base())
 {}
 
@@ -34,7 +34,7 @@ ft::__vector_iterator<RandIt>::__vector_iterator(const ft::__vector_iterator<Ran
 // ************************************************************************** //
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator=(const ft::__vector_iterator<Rand>& other)
+ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator=(const ft::__vector_iterator<Rand>& other) throw()
 {
 	if (this != &other)
 	{
@@ -44,49 +44,49 @@ ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator=(const ft
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>::~__vector_iterator()
+ft::__vector_iterator<RandIt>::~__vector_iterator() throw()
 {}
 
 template <typename RandIt>
-typename ft::__vector_iterator<RandIt>::iterator_type	ft::__vector_iterator<RandIt>::base() const
+typename ft::__vector_iterator<RandIt>::iterator_type	ft::__vector_iterator<RandIt>::base() const throw()
 {
 	return (__current);
 }
 
 template <typename RandIt>
-typename ft::__vector_iterator<RandIt>::reference	ft::__vector_iterator<RandIt>::operator*() const
+typename ft::__vector_iterator<RandIt>::reference	ft::__vector_iterator<RandIt>::operator*() const throw()
 {
 	return (*__current);
 }
 
 template <typename RandIt>
-typename ft::__vector_iterator<RandIt>::pointer	ft::__vector_iterator<RandIt>::operator->() const
+typename ft::__vector_iterator<RandIt>::pointer	ft::__vector_iterator<RandIt>::operator->() const throw()
 {
 	return (&(operator*()));
 }
 
 template <typename RandIt>
-typename ft::__vector_iterator<RandIt>::reference	ft::__vector_iterator<RandIt>::operator[](typename ft::__vector_iterator<RandIt>::difference_type n) const
+typename ft::__vector_iterator<RandIt>::reference	ft::__vector_iterator<RandIt>::operator[](typename ft::__vector_iterator<RandIt>::difference_type n) const throw()
 {
 	return (__current[n]);
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator++()
+ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator++() throw()
 {
 	++__current;
 	return (*this);
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator--()
+ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator--() throw()
 {
 	--__current;
 	return (*this);
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator++(int)
+ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator++(int) throw()
 {
 	ft::__vector_iterator<RandIt>	tmp = *this;
 	++(*this);
@@ -94,7 +94,7 @@ ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator++(int)
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator--(int)
+ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator--(int) throw()
 {
 	ft::__vector_iterator<RandIt>	tmp = *this;
 	--(*this);
@@ -102,7 +102,7 @@ ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator--(int)
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator+(typename ft::__vector_iterator<RandIt>::difference_type n) const
+ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator+(typename ft::__vector_iterator<RandIt>::difference_type n) const throw()
 {
 	ft::__vector_iterator<RandIt>	tmp = *this;
 	tmp += n;
@@ -110,7 +110,7 @@ ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator+(typename 
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator-(typename ft::__vector_iterator<RandIt>::difference_type n) const
+ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator-(typename ft::__vector_iterator<RandIt>::difference_type n) const throw()
 {
 	ft::__vector_iterator<RandIt>	tmp = *this;
 	tmp -= n;
@@ -118,14 +118,14 @@ ft::__vector_iterator<RandIt>	ft::__vector_iterator<RandIt>::operator-(typename 
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator+=(typename ft::__vector_iterator<RandIt>::difference_type n)
+ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator+=(typename ft::__vector_iterator<RandIt>::difference_type n) throw()
 {
 	__current += n;
 	return (*this);
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator-=(typename ft::__vector_iterator<RandIt>::difference_type n)
+ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator-=(typename ft::__vector_iterator<RandIt>::difference_type n) throw()
 {
 	__current -= n;
 	return (*this);
@@ -136,50 +136,58 @@ ft::__vector_iterator<RandIt>&	ft::__vector_iterator<RandIt>::operator-=(typenam
 // ************************************************************************** //
 
 template <typename RandIt>
-bool	ft::operator==(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs)
+inline
+bool	ft::operator==(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs) throw()
 {
 	return (lhs.base() == rhs.base());
 }
 
 template <typename RandIt>
-bool	ft::operator!=(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs)
+inline
+bool	ft::operator!=(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs) throw()
 {
 	return (!(lhs == rhs));
 }
 
 template <typename RandIt>
-bool	ft::operator<(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs)
+inline
+bool	ft::operator<(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs) throw()
 {
 	return (lhs.base() < rhs.base());
 }
 
 template <typename RandIt>
-bool	ft::operator<=(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs)
+inline
+bool	ft::operator<=(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs) throw()
 {
 	return (!(rhs < lhs));
 }
 
 template <typename RandIt>
-bool	ft::operator>(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs)
+inline
+bool	ft::operator>(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs) throw()
 {
 	return (rhs < lhs);
 }
 
 template <typename RandIt>
-bool	ft::operator>=(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs)
+inline
+bool	ft::operator>=(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs) throw()
 {
 	return (!(lhs < rhs));
 }
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>	operator+(typename ft::__vector_iterator<RandIt>::difference_type n, ft::__vector_iterator<RandIt> it)
+inline
+ft::__vector_iterator<RandIt>	operator+(typename ft::__vector_iterator<RandIt>::difference_type n, ft::__vector_iterator<RandIt> it) throw()
 {
 	it += n;
 	return (it);
 }
 
 template <typename RandIt>
-typename ft::__vector_iterator<RandIt>::difference_type	operator-(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs)
+inline
+typename ft::__vector_iterator<RandIt>::difference_type	operator-(const ft::__vector_iterator<RandIt>& lhs, const ft::__vector_iterator<RandIt>& rhs) throw()
 {
 	return (lhs.base() - rhs.base());
 }

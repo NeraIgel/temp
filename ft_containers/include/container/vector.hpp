@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:16:34 by heha              #+#    #+#             */
-/*   Updated: 2023/03/01 15:44:58 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/04 15:19:35 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #ifndef FT_VECTOR_HPP
 # define FT_VECTOR_HPP
 
-//# include <limits>
+# include <limits>
 # include <memory>
-//# include <stdexcept>
+# include <stdexcept>	// TBD (__vector_base? __vector_base_common?)
 # include "algorithm.hpp"
 # include "__vector_base.hpp"
 # include "__vector_iterator.hpp"
@@ -30,27 +30,31 @@ namespace ft
 	template <typename T, typename Allocator = std::allocator<T> >
 	class vector : private __vector_base<T, Allocator> {
 	
+	private:
+		typedef __vector_base<T, Allocator>								__base;	// TBD (delete?)
+	
 	public:
 		typedef T														value_type;
 		typedef Allocator												allocator_type;
-		typedef typename __vector_base<T, Allocator>::reference			reference;
-		typedef typename __vector_base<T, Allocator>::const_reference	const_reference;
-		typedef typename __vector_base<T, Allocator>::pointer			pointer;
-		typedef typename __vector_base<T, Allocator>::const_pointer		const_pointer;
+		typedef typename __base::reference								reference;
+		typedef typename __base::const_reference						const_reference;
+		typedef typename __base::pointer								pointer;
+		typedef typename __base::const_pointer							const_pointer;
 		typedef __vector_iterator<pointer>								iterator;
 		typedef __vector_iterator<const_pointer>						const_iterator;
 		typedef reverse_iterator<iterator>								reverse_iterator;
 		typedef reverse_iterator<const_iterator>						const_reverse_iterator;
 		typedef typename iterator_traits<iterator>::difference_type		difference_type;
-		typedef typename __vector_base<T, Allocator>::size_type			size_type;
+		typedef typename __base::size_type								size_type;
 
-		explicit vector(const allocator_type& alloc = allocator_type());
+		vector();
+		explicit vector(const allocator_type& alloc);
 		explicit vector(size_type count, const value_type& value = value_type(), const allocator_type& alloc = allocator_type());
 		template <typename InputIt>
-		vector(InputIt first, InputIt last, const allocator_type& alloc = allocator_type());
+		vector(InputIt first, InputIt last, const allocator_type& alloc = allocator_type());	// TBD (SFINAE for template parameter)
 		vector(const vector& other);
 		vector& operator=(const vector& other);
-		~vector();
+		~vector();	// throw()
 
 		iterator				begin();
 		const_iterator			begin() const;
@@ -81,38 +85,32 @@ namespace ft
 
 		void					assign(size_type count, const value_type& value);
 		template <typename InputIt>
-		void					assign(InputIt first, InputIt last);
+		void					assign(InputIt first, InputIt last);	// TBD (SFINAE for template parameter)
 		void					push_back(const value_type& value);
 		void					pop_back();
 		iterator				insert(iterator pos, const value_type& value);
 		void					insert(iterator pos, size_type count, const value_type& value);
 		template <typename InputIt>
-		void					insert(iterator pos, InputIt first, InputIt last);
+		void					insert(iterator pos, InputIt first, InputIt last);	// TBD (SFINAE for template parameter)
 		iterator				erase(iterator pos);
 		iterator				erase(iterator first, iterator last);
 		void					swap(vector& other);
-		void					clear();
+		void					clear();	// throw()
 
 		allocator_type			get_allocator() const;
 
 	private:
-		allocator_type			_allocator;
-		size_type				_capacity;			// TBD
-		size_type				_size;				// TBD
-		value_type				*_begin;			// pointer?
-		value_type				*_end;				// pointer?
-		value_type				*_end_of_storage;	// pointer?
 
 	};
 
-	template <typename T, typename Allocator> bool	operator==(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
-	template <typename T, typename Allocator> bool	operator!=(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
-	template <typename T, typename Allocator> bool	operator<(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
-	template <typename T, typename Allocator> bool	operator<=(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
-	template <typename T, typename Allocator> bool	operator>(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
-	template <typename T, typename Allocator> bool	operator>=(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
+	template <typename T, typename Allocator> inline bool	operator==(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
+	template <typename T, typename Allocator> inline bool	operator!=(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
+	template <typename T, typename Allocator> inline bool	operator<(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
+	template <typename T, typename Allocator> inline bool	operator<=(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
+	template <typename T, typename Allocator> inline bool	operator>(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
+	template <typename T, typename Allocator> inline bool	operator>=(const vector<T, Allocator>& lhs, const vector<T, Allocator>& rhs);
 
-	template <typename T, typename Allocator>
+	template <typename T, typename Allocator> inline
 	void	swap(vector<T, Allocator>& lhs, vector<T, Allocator>& rhs);
 }
 

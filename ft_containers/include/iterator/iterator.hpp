@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:59:36 by heha              #+#    #+#             */
-/*   Updated: 2023/02/28 14:53:10 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/02 13:51:23 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,16 +111,16 @@ namespace ft
 
 	};
 
-	template <typename Iter> bool	operator==(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
-	template <typename Iter> bool	operator!=(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
-	template <typename Iter> bool	operator<(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
-	template <typename Iter> bool	operator<=(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
-	template <typename Iter> bool	operator>(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
-	template <typename Iter> bool	operator>=(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
+	template <typename Iter> inline bool	operator==(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
+	template <typename Iter> inline bool	operator!=(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
+	template <typename Iter> inline bool	operator<(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
+	template <typename Iter> inline bool	operator<=(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
+	template <typename Iter> inline bool	operator>(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
+	template <typename Iter> inline bool	operator>=(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
 
-	template <typename Iter>
+	template <typename Iter> inline
 	reverse_iterator<Iter>	operator+(typename reverse_iterator<Iter>::difference_type n, const reverse_iterator<Iter>& rit);
-	template <typename Iter>
+	template <typename Iter> inline
 	typename reverse_iterator<Iter>::difference_type	operator-(const reverse_iterator<Iter>& lhs, const reverse_iterator<Iter>& rhs);
 
 	template <typename InputIt>

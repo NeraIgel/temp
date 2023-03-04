@@ -44,12 +44,8 @@
 	b. https://modoocode.com/295
 	c. https://80000coding.oopy.io/ad7da304-36e9-4db0-aba7-db439cc8bac2
 	d. https://github.com/yongjulejule/ft_containers/tree/fa4e0535dcdd04d911ac8c2ae5bf5c8e0cdd73d7
-		d-a. algorithm / min								// TBD (ft::less로 대체 가능할듯)
-		d-b. functional / x									// TBD (ft::min 대신 ft::less 사용하면 될듯)
-		d-c. utility / std::functional, swap, select_first, identity		// TBD (어떤 목적으로 정의되었는지 확인해보고, 나만의 방법으로 풀어나갈 것)
-		d-d. __vector_iterator / 
-		d-e. __vector_base / 
-		d-f. vector / 
+		d-a. functional / x									// TBD (std::functional 사용하는듯?)
+		d-b. utility / std::functional, swap, select_first, identity		// TBD (어떤 목적으로 정의되었는지 확인해보고, 나만의 방법으로 풀어나갈 것)
 
 	* https://stackoverflow.com/questions/38357089/why-does-stdtransform-and-similar-cast-the-for-loop-increment-to-void
 	* https://stackoverflow.com/questions/10473284/a-struct-has-public-inheritance-by-default
@@ -63,15 +59,17 @@
 	* https://stackoverflow.com/questions/69882795/what-is-a-difference-between-iterator-category-vs-iterator-category-in-stdit
 	* TBD / ft::reverse_iterator::operator[] 구현부가 명세와 다른 것은 std::ptrdiff_t underflow 방지 목적인가?
 	* https://42born2code.slack.com/archives/CMX2R5JSW/p1628521358211700
-	* TBD / ft::vector::operator==() 비멤버 함수에서 size를 미리 호출하는 이유는? 컴파일타임 에러 확인 목적인건가?
+	* https://www.ibm.com/docs/en/i/7.1?topic=specifiers-inline-function-specifier#cplr243
+	* https://stackoverflow.com/questions/40793784/nonmember-friend-function-is-always-inline
+	* https://stackoverflow.com/questions/31672057/why-shouldnt-the-inherited-constructor-inherit-the-default-arguments
+	* https://42born2code.slack.com/archives/CN9RHKQHW/p1653657446368289
+	* https://stackoverflow.com/questions/28516686/does-max-size-of-stdvectorchar-have-a-bug
+	* https://stackoverflow.com/questions/14603163/how-to-use-sfinae-for-selecting-constructors
 
 	* https://stackoverflow.com/questions/839958/custom-iterator-in-c
 	* https://stackoverflow.com/questions/3582608/how-to-correctly-implement-custom-iterators-and-const-iterators
 	* https://stackoverflow.com/questions/8054273/how-to-implement-an-stl-style-iterator-and-avoid-common-pitfalls
 	* https://stackoverflow.com/questions/7758580/writing-your-own-stl-container/7759622#7759622
-
-	* https://gcc.gnu.org/legacy-ml/gcc/2011-08/msg00221.html
-	* https://stackoverflow.com/questions/28516686/does-max-size-of-stdvectorchar-have-a-bug
 	* https://carnation-visage-cc7.notion.site/ft_containers-fabfdb4bdcce4f139c900737acbb04ff
 
 -. 개발 환경 정의

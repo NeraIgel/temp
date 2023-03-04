@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 19:53:17 by heha              #+#    #+#             */
-/*   Updated: 2023/02/24 19:56:18 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/04 15:06:18 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,67 @@
 //                               Constructors                                 //
 // ************************************************************************** //
 
+template <typename T, typename Allocator>
+ft::__vector_base<T, Allocator>::__vector_base()
+	: __allocator(), __end_cap(NULL), __begin(NULL), __end(NULL)
+{
+}
+
+template <typename T, typename Allocator>
+ft::__vector_base<T, Allocator>::__vector_base(const typename ft::__vector_base<T, Allocator>::allocator_type& alloc)
+	: __allocator(alloc), __end_cap(NULL), __begin(NULL), __end(NULL)
+{
+}
+
+template <typename T, typename Allocator>
+ft::__vector_base<T, Allocator>::__vector_base(const ft::__vector_base<T, Allocator>& other)
+	: __allocator(other.__allocator), __end_cap(NULL), __begin(NULL), __end(NULL)
+{
+}
 
 // ************************************************************************** //
-//                                Properties                                  //
+//                                 Capacity                                   //
 // ************************************************************************** //
 
+template <typename T, typename Allocator>
+typename ft::__vector_base<T, Allocator>::size_type	ft::__vector_base<T, Allocator>::__capacity() const throw()
+{
+}
 
 // ************************************************************************** //
-//                                Operations                                  //
+//                                 Modifiers                                  //
 // ************************************************************************** //
 
+template <typename T, typename Allocator>
+void	ft::__vector_base<T, Allocator>::__copy_assign_alloc(const ft::__vector_base<T, Allocator>& other)
+{
+}
+
+template <typename T, typename Allocator>
+void	ft::__vector_base<T, Allocator>::__destruct_at_end(typename ft::__vector_base<T, Allocator>::pointer new_last) throw()
+{
+}
+
+template <typename T, typename Allocator>
+void	ft::__vector_base<T, Allocator>::__move_assign_alloc(ft::__vector_base<T, Allocator>& other)
+{
+}
+
+template <typename T, typename Allocator>
+void	ft::__vector_base<T, Allocator>::__clear() throw()
+{
+}
 
 // ************************************************************************** //
 //                              Implementation                                //
 // ************************************************************************** //
 
+template <typename T, typename Allocator>
+ft::__vector_base<T, Allocator>&	ft::__vector_base<T, Allocator>::operator=(const ft::__vector_base<T, Allocator>& other)
+{
+}
 
+template <typename T, typename Allocator>
+ft::__vector_base<T, Allocator>::~__vector_base()
+{
+}

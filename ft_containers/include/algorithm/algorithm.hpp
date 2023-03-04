@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:18:54 by heha              #+#    #+#             */
-/*   Updated: 2023/02/15 15:37:33 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/03 18:14:53 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ namespace ft
 	bool	lexicographical_compare(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2);
 	template <typename InputIt1, typename InputIt2, typename Compare>
 	bool	lexicographical_compare(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2, Compare comp);
+
+	template <typename T>
+	const T&	min(const T& a, const T& b);
+	template <typename T, typename Compare>
+	const T&	min(const T& a, const T& b, Compare comp);
 }
 
 # include "algorithm.tpp"

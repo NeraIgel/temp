@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:46:11 by heha              #+#    #+#             */
-/*   Updated: 2023/02/15 21:36:10 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/02 13:49:44 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ namespace ft
 		pair& operator=(const pair& other);
 	};
 
-	template <typename T1, typename T2> bool	operator==(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
-	template <typename T1, typename T2> bool	operator!=(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
-	template <typename T1, typename T2> bool	operator<(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
-	template <typename T1, typename T2> bool	operator<=(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
-	template <typename T1, typename T2> bool	operator>(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
-	template <typename T1, typename T2> bool	operator>=(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
+	template <typename T1, typename T2> inline bool	operator==(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
+	template <typename T1, typename T2> inline bool	operator!=(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
+	template <typename T1, typename T2> inline bool	operator<(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
+	template <typename T1, typename T2> inline bool	operator<=(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
+	template <typename T1, typename T2> inline bool	operator>(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
+	template <typename T1, typename T2> inline bool	operator>=(const pair<T1, T2>& lhs, const pair<T1, T2>& rhs);
 
-	template <typename T1, typename T2>
+	template <typename T1, typename T2> inline
 	pair<T1, T2>	make_pair(T1 x, T2 y);
 }
 

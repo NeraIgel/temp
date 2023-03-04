@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:26:53 by heha              #+#    #+#             */
-/*   Updated: 2023/02/15 16:20:48 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/03 18:20:47 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,16 @@ bool	ft::lexicographical_compare(InputIt1 first1, InputIt1 last1, InputIt2 first
 			return (false);
 	}
 	return (first1 == last1 && first2 != last2);
+}
+
+template <typename T>
+const T&	ft::min(const T& a, const T& b)
+{
+	return (b < a ? b : a);
+}
+
+template <typename T, typename Compare>
+const T&	ft::min(const T& a, const T& b, Compare comp)
+{
+	return (comp(b, a) ? b : a);
 }
