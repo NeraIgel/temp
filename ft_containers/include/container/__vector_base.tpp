@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 19:53:17 by heha              #+#    #+#             */
-/*   Updated: 2023/03/04 15:06:18 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/06 21:14:24 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ ft::__vector_base<T, Allocator>::__vector_base(const ft::__vector_base<T, Alloca
 template <typename T, typename Allocator>
 typename ft::__vector_base<T, Allocator>::size_type	ft::__vector_base<T, Allocator>::__capacity() const throw()
 {
+	return (static_cast<typename ft::__vector_base<T, Allocator>::size_type>(__end_cap - __begin));
 }
 
 // ************************************************************************** //

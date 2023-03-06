@@ -65,6 +65,7 @@
 	* https://42born2code.slack.com/archives/CN9RHKQHW/p1653657446368289
 	* https://stackoverflow.com/questions/28516686/does-max-size-of-stdvectorchar-have-a-bug
 	* https://stackoverflow.com/questions/14603163/how-to-use-sfinae-for-selecting-constructors
+	* https://stackoverflow.com/questions/50050659/what-is-going-on-with-vector-base-common
 
 	* https://stackoverflow.com/questions/839958/custom-iterator-in-c
 	* https://stackoverflow.com/questions/3582608/how-to-correctly-implement-custom-iterators-and-const-iterators

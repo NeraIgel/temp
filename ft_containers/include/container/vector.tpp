@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:52:36 by heha              #+#    #+#             */
-/*   Updated: 2023/03/04 15:15:18 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/06 21:21:56 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,9 +104,8 @@ typename ft::vector<T, Allocator>::const_reverse_iterator	ft::vector<T, Allocato
 template <typename T, typename Allocator>
 typename ft::vector<T, Allocator>::size_type	ft::vector<T, Allocator>::size() const
 {
-	return (ft::distance(begin(), end()));
-//	return (ft::distance(this->__begin, this->__end));	// TBD
-//	return (static_cast<typename ft::vector<T, Allocator>::size_type>(this->__end - this->__begin));	// TBD
+	//return (static_cast<typename ft::vector<T, Allocator>::size_type>(ft::distance(begin(), end())));
+	return (static_cast<typename ft::vector<T, Allocator>::size_type>(this->__end - this->__begin));
 }
 
 template <typename T, typename Allocator>
@@ -126,13 +125,14 @@ typename ft::vector<T, Allocator>::size_type	ft::vector<T, Allocator>::capacity(
 {
 	return (__base::capacity());
 //	return (this->capacity());	// TBD
+//	return (static_cast<typename ft::vector<T, Allocator>::size_type>(this->__end_cap - this->__begin));	// TBD
 }
 
 template <typename T, typename Allocator>
 bool	ft::vector<T, Allocator>::empty() const
 {
-	return (begin() == end());
-//	return (this->__begin == this->__end);	// TBD
+	//return (begin() == end());
+	return (this->__begin == this->__end);
 }
 
 template <typename T, typename Allocator>
