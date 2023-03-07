@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:57:01 by heha              #+#    #+#             */
-/*   Updated: 2023/03/02 12:56:58 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/07 13:07:39 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ ft::__vector_iterator<RandIt>::__vector_iterator() throw()
 {}
 
 template <typename RandIt>
-ft::__vector_iterator<RandIt>::__vector_iterator(typename ft::__vector_iterator<RandIt>::iterator_type it) throw()
+ft::__vector_iterator<RandIt>::__vector_iterator(typename ft::__vector_iterator<RandIt>::iterator_type it,
+		typename ft::enable_if<ft::__libft_is_random_access_iterator<RandIt>::value>::type*) throw()
 	: __current(it)
 {}
 

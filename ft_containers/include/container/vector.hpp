@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:16:34 by heha              #+#    #+#             */
-/*   Updated: 2023/03/04 15:19:35 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/07 20:31:38 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,11 @@ namespace ft
 		explicit vector(const allocator_type& alloc);
 		explicit vector(size_type count, const value_type& value = value_type(), const allocator_type& alloc = allocator_type());
 		template <typename InputIt>
-		vector(InputIt first, InputIt last, const allocator_type& alloc = allocator_type());	// TBD (SFINAE for template parameter)
+		vector(InputIt first, InputIt last, const allocator_type& alloc = allocator_type(),
+				typename enable_if<__libft_is_input_iterator<InputIt>::value && !__libft_is_forward_iterator<InputIt>::value>::type* = 0);
+		template <typename ForwardIt>
+		vector(ForwardIt first, ForwardIt last, const allocator_type& alloc = allocator_type(),
+				typename enable_if<__libft_is_forward_iterator<ForwardIt>::value>::type* = 0);
 		vector(const vector& other);
 		vector& operator=(const vector& other);
 		~vector();	// throw()
@@ -100,6 +104,11 @@ namespace ft
 		allocator_type			get_allocator() const;
 
 	private:
+		void					__allocate(size_type count);
+		void					__construct_at_end(const value_type& value);
+		template <typename ForwardIt>
+		void					__construct_at_end(ForwardIt first, ForwardIt last,
+				typename enable_if<__libft_is_forward_iterator<ForwardIt>::value>::type* = 0);
 
 	};
 

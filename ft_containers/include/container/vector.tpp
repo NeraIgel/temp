@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:52:36 by heha              #+#    #+#             */
-/*   Updated: 2023/03/06 21:21:56 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/07 20:31:36 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,33 +16,61 @@
 
 template <typename T, typename Allocator>
 ft::vector<T, Allocator>::vector()
-	: 
-{
-}
+	: __base()
+{}
 
 template <typename T, typename Allocator>
 ft::vector<T, Allocator>::vector(const typename ft::vector<T, Allocator>::allocator_type& alloc)
-	: 
-{
-}
+	: __base(alloc)
+{}
 
 template <typename T, typename Allocator>
 ft::vector<T, Allocator>::vector(typename ft::vector<T, Allocator>::size_type count, const typename ft::vector<T, Allocator>::value_type& value, const typename ft::vector<T, Allocator>::allocator_type& alloc)
-	: 
+	: __base(alloc)
 {
+	if (count > 0)
+	{
+		__allocate(count);
+		__construct_at_end(value);
+	}
 }
 
 template <typename T, typename Allocator>
 template <typename InputIt>
-ft::vector<T, Allocator>::vector(InputIt first, InputIt last, const typename ft::vector<T, Allocator>::allocator_type& alloc)
-	: 
+ft::vector<T, Allocator>::vector(InputIt first, InputIt last, const typename ft::vector<T, Allocator>::allocator_type& alloc,
+		typename ft::enable_if<ft::__libft_is_input_iterator<InputIt>::value && !ft::__libft_is_forward_iterator<InputIt>::value>::type*)
+	: __base(alloc)
 {
+	for (; first != last; ++first)
+	{
+		push_back(*first);
+	}
+}
+
+template <typename T, typename Allocator>
+template <typename ForwardItt>
+ft::vector<T, Allocator>::vector(ForwardIt first, ForwardIt last, const typename ft::vector<T, Allocator>::allocator_type& alloc,
+		typename ft::enable_if<ft::__libft_is_forward_iterator<InputIt>::value>::type*)
+	: __base(alloc)
+{
+	typename ft::vector<T, Allocator>::size_type	count = static_cast<typename ft::vector<T, Allocator>::size_type>(ft::distance(first, last));
+	if (count > 0)
+	{
+		__allocate(count);
+		__construct_at_end(first, last);
+	}
 }
 
 template <typename T, typename Allocator>
 ft::vector<T, Allocator>::vector(const ft::vector<T, Allocator>& other)
-	: 
+	: __baase(other.__allocator)
 {
+	typename ft::vector<T, Allocator>::size_type	count = other.size();
+	if (count > 0)
+	{
+		__allocate(count);
+		__construct_at_end(other.__begin, other.__end);
+	}
 }
 
 // ************************************************************************** //
@@ -123,9 +151,7 @@ void	ft::vector<T, Allocator>::resize(typename ft::vector<T, Allocator>::size_ty
 template <typename T, typename Allocator>
 typename ft::vector<T, Allocator>::size_type	ft::vector<T, Allocator>::capacity() const
 {
-	return (__base::capacity());
-//	return (this->capacity());	// TBD
-//	return (static_cast<typename ft::vector<T, Allocator>::size_type>(this->__end_cap - this->__begin));	// TBD
+	return (this->__capacity());
 }
 
 template <typename T, typename Allocator>
@@ -160,7 +186,7 @@ template <typename T, typename Allocator>
 typename ft::vector<T, Allocator>::reference	ft::vector<T, Allocator>::at(typename ft::vector<T, Allocator>::size_type pos)
 {
 	if (!(pos < size()))
-		throw std::out_of_range("ft::vector");	// TBD (__vector_base? __vector_base_common?)
+		throw std::out_of_range("vector");	// TBD (__vector_base? __vector_base_common?)
 	return (this->__begin[pos]);
 }
 
@@ -168,7 +194,7 @@ template <typename T, typename Allocator>
 typename ft::vector<T, Allocator>::const_reference	ft::vector<T, Allocator>::at(typename ft::vector<T, Allocator>::size_type pos) const
 {
 	if (!(pos < size()))
-		throw std::out_of_range("ft::vector");	// TBD (__vector_base? __vector_base_common?)
+		throw std::out_of_range("vector");	// TBD (__vector_base? __vector_base_common?)
 	return (this->__begin[pos]);
 }
 
@@ -286,11 +312,50 @@ typename ft::vector<T, Allocator>::allocator_type	ft::vector<T, Allocator>::get_
 template <typename T, typename Allocator>
 ft::vector<T, Allocator>&	ft::vector<T, Allocator>::operator=(const ft::vector<T, Allocator>& other)
 {
+	if (this != &other)
+	{
+		this->__copy_assign_alloc(other);
+		assign(other.__begin, other.__end);
+	}
+	return (*this);
 }
 
 template <typename T, typename Allocator>
 ft::vector<T, Allocator>::~vector()
 {
+	__annotate_delete()
+}
+
+template <typename T, typename Allocator>
+void	ft::vector<T, Allocator>::__allocate(typename ft::vector<T, Allocator>::size_type count)
+{
+	if (count > max_size())
+		throw std::length_error("vector");	// TBD (__vector_base? __vector_base_common?)
+	this->__begin = this->__end = this->__allocator.allocate(count);
+	this->__end_cap = this->__begin + count;
+}
+
+template <typename T, typename Allocator>
+void	ft::vector<T, Allocator>::__construct_at_end(const typename ft::vector<T, Allocator>::value_type& value)
+{
+	typename ft::vector<T, Allocator>::const_pointer	end_cap = this->__end_cap;
+	typename ft::vector<T, Allocator>::pointer			pos = this->__end;
+	for (; pos != end_cap; ++pos)
+	{
+		this->__allocator.construct(pos, value);
+	}
+}
+
+template <typename T, typename Allocator>
+template <typename ForwardIt>
+void	ft::vector<T, Allocator>::__construct_at_end(ForwardIt first, ForwardIt last,
+		typename ft::enable_if<ft::__libft_is_forward_iterator<ForwardIt>::value>::type*)
+{
+	typename ft::vector<T, Allocator>::pointer	pos = this->__end;
+	for (; first != last; ++first, (void) ++pos)
+	{
+		this->__allocator.construct(pos, *first);
+	}
 }
 
 // ************************************************************************** //

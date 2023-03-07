@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:02:13 by heha              #+#    #+#             */
-/*   Updated: 2023/03/04 15:07:57 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/07 13:04:30 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ namespace ft
 		typedef typename iterator_traits<RandIt>::reference			reference;
 
 		__vector_iterator() throw();
-		__vector_iterator(iterator_type it, typename enable_if<__libft_is_random_access_iterator<RandIt>::value>::type* = 0) throw();	// TBD (explicit keyword)
+		__vector_iterator(iterator_type it,
+				typename enable_if<__libft_is_random_access_iterator<RandIt>::value>::type* = 0) throw();	// TBD (explicit keyword)
 		__vector_iterator(const __vector_iterator& other) throw();
 		__vector_iterator& operator=(const __vector_iterator& other) throw();
 		~__vector_iterator() throw();

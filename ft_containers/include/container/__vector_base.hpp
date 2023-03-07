@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 19:51:49 by heha              #+#    #+#             */
-/*   Updated: 2023/03/04 15:07:34 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/07 20:42:10 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ namespace ft
 
 		__vector_base();
 		explicit __vector_base(const allocator_type& alloc);	// TBD (explicit keyword)
-		__vector_base(const __vector_base& other);				// TBD (delete?)
-		__vector_base& operator=(const __vector_base& other);	// TBD (delete?)
 		~__vector_base();
 
 		size_type		__capacity() const throw();
@@ -44,7 +42,8 @@ namespace ft
 		void			__clear() throw();
 
 	private:
-
+		__vector_base(const __vector_base& other)				{ (void)other; }
+		__vector_base& operator=(const __vector_base& other);	{ (void)other; return (*this); }
 	
 	protected:
 		allocator_type	__allocator;
