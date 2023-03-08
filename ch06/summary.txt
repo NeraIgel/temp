@@ -1,0 +1,58 @@
+큐(queue)는 선입 선출(FIFO: First-In First-Out)의 형식으로 입출력이 일어나는 자료 구조이다.
+큐는 뒤에서 새로운 데이터가 추가되고 앞에서 데이터가 하나씩 삭제되는 구조를 가지고 있다.
+
+보통 컴퓨터와 주변기기 사이에는 항상 큐가 존재한다.
+그 이유는 컴퓨터의 CPU와 주변기기 사이에는 속도차이가 있기 때문에 CPU를 효율적으로 사용하기 위하여 운영체제는 작업 큐를 활용하는 것이다.
+
+(1) 큐 ADT
+-. 객체 : n개의 element형의 요소들의 순서있는 모임
+-. 연산 :
+	a. create() ::= 큐를 생성한다.
+	b. is_empty(q) ::= 큐가 비어있는지를 검사한다.
+	c. enqueue(q, e) ::= 큐의 뒤에 요소 e를 추가한다.
+	d. dequeue(q) ::= 큐의 앞에 있는 요소를 삭제한다.
+	e. peek(q) ::= 큐의 앞에 있는 요소를 삭제하지 않고 반환한다.
+
+(2) 큐 구현
+연결 리스트를 이용하여 구현하는 큐는 다음과 같이 정의된다.
+	typedef struct s_QueueNode
+	{
+		void			*content;
+		struct s_QueueNode	*prev;
+		struct s_QueueNode	*next;
+	}	t_QueueNode;
+
+	typedef struct s_QueueType
+	{
+		t_QueueNode	*head;
+		size_t		size;
+	}	t_QueueType;
+
+(3) 덱 ADT
+덱(dequeue)은 double-ended queue의 줄임말로서 큐의 전단(front)과 후단(back)에서 모두 삽입과 삭제가 가능한 큐를 의미한다.
+
+-. 객체 : n개의 element형의 요소들의 순서있는 모임
+-. 연산 :
+	a. create() ::= 덱을 생성한다.
+	b. is_empty(dq) ::= 덱이 비어있는지를 검사한다.
+	c. add_back(dq, e) ::= 덱의 뒤에 요소 e를 추가한다.
+	d. add_front(dq, e) ::= 덱의 앞에 요소 e를 추가한다.
+	e. delete_back(dq) ::= 덱의 뒤에 있는 요소를 삭제한다.
+	f. delete_front(dq) ::= 덱의 앞에 있는 요소를 삭제한다.
+	g. get_back(dq) ::= 덱의 뒤에 있는 요소를 삭제하지 않고 반환한다.
+	h. get_front(dq) ::= 덱의 앞에 있는 요소를 삭제하지 않고 반환한다.
+
+(4) 덱 구현
+연결 리스트를 이용하여 구현하는 덱은 다음과 같이 정의된다.
+	typedef struct s_DequeueNode
+	{
+		void			*content;
+		struct s_DequeueNode	*prev;
+		struct s_DequeueNode	*next;
+	}	t_DequeueNode;
+
+	typedef struct s_DequeueType
+	{
+		t_DequeueNode	*head;
+		size_t		size;
+	}	t_DequeueType;
