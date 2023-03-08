@@ -28,7 +28,6 @@
 		size_t		size;
 	}	t_QueueType;
 
-
 (3) 덱 ADT
 덱(dequeue)은 double-ended queue의 줄임말로서 큐의 전단(front)과 후단(back)에서 모두 삽입과 삭제가 가능한 큐를 의미한다.
 
@@ -47,7 +46,7 @@
 연결 리스트를 이용하여 구현하는 덱은 다음과 같이 정의된다.
 	typedef struct s_DequeueNode
 	{
-		void				*content;
+		void			*content;
 		struct s_DequeueNode	*prev;
 		struct s_DequeueNode	*next;
 	}	t_DequeueNode;
@@ -55,5 +54,5 @@
 	typedef struct s_DequeueType
 	{
 		t_DequeueNode	*head;
-		size_t			size;
+		size_t		size;
 	}	t_DequeueType;
