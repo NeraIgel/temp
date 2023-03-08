@@ -18,7 +18,7 @@ void	ft_queue_clear(t_queue *q);
 void	ft_queue_error(t_queue *q, const char *errormsg);
 size_t	ft_queue_size(const t_queue *q);
 bool	ft_queue_empty(const t_queue *q);
-void	ft_queue_push(t_queue *q, void *content, size_t n);
+void	ft_queue_push(t_queue *q, const void *content, size_t n);
 void	ft_queue_pop(t_queue *q);
 void	*ft_queue_back(t_queue *q);
 void	*ft_queue_front(t_queue *q);

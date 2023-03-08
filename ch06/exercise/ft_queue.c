@@ -46,7 +46,7 @@ bool	ft_queue_empty(const t_queue *q)
 	return (0U == q->size);
 }
 
-void	ft_queue_push(t_queue *q, void *content, size_t n)
+void	ft_queue_push(t_queue *q, const void *content, size_t n)
 {
 	__t_node	*new;
 
