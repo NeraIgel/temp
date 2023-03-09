@@ -1,0 +1,78 @@
+[Inception]
+-. 개요 정리
+	a. 여러 도커 이미지를 가상화하고, 이들을 가상 머신에 생성해본다.
+
+-. 실행 방법 정의
+	a. VirtualBox
+
+	* 프로젝트는 가상 머신에서 실행된다.
+	* 프로젝트 구성에 필요한 모든 파일은 srcs 폴더에 있어야 한다.
+	* Makefile도 필요하며 디렉토리의 루트에 있어야 한다. Makefile은 반드시 모든 애플리케이션을 설정해야 한다. (즉, docker-compose.yml을 사용해서 도커 이미지를 빌드해야 한다.)
+
+-. 기반 기술 정리
+	a. https://docs.docker.com
+
+-. 검증 방법 정리
+	a.
+
+-. 자료 조사
+	a.
+
+	* https://80000coding.oopy.io/3305be9c-43a0-4371-9109-d729def6210b#3305be9c-43a0-4371-9109-d729def6210b
+	* https://80000coding.oopy.io/8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa#8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa
+	* https://80000coding.oopy.io/d6e6ca38-d413-47ba-a80b-a1b4f40886ab#d6e6ca38-d413-47ba-a80b-a1b4f40886ab
+	* https://80000coding.oopy.io/969858b3-0baf-4f5a-a8b2-6749021601c6#969858b3-0baf-4f5a-a8b2-6749021601c6
+	* https://bigpel66.oopy.io/library/42/reference/20#7790b675-e312-403e-b3ff-d1887b76f4f5
+	* https://bigpel66.oopy.io/library/42/inner-circle/20
+
+-. 개발 환경 정의
+	a.
+
+-. 환경 세팅 정의
+	a.
+
+-. 단위기능 목록 정의
+	a.
+
+	* 서비스는 컨테이너에서 실행되어야 한다.
+	* 서비스는 하나씩 자체 Dockerfile을 작성해야 한다.
+	* 컨테이너는 Alpine 또는 Debian의 안정적인 버전(최신 버전의 이전 버전)에서 만들어져야 한다.
+	* 도커 이미지를 직접 만들어야 하며, DockerHub와 같은 서비스를 사용하는 것뿐만 아니라 만들어진 도커 이미지를 가져오는 것은 금지된다. (단, Alpine/Debian은 이 규칙에서 제외된다.)
+
+-. 디렉토리 구조 정의
+	— Makefile
+	— srcs
+		|- doker-compose.yml
+		|- .env
+		|- requirements
+			|- bonus
+			|- mariadb
+				|- conf
+				|- Dockerfile
+				|- .dockerignore
+				|- tools
+			|- nginx
+				|- conf
+				|- Dockerfile
+				|- .dockerignore
+				|- tools
+			|- tools
+			|- wordpress
+
+-. 학습 참고 사이트
+	a. https://en.wikipedia.org/wiki/Docker_(software)
+	b. https://www.44bits.io/ko/post/why-should-i-use-docker-container
+	c. https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html
+	d. https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
+	e. https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html
+	f. https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
+	g. https://www.ibm.com/kr-ko/cloud/learn/docker
+	h. https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker%EC%A0%95%EB%A6%AC/
+	i. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
+	j. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
+	k. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
+	l. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
+
+	* https://learn.microsoft.com/ko-kr/dotnet/architecture/microservices/container-docker-introduction/
+	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
+
