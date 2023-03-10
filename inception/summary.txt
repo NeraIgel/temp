@@ -1,6 +1,8 @@
 [Inception]
 -. 개요 정리
-	a. 여러 도커 이미지를 가상화하고, 이들을 가상 머신에 생성해본다.
+	a. 가상 머신에 리눅스를 설치한다. (Alpine or Debian)
+	b. 가상 머신에 설치한 게스트 운영체제에 Docker를 설치한다.
+	c. 여러 서비스들을 운영하기 위한 Dockerfile들을 미리 작성하여 준비하고, 게스트 운영체제에서 준비한 Dockerfile들을 빌드함으로써 Docker Image들이 생성되고, Docker Container들이 실행될 수 있게끔 한다.
 
 -. 실행 방법 정의
 	a. VirtualBox
@@ -11,12 +13,13 @@
 
 -. 기반 기술 정리
 	a. https://docs.docker.com
+	b. https://www.alpinelinux.org/
 
 -. 검증 방법 정리
-	a.
+	a. 
 
 -. 자료 조사
-	a.
+	a. 
 
 	* https://80000coding.oopy.io/3305be9c-43a0-4371-9109-d729def6210b#3305be9c-43a0-4371-9109-d729def6210b
 	* https://80000coding.oopy.io/8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa#8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa
@@ -25,14 +28,16 @@
 	* https://bigpel66.oopy.io/library/42/reference/20#7790b675-e312-403e-b3ff-d1887b76f4f5
 	* https://bigpel66.oopy.io/library/42/inner-circle/20
 
+	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
+
 -. 개발 환경 정의
-	a.
+	a. 
 
 -. 환경 세팅 정의
-	a.
+	a. 
 
 -. 단위기능 목록 정의
-	a.
+	a. 
 
 	* 서비스는 컨테이너에서 실행되어야 한다.
 	* 서비스는 하나씩 자체 Dockerfile을 작성해야 한다.
@@ -64,15 +69,15 @@
 	b. https://www.44bits.io/ko/post/why-should-i-use-docker-container
 	c. https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html
 	d. https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
-	e. https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html
-	f. https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
-	g. https://www.ibm.com/kr-ko/cloud/learn/docker
+	e. https://byungwoo.oopy.io/0e5485ba-dc5e-4951-a611-81ce08291817
+	f. https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html
+	g. https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
 	h. https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker%EC%A0%95%EB%A6%AC/
 	i. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
 	j. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
 	k. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
 	l. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
-
-	* https://learn.microsoft.com/ko-kr/dotnet/architecture/microservices/container-docker-introduction/
-	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
+	m. https://namu.wiki/w/Alpine%20Linux
+	n. https://en.wikipedia.org/wiki/Alpine_Linux
+	o. https://velog.io/@dry8r3ad/why-alpine-linux
 
