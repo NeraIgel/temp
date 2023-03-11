@@ -16,10 +16,10 @@
 	b. https://www.alpinelinux.org/
 
 -. 검증 방법 정리
-	a. 
+	a.
 
 -. 자료 조사
-	a. 
+	a.
 
 	* https://80000coding.oopy.io/3305be9c-43a0-4371-9109-d729def6210b#3305be9c-43a0-4371-9109-d729def6210b
 	* https://80000coding.oopy.io/8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa#8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa
@@ -31,13 +31,13 @@
 	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
 
 -. 개발 환경 정의
-	a. 
+	a.
 
 -. 환경 세팅 정의
-	a. 
+	a.
 
 -. 단위기능 목록 정의
-	a. 
+	a.
 
 	* 서비스는 컨테이너에서 실행되어야 한다.
 	* 서비스는 하나씩 자체 Dockerfile을 작성해야 한다.
@@ -73,11 +73,16 @@
 	f. https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html
 	g. https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
 	h. https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker%EC%A0%95%EB%A6%AC/
-	i. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
-	j. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
-	k. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
-	l. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
-	m. https://namu.wiki/w/Alpine%20Linux
-	n. https://en.wikipedia.org/wiki/Alpine_Linux
-	o. https://velog.io/@dry8r3ad/why-alpine-linux
+	i. https://asung123456.tistory.com/51
+	j. https://swalloow.github.io/container-tini-dumb-init/
+	k. https://www.hahwul.com/2022/08/06/docker-dumb-init/
+	l. https://cloud.google.com/architecture/best-practices-for-building-containers?hl=ko#signal-handling
+	m. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
+	n. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
+	o. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
+	p. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
+	q. https://namu.wiki/w/Alpine%20Linux
+	r. https://en.wikipedia.org/wiki/Alpine_Linux
+	s. https://velog.io/@dry8r3ad/why-alpine-linux
 
+	* https://valuelog.tistory.com/69
