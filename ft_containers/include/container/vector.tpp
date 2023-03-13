@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 16:52:36 by heha              #+#    #+#             */
-/*   Updated: 2023/03/07 20:31:36 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/13 20:20:12 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -322,9 +322,7 @@ ft::vector<T, Allocator>&	ft::vector<T, Allocator>::operator=(const ft::vector<T
 
 template <typename T, typename Allocator>
 ft::vector<T, Allocator>::~vector()
-{
-	__annotate_delete()
-}
+{}
 
 template <typename T, typename Allocator>
 void	ft::vector<T, Allocator>::__allocate(typename ft::vector<T, Allocator>::size_type count)
