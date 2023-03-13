@@ -1,6 +1,6 @@
 [Inception]
 -. 개요 정리
-	a. 가상 머신에 리눅스를 설치한다. (Alpine or Debian)
+	a. 가상 머신에 리눅스를 설치한다.
 	b. 가상 머신에 설치한 게스트 운영체제에 Docker를 설치한다.
 	c. 여러 서비스들을 운영하기 위한 Dockerfile들을 미리 작성하여 준비하고, 게스트 운영체제에서 준비한 Dockerfile들을 빌드함으로써 Docker Image들이 생성되고, Docker Container들이 실행될 수 있게끔 한다.
 
@@ -9,7 +9,7 @@
 
 	* 프로젝트는 가상 머신에서 실행된다.
 	* 프로젝트 구성에 필요한 모든 파일은 srcs 폴더에 있어야 한다.
-	* Makefile도 필요하며 디렉토리의 루트에 있어야 한다. Makefile은 반드시 모든 애플리케이션을 설정해야 한다. (즉, docker-compose.yml을 사용해서 도커 이미지를 빌드해야 한다.)
+	* Makefile도 필요하며 디렉토리의 루트에 있어야 한다. Makefile은 반드시 모든 애플리케이션을 설정해야 한다. (즉, docker-compose.yml을 사용해서 도커 이미지들을 빌드해야 한다.)
 
 -. 기반 기술 정리
 	a. https://docs.docker.com
@@ -21,12 +21,12 @@
 -. 자료 조사
 	a.
 
-	* https://80000coding.oopy.io/3305be9c-43a0-4371-9109-d729def6210b#3305be9c-43a0-4371-9109-d729def6210b
-	* https://80000coding.oopy.io/8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa#8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa
-	* https://80000coding.oopy.io/d6e6ca38-d413-47ba-a80b-a1b4f40886ab#d6e6ca38-d413-47ba-a80b-a1b4f40886ab
-	* https://80000coding.oopy.io/969858b3-0baf-4f5a-a8b2-6749021601c6#969858b3-0baf-4f5a-a8b2-6749021601c6
-	* https://bigpel66.oopy.io/library/42/reference/20#7790b675-e312-403e-b3ff-d1887b76f4f5
 	* https://bigpel66.oopy.io/library/42/inner-circle/20
+	* https://bigpel66.oopy.io/library/42/reference/20#7790b675-e312-403e-b3ff-d1887b76f4f5
+	* https://80000coding.oopy.io/969858b3-0baf-4f5a-a8b2-6749021601c6#969858b3-0baf-4f5a-a8b2-6749021601c6
+	* https://80000coding.oopy.io/d6e6ca38-d413-47ba-a80b-a1b4f40886ab#d6e6ca38-d413-47ba-a80b-a1b4f40886ab
+	* https://80000coding.oopy.io/8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa#8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa
+	* https://80000coding.oopy.io/3305be9c-43a0-4371-9109-d729def6210b#3305be9c-43a0-4371-9109-d729def6210b
 
 	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
 
@@ -41,7 +41,7 @@
 
 	* 서비스는 컨테이너에서 실행되어야 한다.
 	* 서비스는 하나씩 자체 Dockerfile을 작성해야 한다.
-	* 컨테이너는 Alpine 또는 Debian의 안정적인 버전(최신 버전의 이전 버전)에서 만들어져야 한다.
+	* 도커 컨테이너는 Alpine 또는 Debian의 안정적인 버전(최신 버전의 이전 버전)에서 만들어져야 한다.
 	* 도커 이미지를 직접 만들어야 하며, DockerHub와 같은 서비스를 사용하는 것뿐만 아니라 만들어진 도커 이미지를 가져오는 것은 금지된다. (단, Alpine/Debian은 이 규칙에서 제외된다.)
 
 -. 디렉토리 구조 정의
@@ -81,8 +81,10 @@
 	n. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
 	o. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
 	p. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
-	q. https://namu.wiki/w/Alpine%20Linux
-	r. https://en.wikipedia.org/wiki/Alpine_Linux
-	s. https://velog.io/@dry8r3ad/why-alpine-linux
+	q. https://engineer-mole.tistory.com/221
+	r. https://darrengwon.tistory.com/793
+	s. https://valuelog.tistory.com/69
+	t. https://namu.wiki/w/Alpine%20Linux
+	u. https://en.wikipedia.org/wiki/Alpine_Linux
+	v. https://velog.io/@dry8r3ad/why-alpine-linux
 
-	* https://valuelog.tistory.com/69
