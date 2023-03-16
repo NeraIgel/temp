@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 18:16:24 by heha              #+#    #+#             */
-/*   Updated: 2023/03/15 18:47:59 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/16 16:48:58 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,14 @@
 BitcoinExchange::BitcoinExchange(const std::string& dataFileName, const std::string& inputFileName)
 	: _data(), _input()
 {
+	std::string		dataFileExtension(".csv");
+	if (!ends_with(dataFileName, dataFileExtension))
+		std::logic_error("Error: bad file extension.");
+
+	std::ifstream	dataFile(dataFileName.c_str());
+	if (!dataFile.is_open())
+		std::logic_error("Error: could not open file.");
+	
 	// data file open -> read -> vector push_back() -> close (if file open is fails, throw exception)
 	// input file open -> read -> vector push_back() -> close (if file open is fails, throw exception)
 }
@@ -67,4 +75,10 @@ BitcoinExchange&	BitcoinExchange::operator=(const BitcoinExchange& other)
 		_input = other._input;
 	}
 	return (*this);
+}
+
+bool	BitcoinExchange::_ends_with(const std::string& value, const std::string& ending)
+{
+	return (ending.size() <= value.size() &&
+			std::equal(ending.rbegin(), ending.rend(), value.rbegin()));
 }

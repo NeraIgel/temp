@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 18:08:49 by heha              #+#    #+#             */
-/*   Updated: 2023/03/15 18:27:21 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/16 16:48:31 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,11 @@ private:
 	BitcoinExchange(const BitcoinExchange& other);
 	BitcoinExchange& operator=(const BitcoinExchange& other);
 
-	std::vector<std::string>	_data;
-	std::vector<std::string>	_input;
+	bool	_ends_with(const std::string& value, const std::string& ending);
+	void	_data_parsing(const std::string& filename);
+
+	std::vector<std::string>	_datas;
+	std::vector<std::string>	_inputs;
 
 };
 
