@@ -5,37 +5,47 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 19:06:53 by heha              #+#    #+#             */
-/*   Updated: 2023/03/20 19:14:54 by heha             ###   ########.fr       */
+/*   Created: 2023/03/15 18:16:24 by heha              #+#    #+#             */
+/*   Updated: 2023/03/16 16:48:58 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fstream>
 #include "BitcoinExchange.hpp"
 
 // ************************************************************************** //
 //                               Constructors                                 //
 // ************************************************************************** //
 
-BitcoinExchange::BitcoinExchange() throw()
+BitcoinExchange::BitcoinExchange(const std::string& dataFileName, const std::string& inputFileName)
+	: _data(), _input()
+{
+	std::string		dataFileExtension(".csv");
+	if (!ends_with(dataFileName, dataFileExtension))
+		std::logic_error("Error: bad file extension.");
+
+	std::ifstream	dataFile(dataFileName.c_str());
+	if (!dataFile.is_open())
+		std::logic_error("Error: could not open file.");
+	
+	// data file open -> read -> vector push_back() -> close (if file open is fails, throw exception)
+	// input file open -> read -> vector push_back() -> close (if file open is fails, throw exception)
+}
+
+BitcoinExchange::BitcoinExchange()
+	: _data(), _input()
 {}
 
-BitcoinExchange::BitcoinExchange(const BitcoinExchange& other) throw()
-{
-	(void)other;
-}
+BitcoinExchange::BitcoinExchange(const BitcoinExchange& other)
+	: _data(other._data), _input(other._input)
+{}
 
 // ************************************************************************** //
 //                                Operations                                  //
 // ************************************************************************** //
 
-void	BitcoinExchange::execute(const std::string& datafile, const std::string& inputfile)
+bool	BitcoinExchange::execute()
 {
-	(void)datafile;
-	(void)inputfile;
-
-	// data file open -> read -> vector push_back() -> close (if file open is fails, throw exception)
-	// input file open -> read -> vector push_back() -> close (if file open is fails, throw exception)
-	
 	// input vector front check
 	//	a. format check (e.g. "date | value")
 	// 	b. date item check (e.g. "Year-Month-Day")
@@ -44,17 +54,31 @@ void	BitcoinExchange::execute(const std::string& datafile, const std::string& in
 	// 	a. find the index of the date before the input date
 	// exchange
 	// 	a. data value found * input value
+	return (true);
 }
 
 // ************************************************************************** //
 //                              Implementation                                //
 // ************************************************************************** //
 
-BitcoinExchange&	BitcoinExchange::operator=(const BitcoinExchange& other) throw()
+BitcoinExchange::~BitcoinExchange() throw()
 {
-	(void)other;
+	_data.clear();
+	_input.clear();
+}
+
+BitcoinExchange&	BitcoinExchange::operator=(const BitcoinExchange& other)
+{
+	if (this != &other)
+	{
+		_data = other._data;
+		_input = other._input;
+	}
 	return (*this);
 }
 
-BitcoinExchange::~BitcoinExchange() throw()
-{}
+bool	BitcoinExchange::_ends_with(const std::string& value, const std::string& ending)
+{
+	return (ending.size() <= value.size() &&
+			std::equal(ending.rbegin(), ending.rend(), value.rbegin()));
+}

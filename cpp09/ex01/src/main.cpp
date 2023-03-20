@@ -5,26 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 18:50:04 by heha              #+#    #+#             */
-/*   Updated: 2023/03/20 19:05:10 by heha             ###   ########.fr       */
+/*   Created: 2023/03/20 14:04:03 by heha              #+#    #+#             */
+/*   Updated: 2023/03/20 18:28:26 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string>
 #include <cstdlib>
 #include <iostream>
-#include <stdexcept>
 #include <exception>
-#include "BitcoinExchange.hpp"
+#include "RPN.hpp"
 
 int	main(int argc, char *argv[])
 {
 	try
 	{
-		if (argc == 1)
-			throw std::logic_error("Error: could not open file.");
-		else if (argc > 2)
-			throw std::logic_error("Error: invalid number of arguments.");
-		BitcoinExchange::execute("data.csv", argv[1]);
+		std::string	expr;
+		for (int i = 1; i < argc; ++i)
+			expr += argv[i];
+
+		std::cout << RPN::execute(expr) << std::endl;
 	}
 	catch (const std::exception& e)
 	{

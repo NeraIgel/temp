@@ -1,3 +1,4 @@
+[CPP Module 09]
 -. 기반 기술 정리
 	a. ex00
 		a-a. https://en.wikipedia.org/wiki/Comma-separated_values
@@ -6,6 +7,9 @@
 		a-d. https://stackoverflow.com/questions/1120140/how-can-i-read-and-parse-csv-files-in-c
 		a-e. https://stackoverflow.com/questions/874134/find-out-if-string-ends-with-another-string-in-c
 	b. ex01
-		b-a.
+		b-a. https://en.wikipedia.org/wiki/Reverse_Polish_notation
+		b-b. https://ko.wikipedia.org/wiki/%EC%97%AD%ED%8F%B4%EB%9E%80%EB%93%9C_%ED%91%9C%EA%B8%B0%EB%B2%95
 	c. ex02
-		c-a.
+		c-a. https://42born2code.slack.com/archives/CU6MU5TB7/p1679140995476169
+		c-b. https://stackoverflow.com/questions/27751132/how-does-merge-insertion-sort-work
+		c-c. https://codereview.stackexchange.com/questions/116367/ford-johnson-merge-insertion-sort

@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 18:48:21 by heha              #+#    #+#             */
-/*   Updated: 2023/03/20 19:03:00 by heha             ###   ########.fr       */
+/*   Created: 2023/03/20 14:02:07 by heha              #+#    #+#             */
+/*   Updated: 2023/03/20 19:06:08 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef BITCOIN_EXCHANGE_HPP
-# define BITCOIN_EXCHANGE_HPP
+#ifndef RPN_HPP
+# define RPN_HPP
 
 // ************************************************************************** //
-//                            BitcoinExchange Class                           //
+//                                  RPN Class                                 //
 // ************************************************************************** //
 
 # include <string>
 
-class BitcoinExchange {
+class RPN {
 
 public:
-	BitcoinExchange() throw();
-	BitcoinExchange(const BitcoinExchange& other) throw();
-	BitcoinExchange& operator=(const BitcoinExchange& other) throw();
-	~BitcoinExchange() throw();
+	RPN() throw();
+	RPN(const RPN& other) throw();
+	RPN& operator=(const RPN& other) throw();
+	~RPN() throw();
 
-	static void	execute(const std::string& datafile, const std::string& inputfile);
+	static int	execute(const std::string& expr);
 
 private:
+	static bool	_isOperand(char ch) throw();
+	static bool	_isOperator(char ch) throw();
+	static int	_calculate(int a, int b, char op);
+	static int	_calculate(int n, char op);
 
 };
 

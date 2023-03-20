@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 18:48:21 by heha              #+#    #+#             */
-/*   Updated: 2023/03/20 19:03:00 by heha             ###   ########.fr       */
+/*   Created: 2023/03/15 18:08:49 by heha              #+#    #+#             */
+/*   Updated: 2023/03/16 16:48:31 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,26 @@
 // ************************************************************************** //
 
 # include <string>
+# include <vector>
 
 class BitcoinExchange {
 
 public:
-	BitcoinExchange() throw();
-	BitcoinExchange(const BitcoinExchange& other) throw();
-	BitcoinExchange& operator=(const BitcoinExchange& other) throw();
+	explicit BitcoinExchange(const std::string& dataFileName, const std::string& inputFileName);
 	~BitcoinExchange() throw();
 
-	static void	execute(const std::string& datafile, const std::string& inputfile);
+	bool	execute();
 
 private:
+	BitcoinExchange();
+	BitcoinExchange(const BitcoinExchange& other);
+	BitcoinExchange& operator=(const BitcoinExchange& other);
+
+	bool	_ends_with(const std::string& value, const std::string& ending);
+	void	_data_parsing(const std::string& filename);
+
+	std::vector<std::string>	_datas;
+	std::vector<std::string>	_inputs;
 
 };
 
