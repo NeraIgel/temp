@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 18:48:21 by heha              #+#    #+#             */
-/*   Updated: 2023/03/20 19:03:00 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/21 19:29:25 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,26 @@
 //                            BitcoinExchange Class                           //
 // ************************************************************************** //
 
+# include <map>
 # include <string>
+# include <sstream>
 
 class BitcoinExchange {
 
 public:
-	BitcoinExchange() throw();
-	BitcoinExchange(const BitcoinExchange& other) throw();
-	BitcoinExchange& operator=(const BitcoinExchange& other) throw();
+	explicit BitcoinExchange(const std::string& datafile);
+	BitcoinExchange(const BitcoinExchange& other);
+	BitcoinExchange& operator=(const BitcoinExchange& other);
 	~BitcoinExchange() throw();
 
-	static void	execute(const std::string& datafile, const std::string& inputfile);
+	void	execute(const std::string& inputfile) const;
 
 private:
+	BitcoinExchange();
+
+	void	_initDataMap(const std::stringstream& data);
+
+	std::map<std::string, float>	_datamap;
 
 };
 
