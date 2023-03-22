@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 14:28:55 by heha              #+#    #+#             */
-/*   Updated: 2023/03/20 18:28:53 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/22 16:12:47 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ RPN::RPN(const RPN& other) throw()
 int	RPN::execute(const std::string& expr)
 {
 	if (expr.empty())
-		throw std::logic_error("Error: invalid number of arguments.");
+		throw std::logic_error("Error: argument string is empty.");
 
 	std::stack<int>	stack;
 	for (std::string::const_iterator it = expr.begin(), ite = expr.end(); it != ite; ++it)

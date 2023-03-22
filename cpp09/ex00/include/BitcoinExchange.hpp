@@ -5,18 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 18:48:21 by heha              #+#    #+#             */
-/*   Updated: 2023/03/21 19:29:25 by heha             ###   ########.fr       */
+/*   Created: 2023/03/22 14:09:02 by heha              #+#    #+#             */
+/*   Updated: 2023/03/22 19:53:50 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #ifndef BITCOIN_EXCHANGE_HPP
 # define BITCOIN_EXCHANGE_HPP
-
-// ************************************************************************** //
-//                            BitcoinExchange Class                           //
-// ************************************************************************** //
 
 # include <map>
 # include <string>
@@ -35,9 +31,11 @@ public:
 private:
 	BitcoinExchange();
 
-	void	_initDataMap(const std::stringstream& data);
+	void	_initDatabase(std::stringstream& input);
+	void	_validateInputfile(std::stringstream& input) const;
+	void	_parseDatabaseLine(const std::string& line, char delimiter, std::string& date, float& n, float max) const;
 
-	std::map<std::string, float>	_datamap;
+	std::map<std::string, float>	_database;
 
 };
 

@@ -3,9 +3,16 @@
 	a. ex00
 		a-a. https://en.wikipedia.org/wiki/Comma-separated_values
 		a-b. https://stackoverflow.com/questions/8406703/c-compare-to-string-dates
-		a-c. https://stackoverflow.com/questions/308390/convert-a-string-to-a-date-in-c
+		a-c. https://stackoverflow.com/questions/30984852/test-if-string-represents-yyyy-mm-dd
 		a-d. https://stackoverflow.com/questions/1120140/how-can-i-read-and-parse-csv-files-in-c
 		a-e. https://stackoverflow.com/questions/874134/find-out-if-string-ends-with-another-string-in-c
+		a-f. https://stackoverflow.com/questions/529831/returning-the-greatest-key-strictly-less-than-the-given-key-in-a-c-map
+		a-g. https://stackoverflow.com/questions/83439/remove-spaces-from-stdstring-in-c	
+		a-h. https://en.cppreference.com/w/cpp/string/basic_string/getline
+		a-i. https://en.cppreference.com/w/cpp/string/basic_string/substr
+		a-j. https://en.cppreference.com/w/cpp/string/basic_string/rfind
+		a-k. https://en.cppreference.com/w/cpp/chrono/c/strftime
+		a-l. https://en.cppreference.com/w/cpp/container/map/lower_bound
 	b. ex01
 		b-a. https://en.wikipedia.org/wiki/Reverse_Polish_notation
 		b-b. https://ko.wikipedia.org/wiki/%EC%97%AD%ED%8F%B4%EB%9E%80%EB%93%9C_%ED%91%9C%EA%B8%B0%EB%B2%95
