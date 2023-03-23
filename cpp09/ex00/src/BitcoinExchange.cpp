@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 14:17:26 by heha              #+#    #+#             */
-/*   Updated: 2023/03/22 21:17:37 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/23 12:59:28 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ void	BitcoinExchange::_initDatabase(std::stringstream& input)
 		}
 		line.clear();
 	}
+	//std::cout << "test: " << _database.size() << std::endl;
 }
 
 void	BitcoinExchange::_validateInputfile(std::stringstream& input) const
@@ -132,8 +133,8 @@ void	BitcoinExchange::_validateInputfile(std::stringstream& input) const
 			std::map<std::string, float>::const_iterator	it = _database.upper_bound(date);
 			if (it != _database.begin())
 				--it;
-			//std::cout << "test: " << (*it).first << ", " << (*it).second << " / ";
-			std::cout << date << " => " << value << " = " << (*it).second * value << std::endl;
+			//std::cout << "test: " << it->first << ", " << it->second << " / ";
+			std::cout << date << " => " << value << " = " << it->second * value << std::endl;
 		}
 		catch (const std::exception& e)
 		{
