@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 14:17:26 by heha              #+#    #+#             */
-/*   Updated: 2023/03/23 12:59:28 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/24 14:07:54 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ BitcoinExchange::BitcoinExchange(const std::string& datafile)
 
 	std::ifstream	inFile(datafile.c_str());
 	if (!inFile.is_open())
-		throw std::logic_error("Error: could not open file.");
+		throw std::runtime_error("Error: could not open file.");
 
 	std::stringstream	ss;
 	ss << inFile.rdbuf();
@@ -66,7 +66,7 @@ void	BitcoinExchange::execute(const std::string& inputfile) const
 {
 	std::ifstream	inFile(inputfile.c_str());
 	if (!inFile.is_open())
-		throw std::logic_error("Error: could not open file.");
+		throw std::runtime_error("Error: could not open file.");
 
 	std::stringstream	ss;
 	ss << inFile.rdbuf();
@@ -148,22 +148,22 @@ void	BitcoinExchange::_parseDatabaseLine(const std::string& line, char delimiter
 {
 	std::string::size_type	pos = line.rfind(delimiter);
 	if (pos == std::string::npos)
-		throw std::logic_error(std::string("Error: bad input => ") + line);
+		throw std::runtime_error(std::string("Error: bad input => ") + line);
 
 	date.clear();
 	date = line.substr(0, pos);
 	date.erase(std::remove(date.begin(), date.end(), ' '), date.end());
 	struct tm	tm;
     if (!strptime(date.c_str(), "%Y-%m-%d", &tm))
-		throw std::logic_error(std::string("Error: bad input => ") + line);
+		throw std::runtime_error(std::string("Error: bad input => ") + line);
 
 	std::istringstream	iss(line.substr(pos + 1));
 	n = 0.0f;
 	iss >> n;
 	if (!iss)
-		throw std::logic_error(std::string("Error: bad input => ") + line);
+		throw std::runtime_error(std::string("Error: bad input => ") + line);
 	if (n < 0.0f)
-		throw std::logic_error("Error: not a positive number.");
+		throw std::runtime_error("Error: not a positive number.");
 	else if (n > max)
-		throw std::logic_error("Error: too large a number.");
+		throw std::runtime_error("Error: too large a number.");
 }

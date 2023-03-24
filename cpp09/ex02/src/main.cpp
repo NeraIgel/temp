@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 15:29:13 by heha              #+#    #+#             */
-/*   Updated: 2023/03/23 15:40:59 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/24 21:38:16 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int	main(int argc, char *argv[])
 	{
 		std::string	input;
 		for (int i = 1; i < argc; ++i)
+		{
 			input += argv[i];
+			input += ' ';
+		}
 
 		PmergeMe::execute(input);
 	}

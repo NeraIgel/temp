@@ -6,7 +6,7 @@
 /*   By: heha <heha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 14:04:03 by heha              #+#    #+#             */
-/*   Updated: 2023/03/20 18:28:26 by heha             ###   ########.fr       */
+/*   Updated: 2023/03/24 21:46:22 by heha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@ int	main(int argc, char *argv[])
 {
 	try
 	{
-		std::string	expr;
+		std::string	input;
 		for (int i = 1; i < argc; ++i)
-			expr += argv[i];
+		{
+			input += argv[i];
+			input += ' ';
+		}
 
-		std::cout << RPN::execute(expr) << std::endl;
+		std::cout << RPN::execute(input) << std::endl;
 	}
 	catch (const std::exception& e)
 	{
