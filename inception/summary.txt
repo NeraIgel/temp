@@ -14,6 +14,9 @@
 -. 기반 기술 정리
 	a. https://docs.docker.com
 	b. https://www.alpinelinux.org/
+	c. https://www.debian.org/
+	d. https://debianusers.or.kr/
+	e. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
 
 -. 검증 방법 정리
 	a.
@@ -66,25 +69,29 @@
 
 -. 학습 참고 사이트
 	a. https://en.wikipedia.org/wiki/Docker_(software)
-	b. https://www.44bits.io/ko/post/why-should-i-use-docker-container
-	c. https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html
-	d. https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
-	e. https://byungwoo.oopy.io/0e5485ba-dc5e-4951-a611-81ce08291817
-	f. https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html
-	g. https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
-	h. https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker%EC%A0%95%EB%A6%AC/
-	i. https://asung123456.tistory.com/51
-	j. https://swalloow.github.io/container-tini-dumb-init/
-	k. https://www.hahwul.com/2022/08/06/docker-dumb-init/
-	l. https://cloud.google.com/architecture/best-practices-for-building-containers?hl=ko#signal-handling
-	m. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
-	n. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
-	o. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
-	p. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
-	q. https://engineer-mole.tistory.com/221
-	r. https://darrengwon.tistory.com/793
-	s. https://valuelog.tistory.com/69
-	t. https://namu.wiki/w/Alpine%20Linux
-	u. https://en.wikipedia.org/wiki/Alpine_Linux
-	v. https://velog.io/@dry8r3ad/why-alpine-linux
+	b. https://www.44bits.io/ko/keyword/linux-container
+	c. https://www.44bits.io/ko/post/why-should-i-use-docker-container
+	d. https://www.44bits.io/ko/post/building-docker-image-basic-commit-diff-and-dockerfile
+	e. https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html
+	f. https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
+	g. https://byungwoo.oopy.io/0e5485ba-dc5e-4951-a611-81ce08291817
+	h. https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html
+	i. https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
+	j. https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker%EC%A0%95%EB%A6%AC/
+	k. https://asung123456.tistory.com/51
+	l. https://swalloow.github.io/container-tini-dumb-init/
+	m. https://www.hahwul.com/2022/08/06/docker-dumb-init/
+	n. https://cloud.google.com/architecture/best-practices-for-building-containers?hl=ko#signal-handling
+	o. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
+	p. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
+	q. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
+	r. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
+	s. https://engineer-mole.tistory.com/221
+	t. https://darrengwon.tistory.com/793
+	u. https://valuelog.tistory.com/69
+	v. https://shinjam.tistory.com/entry/docker-compose-VS-docker-compose?category=891607
+	w. https://stackoverflow.com/questions/66514436/difference-between-docker-compose-and-docker-compose
+	x. https://namu.wiki/w/Alpine%20Linux
+	y. https://en.wikipedia.org/wiki/Alpine_Linux
+	z. https://velog.io/@dry8r3ad/why-alpine-linux
 
