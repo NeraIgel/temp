@@ -35,8 +35,8 @@
 	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
 
 -. 개발 환경 정의
-	a. iMac
-	b. Windows10 WSL2
+	a. Windows10 WSL2
+	b. iMac VirtualBox
 
 -. 환경 세팅 정의
 	a.
