@@ -4,7 +4,7 @@
 
 	* Docker는 리눅스의 응용 프로그램들을 프로세스 격리 기술들을 사용해 컨테이너로 실행하고 관리하는 오픈 소스 프로젝트이다.
 	* Docker는 리눅스의 컨테이너를 실행하고 관리하는 도구이기 때문에, Mac 또는 Windows 운영체제에서 구동하기 위해서는 도커 데스크탑(유료) 또는 가상 머신을 사용해야 한다.
-	* 리눅스의 응용 프로그램들을 실행하기 위한 Dockerfile들을 미리 작성하여 준비하고, 가상 머신의 게스트 운영체제에서 Docker를 설치 후, 준비한 Dockerfile들을 빌드함으로써 Docker Image들을 생성하고 이를 바탕으로 Docker Container들을 실행시킨다.
+	* Dockerfile들을 미리 작성하여 준비하고, 가상 머신의 게스트 운영체제에 Docker를 설치 후 준비한 Dockerfile들을 빌드함으로써 Docker Image들을 생성하고 이를 바탕으로 Docker Container들을 실행시킬 수 있다.
 
 -. 실행 방법 정의
 	a. VirtualBox
