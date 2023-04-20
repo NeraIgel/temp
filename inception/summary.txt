@@ -3,11 +3,8 @@
 	a. Docker를 사용하여 다양한 서비스로 구성된 소규모 인프라를 설정한다. (NGINX, WordPress+php-fpm, MariaDB)
 
 	* Docker는 리눅스의 응용 프로그램들을 프로세스 격리 기술들을 사용해 컨테이너로 실행하고 관리하는 오픈 소스 프로젝트이다.
-	* Docker는 리눅스 컨테이너를 실행하고 관리하는 도구이기 때문에, Mac 또는 Windows에서 구동하기 위해서는 도커 데스크탑(유료) 또는 가상 머신을 사용해야 한다.
-
-	* 가상 머신에 리눅스를 설치한다.
-	* 가상 머신에 설치한 게스트 운영체제에 Docker를 설치한다.
-	* 여러 서비스들을 운영하기 위한 Dockerfile들을 미리 작성하여 준비하고, 게스트 운영체제에서 준비한 Dockerfile들을 빌드함으로써 Docker Image들이 생성되고, Docker Container들이 실행될 수 있게끔 한다.
+	* Docker는 리눅스의 컨테이너를 실행하고 관리하는 도구이기 때문에, Mac 또는 Windows 운영체제에서 구동하기 위해서는 도커 데스크탑(유료) 또는 가상 머신을 사용해야 한다.
+	* 리눅스의 응용 프로그램들을 실행하기 위한 Dockerfile들을 미리 작성하여 준비하고, 가상 머신의 게스트 운영체제에서 Docker를 설치 후, 준비한 Dockerfile들을 빌드함으로써 Docker Image들을 생성하고 이를 바탕으로 Docker Container들을 실행시킨다.
 
 -. 실행 방법 정의
 	a. VirtualBox
@@ -35,7 +32,6 @@
 	* https://80000coding.oopy.io/d6e6ca38-d413-47ba-a80b-a1b4f40886ab#d6e6ca38-d413-47ba-a80b-a1b4f40886ab
 	* https://80000coding.oopy.io/8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa#8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa
 	* https://80000coding.oopy.io/3305be9c-43a0-4371-9109-d729def6210b#3305be9c-43a0-4371-9109-d729def6210b
-
 	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
 
 -. 개발 환경 정의
@@ -52,7 +48,7 @@
 	d. docker-compose.yml
 		d-a. WordPress 데이터베이스가 포함된 볼륨
 		d-b. WordPress 웹사이트 파일이 포함된 두 번째 볼륨
-		d-c. 컨테이너 간의 연결을 설정하는 도커 네트워크
+		d-c. 도커 컨테이너 간의 연결을 설정하는 도커 네트워크
 
 	* 서비스는 컨테이너에서 실행되어야 한다.
 	* 서비스는 하나씩 자체 Dockerfile을 작성해야 한다.
