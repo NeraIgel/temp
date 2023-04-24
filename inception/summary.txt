@@ -39,10 +39,7 @@
 
 -. 개발 환경 정의
 	a. Windows10 WSL2
-	b. iMac VirtualBox
-
--. 환경 세팅 정의
-	a.
+	b. iMac VirtualBox Debian
 
 -. 단위기능 목록 정의
 	a. TLSv1.2 또는 TLSv1.3만 있는 NGINX를 포함하는 도커 컨테이너
