@@ -15,11 +15,10 @@
 
 -. 기반 기술 정리
 	a. https://docs.docker.com
-
-	* https://www.alpinelinux.org/
-	* https://www.debian.org/
-	* https://debianusers.or.kr/
-	* https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
+	b. https://www.alpinelinux.org/
+	c. https://www.debian.org/
+	d. https://debianusers.or.kr/
+	e. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
 
 -. 검증 방법 정리
 	a. subject
