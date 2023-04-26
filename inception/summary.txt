@@ -15,10 +15,10 @@
 
 -. 기반 기술 정리
 	a. https://docs.docker.com
-	b. https://www.alpinelinux.org/
-	c. https://www.nginx.com/
-	d. https://wordpress.com/
-	e. https://mariadb.org/
+	b. https://www.nginx.com/
+	c. https://wordpress.com/
+	d. https://mariadb.org/
+	e. https://www.alpinelinux.org/
 	f. https://www.debian.org/
 	g. https://debianusers.or.kr/
 	h. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
