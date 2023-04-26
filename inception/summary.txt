@@ -28,10 +28,11 @@
 
 -. 자료 조사
 	a. https://docs.docker.com/desktop/windows/wsl/
-	b. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
-	c. https://netmarble.engineering/journey-to-wsl2-and-trouble-shooting/
-	d. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
-	e. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
+	b. https://docs.docker.com/engine/install/ubuntu/
+	c. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
+	d. https://netmarble.engineering/journey-to-wsl2-and-trouble-shooting/
+	e. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
+	f. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
 	A. https://wiki.debianusers.or.kr/index.php?title=%EB%B2%84%EC%B6%94%EC%96%BC%EB%B0%95%EC%8A%A4%EC%97%90_%EB%8D%B0%EB%B9%84%EC%95%88_%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0
 	B. https://wiki.debianusers.or.kr/index.php?title=%EB%8D%B0%EB%B9%84%EC%95%88_10(buster)_%EC%84%A4%EC%B9%98
 	C. https://developer-eun-diary.tistory.com/135
