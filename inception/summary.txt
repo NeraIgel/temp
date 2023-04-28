@@ -82,7 +82,7 @@
 			a-c-a. sudo groupadd docker
 			a-c-b. sudo usermod -aG docker $USER
 			a-c-c. docker ps
-		a-d. Configure Docker to start on boot with systemd
+		a-d. Configure Docker to start on boot with systemd	// re-check
 			a-d-a. sudo systemctl enable docker.service
 			a-d-b. sudo systemctl enable containerd.service
 	b. iMac VirtualBox Debian
