@@ -34,11 +34,12 @@
 		a-d. https://docs.docker.com/engine/install/linux-postinstall/
 		a-e. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
 		a-f. https://dev.epiloum.net/2063
-		a-g. https://netmarble.engineering/journey-to-wsl2-and-trouble-shooting/
-		a-h. https://netmarble.engineering/wsl2-static-ip-scheduler-settings
-		a-i. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
-		a-j. https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
-		a-k. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
+		a-g. https://www.objectivity.co.uk/blog/how-to-live-without-docker-desktop-developers-perspective/
+		a-h. https://netmarble.engineering/journey-to-wsl2-and-trouble-shooting/
+		a-i. https://netmarble.engineering/wsl2-static-ip-scheduler-settings
+		a-j. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
+		a-k. https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
+		a-l. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
 	b. NGINX
 	c. WordPress
 	d. MariaDB
@@ -59,7 +60,7 @@
 	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
 
 -. 개발 환경 정의
-	a. Windows10 WSL2
+	a. Windows10 WSL2 Ubuntu 18.04(LTS)
 	b. iMac VirtualBox Debian
 
 -. 단위기능 목록 정의
