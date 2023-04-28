@@ -39,7 +39,8 @@
 		a-i. https://netmarble.engineering/wsl2-static-ip-scheduler-settings
 		a-j. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
 		a-k. https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
-		a-l. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
+		a-l. https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9
+		a-m. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
 	b. NGINX
 	c. WordPress
 	d. MariaDB
