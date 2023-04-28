@@ -61,6 +61,28 @@
 
 -. 개발 환경 정의
 	a. Windows10 WSL2 Ubuntu 18.04(LTS)
+		a-a. Uninstall old versions
+			a-a-a. sudo apt-get remove docker docker-engine docker.io containerd runc
+			a-a-b. sudo rm -rf /var/lib/docker
+			a-a-c. sudo rm -rf /var/lib/containerd
+		a-b. Install using the apt repository
+			a-b-a. sudo apt-get update
+			a-b-b. sudo apt-get install ca-certificates curl gnupg
+			a-b-c. sudo install -m 0755 -d /etc/apt/keyrings
+			a-b-d. curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+			a-b-e. sudo chmod a+r /etc/apt/keyrings/docker.gpg
+			a-b-f. echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+			a-b-g. sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+			a-b-h. sudo docker --version
+			a-b-i. sudo docker version
+			a-b-j. sudo docker ps
+		a-c. Manage Docker as a non-root user
+			a-c-a. sudo groupadd docker
+			a-c-b. sudo usermod -aG docker $USER
+			a-c-c. docker ps
+		a-d. Configure Docker to start on boot with systemd
+			a-d-a. sudo systemctl enable docker.service
+			a-d-b. sudo systemctl enable containerd.service
 	b. iMac VirtualBox Debian
 
 -. 단위기능 목록 정의
