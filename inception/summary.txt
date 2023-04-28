@@ -61,6 +61,10 @@
 
 -. 개발 환경 정의
 	a. Windows10 WSL2 Ubuntu 18.04(LTS)
+		a-a. Configure admin (sudo) access for the non-root user
+			a-a-a. grep -E 'sudo|wheel' /etc/group	// e.g. sudo:x:27:myusername
+				a-a-a-a. usermod -aG sudo $USER
+			a-a-b. sudo grep -E '%sudo|%wheel' /etc/sudoers	// e.g. %sudo ALL=(ALL) ALL
 		a-a. Uninstall old versions
 			a-a-a. sudo apt-get remove docker docker-engine docker.io containerd runc
 			a-a-b. sudo rm -rf /var/lib/docker
