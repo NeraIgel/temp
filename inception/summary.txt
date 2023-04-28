@@ -20,8 +20,8 @@
 	d. https://mariadb.org/
 	e. https://www.alpinelinux.org/
 	f. https://www.debian.org/
-	g. https://debianusers.or.kr/
-	h. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
+		f-a. https://debianusers.or.kr/
+		f-b. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
 
 -. 검증 방법 정리
 	a. subject
