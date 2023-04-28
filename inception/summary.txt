@@ -27,17 +27,27 @@
 	a. subject
 
 -. 자료 조사
-	a. https://docs.docker.com/desktop/windows/wsl/
-	b. https://docs.docker.com/engine/install/ubuntu/
-	c. https://docs.docker.com/engine/install/linux-postinstall/
-	d. https://docs.docker.com/engine/install/troubleshoot/
-	e. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
-	f. https://netmarble.engineering/journey-to-wsl2-and-trouble-shooting/
-	g. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
-	h. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
-	A. https://wiki.debianusers.or.kr/index.php?title=%EB%B2%84%EC%B6%94%EC%96%BC%EB%B0%95%EC%8A%A4%EC%97%90_%EB%8D%B0%EB%B9%84%EC%95%88_%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0
-	B. https://wiki.debianusers.or.kr/index.php?title=%EB%8D%B0%EB%B9%84%EC%95%88_10(buster)_%EC%84%A4%EC%B9%98
-	C. https://developer-eun-diary.tistory.com/135
+	a. WSL2
+		a-a. https://docs.docker.com/desktop/windows/wsl/
+		a-b. https://docs.docker.com/engine/install/ubuntu/
+		a-c. https://docs.docker.com/engine/install/troubleshoot/
+		a-d. https://docs.docker.com/engine/install/linux-postinstall/
+		a-e. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
+		a-f. https://dev.epiloum.net/2063
+		a-g. https://netmarble.engineering/journey-to-wsl2-and-trouble-shooting/
+		a-h. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
+		a-i. https://netmarble.engineering/wsl2-static-ip-scheduler-settings/?hilite=wsl
+		a-j. https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
+		a-k. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
+	b. NGINX
+	c. WordPress
+	d. MariaDB
+	e. docker compose
+	f. Makefile for docker
+	g. Debian configuration for docker exercises
+		g-a. https://wiki.debianusers.or.kr/index.php?title=%EB%B2%84%EC%B6%94%EC%96%BC%EB%B0%95%EC%8A%A4%EC%97%90_%EB%8D%B0%EB%B9%84%EC%95%88_%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0
+		g-b. https://wiki.debianusers.or.kr/index.php?title=%EB%8D%B0%EB%B9%84%EC%95%88_10(buster)_%EC%84%A4%EC%B9%98
+		g-c. https://developer-eun-diary.tistory.com/135
 
 	* https://bigpel66.oopy.io/library/docker/docker
 	* https://bigpel66.oopy.io/library/42/inner-circle/20
