@@ -90,6 +90,10 @@
 				a-d-a-d. echo '    sudo service docker start' >> ~/.profile
 				a-d-a-e. echo 'fi' >> ~/.profile
 			a-d-b. Configure Docker to start on Windows boot
+				a-d-b-a. echo '' >> ~/.profile
+				a-d-b-b. echo '# set DOCKER_HOST for docker default context' >> ~/.profile
+				a-d-b-c. echo 'wsl_ip=$(ip addr show eth0 | grep -oP "(?<=inet\s)\d+(\.\d+){3}")' >> ~/.profile
+				a-d-b-d. echo 'export DOCKER_HOST=tcp://$wsl_ip:2375' >> ~/.profile
 	b. iMac VirtualBox Debian
 
 -. 단위기능 목록 정의
