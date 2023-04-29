@@ -87,7 +87,7 @@
 				a-d-a-a. echo '' >> ~/.profile
 				a-d-a-b. echo '# start docker daemon automatically when wsl launch' >> ~/.profile
 				a-d-a-c. echo 'if [ -z "$(ps aux | grep dockerd | grep -v grep)" ] ; then' >> ~/.profile
-				a-d-a-d. echo 'sudo service docker start' >> ~/.profile
+				a-d-a-d. echo '    sudo service docker start' >> ~/.profile
 				a-d-a-e. echo 'fi' >> ~/.profile
 			a-d-b. Configure Docker to start on Windows boot
 	b. iMac VirtualBox Debian
