@@ -82,9 +82,12 @@
 			a-c-a. sudo groupadd docker
 			a-c-b. sudo usermod -aG docker $USER
 			a-c-c. docker ps
-		a-d. Configure Docker to start on boot with systemd	// re-check
-			a-d-a. sudo systemctl enable docker.service
-			a-d-b. sudo systemctl enable containerd.service
+		a-d. Configure Docker
+			a-d-a. Configure Docker to start on WSL launch
+				a-d-a-a. echo '' >> ~/.profile
+				a-d-a-b. echo '# start docker daemon automatically when wsl launch' >> ~/.profile
+				a-d-a-c. echo 'sudo service docker start' >> ~/.profile
+			a-d-b. Configure Docker to start on Windows boot
 	b. iMac VirtualBox Debian
 
 -. 단위기능 목록 정의
