@@ -41,6 +41,7 @@
 		a-k. https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
 		a-l. https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9
 		a-m. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
+		a-n. https://jink1982.tistory.com/48
 	b. NGINX
 	c. WordPress
 	d. MariaDB
