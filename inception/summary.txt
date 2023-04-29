@@ -82,7 +82,7 @@
 			a-c-a. sudo groupadd docker
 			a-c-b. sudo usermod -aG docker $USER
 			a-c-c. docker ps
-		a-d. Configure Docker
+		a-d. Configure Docker to start
 			a-d-a. Configure Docker to start on WSL launch
 				a-d-a-a. echo '' >> ~/.profile
 				a-d-a-b. echo '# start docker daemon automatically when wsl launch' >> ~/.profile
