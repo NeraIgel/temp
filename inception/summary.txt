@@ -86,7 +86,7 @@
 			a-d-a. echo '' >> ~/.profile
 			a-d-b. echo '# start docker daemon automatically when logging in wsl shell' >> ~/.profile
 			a-d-c. echo 'if [ -z "$(ps aux | grep dockerd | grep -v grep)" ] ; then' >> ~/.profile
-			a-d-d. echo '    if [ service docker status 2>&1 | grep -q "is not running" ] ; then' >> ~/.profile
+			a-d-d. echo '    if [ -z "$(service docker status 2>&1 | grep -q "is not running")" ] ; then' >> ~/.profile
 			a-d-e. echo '        wsl.exe --distribution "${WSL_DISTRO_NAME}" --user root --exec /usr/sbin/service docker start > /dev/null 2>&1' >> ~/.profile
 			a-d-f. echo '    fi' >> ~/.profile
 			a-d-g. echo 'fi' >> ~/.profile
