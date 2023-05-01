@@ -15,6 +15,7 @@
 
 -. 기반 기술 정리
 	a. https://docs.docker.com
+		a-a. https://hub.docker.com/
 	b. https://www.nginx.com/
 	c. https://wordpress.com/
 	d. https://mariadb.org/
@@ -43,6 +44,7 @@
 		a-m. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
 		a-n. https://jink1982.tistory.com/48
 	b. NGINX
+		b-a. https://hub.docker.com/_/nginx
 	c. WordPress
 	d. MariaDB
 	e. docker compose
