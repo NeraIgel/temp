@@ -16,13 +16,13 @@
 -. 기반 기술 정리
 	a. https://docs.docker.com
 		a-a. https://hub.docker.com/
-	b. https://www.nginx.com/
-	c. https://wordpress.com/
-	d. https://mariadb.org/
-	e. https://www.alpinelinux.org/
-		e-a. https://wiki.alpinelinux.org/wiki/Main_Page
-	f. https://www.debian.org/
-		f-a. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
+	b. https://www.alpinelinux.org/
+		b-a. https://wiki.alpinelinux.org/wiki/Main_Page
+	c. https://www.debian.org/
+		c-a. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
+	d. https://www.nginx.com/
+	e. https://wordpress.com/
+	f. https://mariadb.org/
 
 -. 검증 방법 정리
 	a. subject
