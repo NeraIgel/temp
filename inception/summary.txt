@@ -55,6 +55,7 @@
 		c-c. https://hub.docker.com/_/nginx
 		* https://blog.naver.com/PostView.nhn?blogId=ki630808&logNo=222149370156&categoryNo=51&parentCategoryNo=2&viewDate=&currentPage=&postListTopCurrentPage=&isAfterWrite=true
 		* https://www.librebyte.net/en/web-servers/how-to-install-nginx-on-alpine-linux/
+		* https://42born2code.slack.com/archives/CU6MU5TB7/p1616576215022600
 		* https://knsesang2000.tistory.com/14
 	d. WordPress
 	e. MariaDB
