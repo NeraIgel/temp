@@ -21,10 +21,8 @@
 	d. https://mariadb.org/
 	e. https://www.alpinelinux.org/
 		e-a. https://wiki.alpinelinux.org/wiki/Main_Page
-		e-b. https://wiki.alpinelinux.org/wiki/Category:Server
 	f. https://www.debian.org/
-		f-a. https://debianusers.or.kr/
-		f-b. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
+		f-a. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
 
 -. 검증 방법 정리
 	a. subject
