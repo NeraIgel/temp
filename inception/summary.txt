@@ -20,6 +20,8 @@
 	c. https://wordpress.com/
 	d. https://mariadb.org/
 	e. https://www.alpinelinux.org/
+		e-a. https://wiki.alpinelinux.org/wiki/Main_Page
+		e-b. https://wiki.alpinelinux.org/wiki/Category:Server
 	f. https://www.debian.org/
 		f-a. https://debianusers.or.kr/
 		f-b. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
@@ -52,11 +54,13 @@
 		b-f. https://knsesang2000.tistory.com/14
 		b-g. https://knsesang2000.tistory.com/389
 		b-h. https://42born2code.slack.com/archives/CU6MU5TB7/p1616576215022600
-		b-i. https://www.techtarget.com/searchitoperations/tutorial/Use-Docker-and-Alpine-Linux-to-build-lightweight-containers
+		b-i. https://wiki.alpinelinux.org/wiki/Running_Alpine_in_a_Docker_Container
+		b-j. https://www.techtarget.com/searchitoperations/tutorial/Use-Docker-and-Alpine-Linux-to-build-lightweight-containers
 	c. NGINX
 		c-a. https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker-2/
 		c-b. https://nginx.org/en/linux_packages.html#Alpine
-		c-c. https://hub.docker.com/_/nginx
+		c-c. https://wiki.alpinelinux.org/wiki/Nginx
+		c-d. https://hub.docker.com/_/nginx
 	d. WordPress
 	e. MariaDB
 	f. docker compose
