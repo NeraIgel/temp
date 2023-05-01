@@ -49,7 +49,7 @@
 		b-c. https://www.alpinelinux.org/releases/
 		b-d. https://wiki.alpinelinux.org/wiki/Installation#Post-Installation
 		b-e. https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper
-		b-f. https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper#Upgrade_a_Running_System
+		b-f. https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper#Add_a_Package
 		b-g. https://wiki.alpinelinux.org/wiki/Repositories#Managing_repositories
 		b-h. https://wiki.alpinelinux.org/wiki/OpenRC
 		b-i. https://hub.docker.com/_/alpine
