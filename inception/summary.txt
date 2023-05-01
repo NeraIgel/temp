@@ -50,13 +50,16 @@
 		b-b. https://github.com/alpinelinux/docker-alpine
 		b-c. https://www.alpinelinux.org/releases/
 		b-d. https://wiki.alpinelinux.org/wiki/Installation#Post-Installation
-		b-e. https://wiki.alpinelinux.org/wiki/OpenRC
-		b-f. https://hub.docker.com/_/alpine
-		b-g. https://hello-bryan.tistory.com/166
-		b-h. https://knsesang2000.tistory.com/14
-		b-i. https://knsesang2000.tistory.com/389
-		b-j. https://42born2code.slack.com/archives/CU6MU5TB7/p1616576215022600
-		b-k. https://www.techtarget.com/searchitoperations/tutorial/Use-Docker-and-Alpine-Linux-to-build-lightweight-containers
+		b-e. https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper
+		b-f. https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper#Upgrade_a_Running_System
+		b-g. https://wiki.alpinelinux.org/wiki/Repositories#Managing_repositories
+		b-h. https://wiki.alpinelinux.org/wiki/OpenRC
+		b-i. https://hub.docker.com/_/alpine
+		b-j. https://hello-bryan.tistory.com/166
+		b-k. https://knsesang2000.tistory.com/14
+		b-l. https://knsesang2000.tistory.com/389
+		b-m. https://42born2code.slack.com/archives/CU6MU5TB7/p1616576215022600
+		b-n. https://www.techtarget.com/searchitoperations/tutorial/Use-Docker-and-Alpine-Linux-to-build-lightweight-containers
 	c. NGINX
 		c-a. https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker-2/
 		c-b. https://nginx.org/en/linux_packages.html#Alpine
