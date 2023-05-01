@@ -44,7 +44,8 @@
 		a-m. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
 		a-n. https://jink1982.tistory.com/48
 	b. NGINX
-		b-a. https://hub.docker.com/_/nginx
+		b-a. https://nginx.org/en/linux_packages.html#Alpine
+		b-b. https://hub.docker.com/_/nginx
 	c. WordPress
 	d. MariaDB
 	e. docker compose
