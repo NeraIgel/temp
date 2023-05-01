@@ -50,8 +50,9 @@
 		b-d. https://hello-bryan.tistory.com/166
 		b-e. https://hub.docker.com/_/alpine
 	c. NGINX
-		c-a. https://nginx.org/en/linux_packages.html#Alpine
-		c-b. https://hub.docker.com/_/nginx
+		c-a. https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker/
+		c-b. https://nginx.org/en/linux_packages.html#Alpine
+		c-c. https://hub.docker.com/_/nginx
 	d. WordPress
 	e. MariaDB
 	f. docker compose
