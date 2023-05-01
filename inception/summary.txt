@@ -154,4 +154,11 @@
 	x. https://namu.wiki/w/Alpine%20Linux
 	y. https://en.wikipedia.org/wiki/Alpine_Linux
 	z. https://velog.io/@dry8r3ad/why-alpine-linux
+	A. https://ko.wikipedia.org/wiki/Nginx
+	B. https://namu.wiki/w/NGINX
+	C. https://dkswnkk.tistory.com/513
+	D. https://icarus8050.tistory.com/57
+	E. https://whatisthenext.tistory.com/123
+	F. https://12bme.tistory.com/366
+	G. https://nginxstore.com/blog/nginx/%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%9D%B4-%EC%8B%A4%EC%88%98%ED%95%98%EB%8A%94-nginx-%EC%84%A4%EC%A0%95-%EC%97%90%EB%9F%AC-10%EA%B0%80%EC%A7%80/
 
