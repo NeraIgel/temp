@@ -46,8 +46,9 @@
 	b. Alpine
 		b-a. https://www.docker.com/blog/how-to-use-the-alpine-docker-official-image/
 		b-b. https://github.com/alpinelinux/docker-alpine
-		b-c. https://hello-bryan.tistory.com/166
-		b-d. https://hub.docker.com/_/alpine
+		b-c. https://www.alpinelinux.org/releases/
+		b-d. https://hello-bryan.tistory.com/166
+		b-e. https://hub.docker.com/_/alpine
 	c. NGINX
 		c-a. https://nginx.org/en/linux_packages.html#Alpine
 		c-b. https://hub.docker.com/_/nginx
