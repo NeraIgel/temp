@@ -21,6 +21,7 @@
 	c. https://www.debian.org/
 		c-a. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
 	d. https://www.nginx.com/
+		d-a. https://nginx.org/en/docs/
 	e. https://wordpress.com/
 	f. https://mariadb.org/
 
@@ -59,13 +60,14 @@
 		b-m. https://42born2code.slack.com/archives/CU6MU5TB7/p1616576215022600
 		b-n. https://www.techtarget.com/searchitoperations/tutorial/Use-Docker-and-Alpine-Linux-to-build-lightweight-containers
 	c. NGINX
-		c-a. https://stackoverflow.com/questions/65627946/how-to-start-nginx-server-within-alpinelatest-image-using-rc-service-command
-		c-b. https://www.digitalocean.com/community/tutorials/how-to-run-nginx-in-a-docker-container-on-ubuntu-22-04
-		c-c. https://www.docker.com/blog/how-to-build-and-run-next-js-applications-with-docker-compose-nginx/
-		c-d. https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker-2/
-		c-e. https://nginx.org/en/linux_packages.html#Alpine
-		c-f. https://wiki.alpinelinux.org/wiki/Nginx
-		c-g. https://hub.docker.com/_/nginx
+		c-a. https://www.docker.com/blog/how-to-build-and-run-next-js-applications-with-docker-compose-nginx/
+		c-b. https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker-2/
+		c-c. https://nginx.org/en/linux_packages.html#Alpine
+		c-d. https://nginx.org/en/docs/http/configuring_https_servers.html
+		c-e. https://www.digitalocean.com/community/tutorials/how-to-run-nginx-in-a-docker-container-on-ubuntu-22-04
+		c-f. https://stackoverflow.com/questions/65627946/how-to-start-nginx-server-within-alpinelatest-image-using-rc-service-command
+		c-g. https://wiki.alpinelinux.org/wiki/Nginx
+		c-h. https://hub.docker.com/_/nginx
 	d. WordPress
 	e. MariaDB
 	f. docker compose
