@@ -186,13 +186,11 @@
 				|- tools
 
 -. 학습 참고 사이트
-	a. WSL2
-	b. Docker
-	c. Alpine
-	d. NGINX
-	e. WordPress
-	f. MariaDB
-	g. Makefile for docker
+	a. Docker
+	b. Alpine
+	c. NGINX
+	d. WordPress
+	e. MariaDB
 
 -. 학습 참고 사이트 (임시)
 	a. https://en.wikipedia.org/wiki/Docker_(software)
