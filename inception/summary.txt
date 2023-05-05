@@ -14,16 +14,21 @@
 	* Makefile도 필요하며 디렉토리의 루트에 있어야 한다. Makefile은 반드시 모든 애플리케이션을 설정해야 한다. (즉, docker-compose.yml을 사용해서 도커 이미지들을 생성해야 한다.)
 
 -. 기반 기술 정리
-	a. https://docs.docker.com
+	a. https://www.docker.com/
 		a-a. https://hub.docker.com/
+		a-b. https://docs.docker.com
 	b. https://www.alpinelinux.org/
 		b-a. https://wiki.alpinelinux.org/wiki/Main_Page
+		b-b. https://docs.alpinelinux.org/user-handbook/0.1a/index.html
 	c. https://www.debian.org/
-		c-a. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
+		c-a. https://forums.debian.net/
+		c-b. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
 	d. https://www.nginx.com/
-		d-a. https://nginx.org/en/docs/
+		d-a. https://docs.nginx.com/nginx
+		d-b. https://nginx.org/en/docs/
 	e. https://wordpress.com/
 	f. https://mariadb.org/
+		f-a. https://mariadb.org/documentation/
 
 -. 검증 방법 정리
 	a. subject
@@ -60,6 +65,7 @@
 		b-m. https://42born2code.slack.com/archives/CU6MU5TB7/p1616576215022600
 		b-n. https://www.techtarget.com/searchitoperations/tutorial/Use-Docker-and-Alpine-Linux-to-build-lightweight-containers
 	c. NGINX
+		c-?. https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/
 		c-a. https://www.docker.com/blog/how-to-build-and-run-next-js-applications-with-docker-compose-nginx/
 		c-b. https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker-2/
 		c-c. https://nginx.org/en/linux_packages.html#Alpine
