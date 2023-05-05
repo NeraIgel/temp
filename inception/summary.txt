@@ -24,8 +24,8 @@
 		c-a. https://forums.debian.net/
 		c-b. https://wiki.debianusers.or.kr/index.php?title=%EB%8C%80%EB%AC%B8
 	d. https://www.nginx.com/
-		d-a. https://docs.nginx.com/nginx
-		d-b. https://nginx.org/en/docs/
+		d-a. https://nginx.org/en/docs/
+		d-b. https://docs.nginx.com/nginx
 	e. https://wordpress.com/
 	f. https://mariadb.org/
 		f-a. https://mariadb.org/documentation/
