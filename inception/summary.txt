@@ -44,6 +44,15 @@
 	h. Makefile for docker
 	i. Debian configuration for docker
 
+	* https://bigpel66.oopy.io/library/docker/docker
+	* https://bigpel66.oopy.io/library/42/inner-circle/20
+	* https://bigpel66.oopy.io/library/42/reference/20#7790b675-e312-403e-b3ff-d1887b76f4f5
+	* https://80000coding.oopy.io/969858b3-0baf-4f5a-a8b2-6749021601c6#969858b3-0baf-4f5a-a8b2-6749021601c6
+	* https://80000coding.oopy.io/d6e6ca38-d413-47ba-a80b-a1b4f40886ab#d6e6ca38-d413-47ba-a80b-a1b4f40886ab
+	* https://80000coding.oopy.io/8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa#8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa
+	* https://80000coding.oopy.io/3305be9c-43a0-4371-9109-d729def6210b#3305be9c-43a0-4371-9109-d729def6210b
+	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
+
 -. 자료 조사 (임시)
 	a. WSL2
 		a-a. https://docs.docker.com/desktop/windows/wsl/
