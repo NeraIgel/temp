@@ -159,7 +159,6 @@
 		|- doker-compose.yml
 		|- .env
 		|- requirements
-			|- bonus
 			|- mariadb
 				|- conf
 				|- Dockerfile
@@ -172,6 +171,10 @@
 				|- tools
 			|- tools
 			|- wordpress
+				|- conf
+				|- Dockerfile
+				|- .dockerignore
+				|- tools
 
 -. 학습 참고 사이트
 	a. WSL2
