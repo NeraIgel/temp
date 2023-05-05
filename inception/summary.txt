@@ -34,15 +34,14 @@
 	a. subject
 
 -. 자료 조사
-	a. WSL2
-	b. Dockerfile
+	a. Docker
+	b. WSL2
 	c. Alpine
 	d. NGINX
 	e. WordPress
 	f. MariaDB
-	g. Compose file
-	h. Makefile for docker
-	i. Debian configuration for docker
+	g. Makefile for docker
+	h. Debian configuration for docker
 
 	* https://bigpel66.oopy.io/library/docker/docker
 	* https://bigpel66.oopy.io/library/42/inner-circle/20
