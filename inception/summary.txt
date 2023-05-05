@@ -35,6 +35,17 @@
 
 -. 자료 조사
 	a. WSL2
+	b. Dockerfile
+	c. Alpine
+	d. NGINX
+	e. WordPress
+	f. MariaDB
+	g. Compose file
+	h. Makefile for docker
+	i. Debian configuration for docker
+
+-. 자료 조사 (임시)
+	a. WSL2
 		a-a. https://docs.docker.com/desktop/windows/wsl/
 		a-b. https://docs.docker.com/engine/install/ubuntu/
 		a-c. https://docs.docker.com/engine/install/troubleshoot/
@@ -163,6 +174,15 @@
 			|- wordpress
 
 -. 학습 참고 사이트
+	a. WSL2
+	b. Docker
+	c. Alpine
+	d. NGINX
+	e. WordPress
+	f. MariaDB
+	g. Makefile for docker
+
+-. 학습 참고 사이트 (임시)
 	a. https://en.wikipedia.org/wiki/Docker_(software)
 	b. https://www.44bits.io/ko/keyword/linux-container
 	c. https://www.44bits.io/ko/post/why-should-i-use-docker-container
