@@ -141,7 +141,7 @@
 			a-d-e. echo '        wsl.exe --distribution "${WSL_DISTRO_NAME}" --user root --exec /usr/sbin/service docker start > /dev/null 2>&1' >> ~/.profile
 			a-d-f. echo '    fi' >> ~/.profile
 			a-d-g. echo 'fi' >> ~/.profile
-	b. Configuring Alpine 3.16 in a Docker container
+	b. Alpine 3.16 in a Docker Container
 		b-a. Add OpenRC package
 			b-a-a. apk update
 			b-a-b. apk add --no-cache openrc
