@@ -17,6 +17,7 @@
 	a. https://www.docker.com/
 		a-a. https://hub.docker.com/
 		a-b. https://docs.docker.com
+		a-c. https://github.com/moby/moby
 	b. https://www.alpinelinux.org/
 		b-a. https://wiki.alpinelinux.org/wiki/Main_Page
 		b-b. https://docs.alpinelinux.org/user-handbook/0.1a/index.html
@@ -35,6 +36,8 @@
 
 -. 자료 조사
 	a. Docker
+		a-a. https://docs.docker.com/get-started/
+		a-b. https://docs.docker.com/get-started/overview/
 	b. WSL2
 	c. Alpine
 	d. NGINX
@@ -186,35 +189,35 @@
 
 -. 학습 참고 사이트
 	a. Docker
+		a-a. https://en.wikipedia.org/wiki/Docker_(software)
+		a-b. https://www.44bits.io/ko/keyword/linux-container
+		a-c. https://www.44bits.io/ko/post/why-should-i-use-docker-container
+		a-d. https://www.44bits.io/ko/post/building-docker-image-basic-commit-diff-and-dockerfile
+		a-e. https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html
+		a-f. https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
+		a-g. https://byungwoo.oopy.io/0e5485ba-dc5e-4951-a611-81ce08291817
+		a-h. https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html
+		a-i. https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
+		a-j. https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker%EC%A0%95%EB%A6%AC/
+		a-k. https://asung123456.tistory.com/51
+		a-l. https://swalloow.github.io/container-tini-dumb-init/
+		a-m. https://www.hahwul.com/2022/08/06/docker-dumb-init/
+		a-n. https://cloud.google.com/architecture/best-practices-for-building-containers?hl=ko#signal-handling
+		a-o. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
+		a-p. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
+		a-q. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
+		a-r. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
+		a-s. https://engineer-mole.tistory.com/221
+		a-t. https://darrengwon.tistory.com/793
+		a-u. https://valuelog.tistory.com/69
+		a-v. https://shinjam.tistory.com/entry/docker-compose-VS-docker-compose?category=891607
+		a-w. https://stackoverflow.com/questions/66514436/difference-between-docker-compose-and-docker-compose
 	b. Alpine
 	c. NGINX
 	d. WordPress
 	e. MariaDB
 
 -. 학습 참고 사이트 (임시)
-	a. https://en.wikipedia.org/wiki/Docker_(software)
-	b. https://www.44bits.io/ko/keyword/linux-container
-	c. https://www.44bits.io/ko/post/why-should-i-use-docker-container
-	d. https://www.44bits.io/ko/post/building-docker-image-basic-commit-diff-and-dockerfile
-	e. https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html
-	f. https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
-	g. https://byungwoo.oopy.io/0e5485ba-dc5e-4951-a611-81ce08291817
-	h. https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html
-	i. https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
-	j. https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker%EC%A0%95%EB%A6%AC/
-	k. https://asung123456.tistory.com/51
-	l. https://swalloow.github.io/container-tini-dumb-init/
-	m. https://www.hahwul.com/2022/08/06/docker-dumb-init/
-	n. https://cloud.google.com/architecture/best-practices-for-building-containers?hl=ko#signal-handling
-	o. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
-	p. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
-	q. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
-	r. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
-	s. https://engineer-mole.tistory.com/221
-	t. https://darrengwon.tistory.com/793
-	u. https://valuelog.tistory.com/69
-	v. https://shinjam.tistory.com/entry/docker-compose-VS-docker-compose?category=891607
-	w. https://stackoverflow.com/questions/66514436/difference-between-docker-compose-and-docker-compose
 	x. https://namu.wiki/w/Alpine%20Linux
 	y. https://en.wikipedia.org/wiki/Alpine_Linux
 	z. https://velog.io/@dry8r3ad/why-alpine-linux
