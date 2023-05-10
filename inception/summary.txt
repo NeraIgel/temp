@@ -58,10 +58,10 @@
 			a-c-d. https://docs.docker.com/develop/remote-development/
 			a-c-e. https://docs.docker.com/engine/reference/builder/
 			a-c-f. https://docs.docker.com/build/building/multi-stage/
-			a-c-g. https://docs.docker.com/storage/volumes/
-			a-c-h. https://docs.docker.com/storage/bind-mounts/
-			a-c-i. https://docs.docker.com/network/
-			a-c-j. https://docs.docker.com/compose/compose-file/
+			a-c-g. https://docs.docker.com/compose/compose-file/
+			a-c-h. https://docs.docker.com/network/
+			a-c-i. https://docs.docker.com/storage/volumes/
+			a-c-j. https://docs.docker.com/storage/bind-mounts/
 			a-c-k. https://docs.docker.com/get-started/kube-deploy/
 			a-c-l. https://docs.docker.com/get-started/swarm-deploy/
 		a-d. https://docs.docker.com/language/
@@ -70,8 +70,6 @@
 			a-d-c. https://docs.docker.com/language/java/
 			a-d-d. https://docs.docker.com/language/golang/
 			a-d-e. https://docs.docker.com/language/dotnet/
-		a-e. https://docs.docker.com/reference/
-			a-e-a. 
 	b. WSL2
 	c. Alpine
 	d. NGINX
