@@ -17,7 +17,6 @@
 	a. https://www.docker.com/
 		a-a. https://hub.docker.com/
 		a-b. https://docs.docker.com
-		a-c. https://github.com/moby/moby
 	b. https://www.alpinelinux.org/
 		b-a. https://wiki.alpinelinux.org/wiki/Main_Page
 		b-b. https://docs.alpinelinux.org/user-handbook/0.1a/index.html
