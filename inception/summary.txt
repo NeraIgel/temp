@@ -52,16 +52,22 @@
 			a-b-b. https://docs.docker.com/engine/install/troubleshoot/
 			a-b-c. https://docs.docker.com/engine/install/linux-postinstall/
 		a-c. https://docs.docker.com/develop/
+			a-c-a. https://docs.docker.com/engine/reference/builder/
+			a-c-b. https://docs.docker.com/build/building/multi-stage/
+			a-c-c. https://docs.docker.com/storage/volumes/
+			a-c-d. https://docs.docker.com/storage/bind-mounts/ 
+			a-c-e. https://docs.docker.com/get-started/kube-deploy/
+			a-c-f. https://docs.docker.com/get-started/swarm-deploy/
+			a-c-g. https://docs.docker.com/develop/dev-best-practices/
+			a-c-h. https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 		a-d. https://docs.docker.com/language/
 		a-e. https://docs.docker.com/desktop/
 		a-f. https://docs.docker.com/reference/
-		a-g. https://docs.docker.com/engine/reference/builder/
 		a-h. https://docs.docker.com/config/daemon/
 		a-i. https://docs.docker.com/network/
 		a-k. https://docs.docker.com/compose/compose-file/
 		a-l. https://docs.docker.com/config/labels-custom-metadata/
 		a-m. https://docs.docker.com/storage/
-		a-n. https://docs.docker.com/build/building/multi-stage/
 	b. WSL2
 	c. Alpine
 	d. NGINX
