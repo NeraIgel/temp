@@ -56,18 +56,16 @@
 			a-c-b. https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 			a-c-c. https://docs.docker.com/develop/security-best-practices/
 			a-c-d. https://docs.docker.com/develop/remote-development/
-
-			a-c-?. https://docs.docker.com/engine/reference/builder/
-			a-c-?. https://docs.docker.com/build/building/multi-stage/
-			a-c-?. https://docs.docker.com/storage/volumes/
-			a-c-?. https://docs.docker.com/storage/bind-mounts/ 
-			a-c-?. https://docs.docker.com/get-started/kube-deploy/
-			a-c-?. https://docs.docker.com/get-started/swarm-deploy/
+			a-c-e. https://docs.docker.com/engine/reference/builder/
+			a-c-f. https://docs.docker.com/build/building/multi-stage/
+			a-c-g. https://docs.docker.com/storage/volumes/
+			a-c-h. https://docs.docker.com/storage/bind-mounts/
+			a-c-i. https://docs.docker.com/network/
+			a-c-j. https://docs.docker.com/compose/compose-file/
+			a-c-k. https://docs.docker.com/get-started/kube-deploy/
+			a-c-l. https://docs.docker.com/get-started/swarm-deploy/
 		a-d. https://docs.docker.com/language/
 		a-f. https://docs.docker.com/reference/
-		a-i. https://docs.docker.com/network/
-		a-k. https://docs.docker.com/compose/compose-file/
-		a-m. https://docs.docker.com/storage/
 	b. WSL2
 	c. Alpine
 	d. NGINX
