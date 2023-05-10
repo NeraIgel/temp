@@ -36,7 +36,20 @@
 -. 자료 조사
 	a. Docker
 		a-a. https://docs.docker.com/get-started/
-		a-b. https://docs.docker.com/get-started/overview/
+		a-b. https://docs.docker.com/get-docker/
+		a-c. https://docs.docker.com/get-started/overview/
+		a-d. https://docs.docker.com/language/
+		a-e. https://docs.docker.com/desktop/
+		a-f. https://docs.docker.com/reference/
+		a-g. https://docs.docker.com/engine/reference/builder/
+		a-h. https://docs.docker.com/config/daemon/
+		a-i. https://docs.docker.com/network/
+		a-j. https://docs.docker.com/get-started/02_our_app/
+		a-k. https://docs.docker.com/compose/compose-file/
+		a-l. https://docs.docker.com/config/labels-custom-metadata/
+		a-m. https://docs.docker.com/storage/
+		a-n. https://docs.docker.com/build/building/multi-stage/
+		a-o. https://docs.docker.com/get-started/04_sharing_app/
 	b. WSL2
 	c. Alpine
 	d. NGINX
