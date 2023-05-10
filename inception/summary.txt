@@ -80,7 +80,10 @@
 			b-b-c. https://docs.docker.com/desktop/windows/wsl/#best-practices
 			b-b-d. https://docs.docker.com/desktop/windows/wsl/#develop-with-docker-and-wsl-2
 		b-c. https://docs.docker.com/engine/install/ubuntu/
-			b-c-a. https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine
+			b-c-a. https://docs.docker.com/engine/install/ubuntu/#prerequisites
+			b-c-b. https://docs.docker.com/engine/install/ubuntu/#uninstall-old-versions
+			b-c-c. https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine
+			b-c-d. https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 	c. Alpine
 	d. NGINX
 	e. WordPress
