@@ -65,9 +65,11 @@
 			a-c-i. https://docs.docker.com/storage/bind-mounts/
 			a-c-j. https://docs.docker.com/network/
 			a-c-k. https://docs.docker.com/compose/compose-file/
-			a-c-l. https://docs.docker.com/get-started/kube-deploy/
-			a-c-m. https://docs.docker.com/get-started/swarm-deploy/
-			a-c-n. https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/
+			a-c-l. https://docs.docker.com/compose/compose-file/02-model/
+			a-c-m. https://docs.docker.com/compose/compose-file/03-compose-file/
+			a-c-n. https://docs.docker.com/get-started/kube-deploy/
+			a-c-o. https://docs.docker.com/get-started/swarm-deploy/
+			a-c-p. https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/
 		a-d. https://docs.docker.com/language/
 			a-d-a. https://docs.docker.com/language/nodejs/
 			a-d-b. https://docs.docker.com/language/python/
