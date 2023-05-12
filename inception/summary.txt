@@ -71,8 +71,8 @@
 			a-d-d. https://docs.docker.com/language/golang/
 			a-d-e. https://docs.docker.com/language/dotnet/
 	b. WSL2
-		b-a. https://learn.microsoft.com/en-us/windows/wsl/install
-		b-b. https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
+		b-a. https://learn.microsoft.com/ko-kr/windows/wsl/install
+		b-b. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
 		b-c. https://docs.docker.com/desktop/windows/wsl/
 		b-d. https://docs.docker.com/engine/install/ubuntu/
 		b-e. 
@@ -86,6 +86,30 @@
 		b-m. 
 		b-n. 
 		b-o. 
+
+		b-?. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
+		b-?. https://docs.docker.com/desktop/windows/wsl/
+		b-?. https://teang1995.tistory.com/19
+		b-?. https://dev.epiloum.net/2063
+		b-?. https://hahahoho5915.tistory.com/48
+		b-?. https://engineer-mole.tistory.com/255
+		b-?. https://medium.com/geekculture/run-docker-in-windows-10-11-wsl-without-docker-desktop-a2a7eb90556d
+
+		b-?. https://docs.docker.com/desktop/windows/wsl/
+		b-?. https://docs.docker.com/engine/install/ubuntu/
+		b-?. https://docs.docker.com/engine/install/troubleshoot/
+		b-?. https://docs.docker.com/engine/install/linux-postinstall/
+		b-?. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
+		b-?. https://dev.epiloum.net/2063
+		b-?. https://www.objectivity.co.uk/blog/how-to-live-without-docker-desktop-developers-perspective/
+		b-?. https://netmarble.engineering/journey-to-wsl2-and-trouble-shooting/
+		b-?. https://netmarble.engineering/wsl2-static-ip-scheduler-settings
+		b-?. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
+		b-?. https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
+		b-?. https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9
+		b-?. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
+		b-?. https://jink1982.tistory.com/48
+
 	c. Alpine
 	d. NGINX
 	e. WordPress
@@ -103,21 +127,6 @@
 	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
 
 -. 자료 조사 (임시)
-	a. WSL2
-		a-a. https://docs.docker.com/desktop/windows/wsl/
-		a-b. https://docs.docker.com/engine/install/ubuntu/
-		a-c. https://docs.docker.com/engine/install/troubleshoot/
-		a-d. https://docs.docker.com/engine/install/linux-postinstall/
-		a-e. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
-		a-f. https://dev.epiloum.net/2063
-		a-g. https://www.objectivity.co.uk/blog/how-to-live-without-docker-desktop-developers-perspective/
-		a-h. https://netmarble.engineering/journey-to-wsl2-and-trouble-shooting/
-		a-i. https://netmarble.engineering/wsl2-static-ip-scheduler-settings
-		a-j. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
-		a-k. https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
-		a-l. https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9
-		a-m. https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik
-		a-n. https://jink1982.tistory.com/48
 	b. Alpine
 		b-a. https://www.docker.com/blog/how-to-use-the-alpine-docker-official-image/
 		b-b. https://github.com/alpinelinux/docker-alpine
