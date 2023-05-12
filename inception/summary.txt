@@ -231,10 +231,10 @@
 		a-p. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
 		a-q. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
 		a-r. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
-		a-s. https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
-
-		a-?. https://shinjam.tistory.com/entry/docker-compose-VS-docker-compose?category=891607
-		a-?. https://stackoverflow.com/questions/66514436/difference-between-docker-compose-and-docker-compose
+		a-s. https://meetup.nhncloud.com/posts/277
+		a-t. https://seongjin.me/environment-variables-in-docker-compose/
+		a-u. https://shinjam.tistory.com/entry/docker-compose-VS-docker-compose
+		a-v. https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
 	b. Alpine
 	c. NGINX
 	d. WordPress
