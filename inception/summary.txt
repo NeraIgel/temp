@@ -49,8 +49,10 @@
 			a-a-j. https://docs.docker.com/get-started/overview/
 		a-b. https://docs.docker.com/get-docker/
 			a-b-a. https://docs.docker.com/engine/install/
-			a-b-b. https://docs.docker.com/engine/install/troubleshoot/
-			a-b-c. https://docs.docker.com/engine/install/linux-postinstall/
+			a-b-b. https://docs.docker.com/engine/install/ubuntu/
+			a-b-c. https://docs.docker.com/engine/install/debian/
+			a-b-d. https://docs.docker.com/engine/install/troubleshoot/
+			a-b-e. https://docs.docker.com/engine/install/linux-postinstall/
 		a-c. https://docs.docker.com/develop/
 			a-c-a. https://docs.docker.com/develop/dev-best-practices/
 			a-c-b. https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
@@ -60,10 +62,11 @@
 			a-c-f. https://docs.docker.com/build/building/multi-stage/
 			a-c-g. https://docs.docker.com/compose/compose-file/
 			a-c-h. https://docs.docker.com/network/
-			a-c-i. https://docs.docker.com/storage/volumes/
-			a-c-j. https://docs.docker.com/storage/bind-mounts/
-			a-c-k. https://docs.docker.com/get-started/kube-deploy/
-			a-c-l. https://docs.docker.com/get-started/swarm-deploy/
+			a-c-i. https://docs.docker.com/storage/
+			a-c-j. https://docs.docker.com/storage/volumes/
+			a-c-k. https://docs.docker.com/storage/bind-mounts/
+			a-c-l. https://docs.docker.com/get-started/kube-deploy/
+			a-c-m. https://docs.docker.com/get-started/swarm-deploy/
 		a-d. https://docs.docker.com/language/
 			a-d-a. https://docs.docker.com/language/nodejs/
 			a-d-b. https://docs.docker.com/language/python/
@@ -145,13 +148,15 @@
 			a-b-f. echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 			a-b-g. sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 			a-b-h. sudo service docker start
-			a-b-i. sudo docker --version
-			a-b-j. sudo docker version
-			a-b-k. sudo docker ps
+			a-b-i. sudo docker compose version
+			a-b-j. sudo docker --version
+			a-b-k. sudo docker version
+			a-b-l. sudo docker ps
 		a-c. Manage Docker as a non-root user
 			a-c-a. sudo groupadd docker
 			a-c-b. sudo usermod -aG docker $USER
 			a-c-c. docker ps
+			a-c-d. 
 		a-d. Configure Docker to start on WSL launch
 			a-d-a. echo '' >> ~/.profile
 			a-d-b. echo '# start docker daemon automatically when logging in wsl shell' >> ~/.profile
