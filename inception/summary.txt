@@ -61,16 +61,13 @@
 			a-c-e. https://docs.docker.com/engine/reference/builder/
 			a-c-f. https://docs.docker.com/build/building/multi-stage/
 			a-c-g. https://docs.docker.com/build/building/base-images/
-			a-c-h. https://docs.docker.com/compose/compose-file/
-			a-c-i. https://docs.docker.com/network/
-			a-c-j. https://docs.docker.com/storage/
-			a-c-k. https://docs.docker.com/storage/volumes/
-			a-c-l. https://docs.docker.com/storage/bind-mounts/
-			a-c-m. https://docs.docker.com/get-started/kube-deploy/
-			a-c-n. https://docs.docker.com/get-started/swarm-deploy/
-
-			a-c-?. https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/
-
+			a-c-h. https://docs.docker.com/storage/volumes/
+			a-c-i. https://docs.docker.com/storage/bind-mounts/
+			a-c-j. https://docs.docker.com/network/
+			a-c-k. https://docs.docker.com/compose/compose-file/
+			a-c-l. https://docs.docker.com/get-started/kube-deploy/
+			a-c-m. https://docs.docker.com/get-started/swarm-deploy/
+			a-c-n. https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/
 		a-d. https://docs.docker.com/language/
 			a-d-a. https://docs.docker.com/language/nodejs/
 			a-d-b. https://docs.docker.com/language/python/
