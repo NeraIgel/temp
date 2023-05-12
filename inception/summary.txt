@@ -73,13 +73,13 @@
 	b. WSL2
 		b-a. https://learn.microsoft.com/ko-kr/windows/wsl/install
 		b-b. https://learn.microsoft.com/ko-kr/windows/wsl/install-manual
-		b-c. https://learn.microsoft.com/ko-kr/windows/wsl/setup/environment
-		b-d. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
-		b-e. https://docs.docker.com/desktop/windows/wsl/
-		b-f. https://docs.docker.com/engine/install/ubuntu/
-		b-g. https://docs.docker.com/engine/install/troubleshoot/
-		b-h. https://docs.docker.com/engine/install/linux-postinstall/
-		b-i. 
+		b-c. https://learn.microsoft.com/ko-kr/windows/wsl/wsl-config
+		b-d. https://learn.microsoft.com/ko-kr/windows/wsl/setup/environment
+		b-e. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
+		b-f. https://docs.docker.com/desktop/windows/wsl/
+		b-g. https://docs.docker.com/engine/install/ubuntu/
+		b-h. https://docs.docker.com/engine/install/troubleshoot/
+		b-i. https://docs.docker.com/engine/install/linux-postinstall/
 		b-j. 
 		b-k. 
 		b-l. 
@@ -87,8 +87,6 @@
 		b-n. 
 		b-o. 
 
-		b-?. https://teang1995.tistory.com/19
-		b-?. https://hahahoho5915.tistory.com/48
 		b-?. https://engineer-mole.tistory.com/255
 		b-?. https://medium.com/geekculture/run-docker-in-windows-10-11-wsl-without-docker-desktop-a2a7eb90556d
 
