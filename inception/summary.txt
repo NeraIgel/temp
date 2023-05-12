@@ -87,9 +87,6 @@
 		b-n. 
 		b-o. 
 
-		b-?. https://engineer-mole.tistory.com/255
-		b-?. https://medium.com/geekculture/run-docker-in-windows-10-11-wsl-without-docker-desktop-a2a7eb90556d
-
 		b-?. https://dev.epiloum.net/2063
 		b-?. https://www.objectivity.co.uk/blog/how-to-live-without-docker-desktop-developers-perspective/
 		b-?. https://netmarble.engineering/journey-to-wsl2-and-trouble-shooting/
