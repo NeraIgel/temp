@@ -76,8 +76,8 @@
 		b-c. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
 		b-d. https://docs.docker.com/desktop/windows/wsl/
 		b-e. https://docs.docker.com/engine/install/ubuntu/
-		b-f. https://docs.docker.com/engine/install/linux-postinstall/
-		b-g. 
+		b-f. https://docs.docker.com/engine/install/troubleshoot/
+		b-g. https://docs.docker.com/engine/install/linux-postinstall/
 		b-h. 
 		b-i. 
 		b-j. 
