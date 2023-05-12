@@ -71,19 +71,21 @@
 			a-d-d. https://docs.docker.com/language/golang/
 			a-d-e. https://docs.docker.com/language/dotnet/
 	b. WSL2
-		b-a. https://learn.microsoft.com/en-us/windows/wsl/
-			b-a-a. https://learn.microsoft.com/en-us/windows/wsl/install
-			b-a-b. https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
-		b-b. https://docs.docker.com/desktop/windows/wsl/
-			b-b-a. https://docs.docker.com/desktop/windows/wsl/#prerequisites
-			b-b-b. https://docs.docker.com/desktop/windows/wsl/#enabling-docker-support-in-wsl-2-distros
-			b-b-c. https://docs.docker.com/desktop/windows/wsl/#best-practices
-			b-b-d. https://docs.docker.com/desktop/windows/wsl/#develop-with-docker-and-wsl-2
-		b-c. https://docs.docker.com/engine/install/ubuntu/
-			b-c-a. https://docs.docker.com/engine/install/ubuntu/#prerequisites
-			b-c-b. https://docs.docker.com/engine/install/ubuntu/#uninstall-old-versions
-			b-c-c. https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine
-			b-c-d. https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+		b-a. https://learn.microsoft.com/en-us/windows/wsl/install
+		b-b. https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
+		b-c. https://docs.docker.com/desktop/windows/wsl/
+		b-d. https://docs.docker.com/engine/install/ubuntu/
+		b-e. 
+		b-f. 
+		b-g. 
+		b-h. 
+		b-i. 
+		b-j. 
+		b-k. 
+		b-l. 
+		b-m. 
+		b-n. 
+		b-o. 
 	c. Alpine
 	d. NGINX
 	e. WordPress
