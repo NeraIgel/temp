@@ -227,13 +227,13 @@
 		a-l. https://swalloow.github.io/container-tini-dumb-init/
 		a-m. https://www.hahwul.com/2022/08/06/docker-dumb-init/
 		a-n. https://cloud.google.com/architecture/best-practices-for-building-containers?hl=ko#signal-handling
-		a-o. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
-		a-p. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
-		a-q. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
-		a-r. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
-		a-s. https://meetup.nhncloud.com/posts/277
-		a-t. https://seongjin.me/environment-variables-in-docker-compose/
-		a-u. https://shinjam.tistory.com/entry/docker-compose-VS-docker-compose
+		a-o. https://shinjam.tistory.com/entry/docker-compose-VS-docker-compose
+		a-p. https://seongjin.me/environment-variables-in-docker-compose/
+		a-q. https://meetup.nhncloud.com/posts/277
+		a-r. https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction
+		a-s. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
+		a-t. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
+		a-u. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
 		a-v. https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
 	b. Alpine
 	c. NGINX
