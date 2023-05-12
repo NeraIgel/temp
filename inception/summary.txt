@@ -109,7 +109,6 @@
 	* https://80000coding.oopy.io/d6e6ca38-d413-47ba-a80b-a1b4f40886ab#d6e6ca38-d413-47ba-a80b-a1b4f40886ab
 	* https://80000coding.oopy.io/8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa#8e5f46b5-c0b1-44d5-ac77-3446bbaf8ffa
 	* https://80000coding.oopy.io/3305be9c-43a0-4371-9109-d729def6210b#3305be9c-43a0-4371-9109-d729def6210b
-	* https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
 
 -. 자료 조사 (임시)
 	b. Alpine
@@ -232,11 +231,10 @@
 		a-p. https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
 		a-q. https://medium.com/@saschagrunert/demystifying-containers-part-ii-container-runtimes-e363aa378f25
 		a-r. https://medium.com/@saschagrunert/demystifying-containers-part-iii-container-images-244865de6fef
-		a-s. https://engineer-mole.tistory.com/221
-		a-t. https://darrengwon.tistory.com/793
-		a-u. https://valuelog.tistory.com/69
-		a-v. https://shinjam.tistory.com/entry/docker-compose-VS-docker-compose?category=891607
-		a-w. https://stackoverflow.com/questions/66514436/difference-between-docker-compose-and-docker-compose
+		a-s. https://learn.microsoft.com/ko-kr/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
+
+		a-?. https://shinjam.tistory.com/entry/docker-compose-VS-docker-compose?category=891607
+		a-?. https://stackoverflow.com/questions/66514436/difference-between-docker-compose-and-docker-compose
 	b. Alpine
 	c. NGINX
 	d. WordPress
