@@ -154,9 +154,8 @@
 			a-b-g. sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 			a-b-h. sudo service docker start
 			a-b-i. sudo docker compose version
-			a-b-j. sudo docker --version
-			a-b-k. sudo docker version
-			a-b-l. sudo docker ps
+			a-b-j. sudo docker version
+			a-b-k. sudo docker ps
 		a-c. Manage Docker as a non-root user
 			a-c-a. sudo groupadd docker
 			a-c-b. sudo usermod -aG docker $USER
