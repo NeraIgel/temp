@@ -72,10 +72,10 @@
 			a-d-e. https://docs.docker.com/language/dotnet/
 	b. WSL2
 		b-a. https://learn.microsoft.com/ko-kr/windows/wsl/install
-		b-b. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
-		b-c. https://docs.docker.com/desktop/windows/wsl/
-		b-d. https://docs.docker.com/engine/install/ubuntu/
-		b-e. 
+		b-b. https://learn.microsoft.com/ko-kr/windows/wsl/setup/environment
+		b-c. https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-containers
+		b-d. https://docs.docker.com/desktop/windows/wsl/
+		b-e. https://docs.docker.com/engine/install/ubuntu/
 		b-f. 
 		b-g. 
 		b-h. 
