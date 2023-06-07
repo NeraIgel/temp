@@ -92,6 +92,7 @@
 		b-k. https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/
 		b-l. https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
 		b-m. https://jink1982.tistory.com/48
+		b-n. https://kontext.tech/article/1065/docker-with-wsl-2-ssl-proxy-and-ssl-certificate-problem
 	c. Alpine
 	d. NGINX
 	e. WordPress
